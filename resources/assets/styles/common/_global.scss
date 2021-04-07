@@ -1,0 +1,40 @@
+body {
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+h2:target::before {
+  content: "";
+  display: block;
+  height: 140px;
+  margin: -140px 0 0;
+}
+
+.btn-huge {
+  padding: 10px 40px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 960px) {
+  .alignwide,
+  .alignfull {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}
+
+.btn-primary {
+  background-color: #002b52 !important;
+  color: #fff;
+  border-color: #002b52 !important;
+
+  &:hover {
+    background-color: #36aab2 !important;
+    border-color: #36aab2 !important;
+  }
+}
+
+.min-vh-60 {
+  min-height: 60vh !important;
+}

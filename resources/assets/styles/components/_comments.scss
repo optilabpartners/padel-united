@@ -1,0 +1,54 @@
+
+.comment-list {
+  @extend .list-unstyled;
+}
+
+.comment-list ol {
+  list-style: none;
+}
+
+.comment-list article {
+  @extend .card;
+
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  > .comment-meta {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+    img {
+      @extend .rounded-circle;
+    }
+
+    > .comment-metadata {
+      font-size: 0.7rem;
+    }
+  }
+
+  > .comment-content {
+    padding: 0.5rem 1.2rem;
+  }
+
+  > .reply {
+    padding: 0 0.5rem 0.5rem;
+
+    > a {
+      @extend .btn;
+      @extend .btn-link;
+    }
+  }
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  @extend .form-control;
+}
+
+.comment-form input[type="submit"] {
+  @extend .btn;
+
+  color: #fff !important;
+}

@@ -1,0 +1,32 @@
+footer {
+  background-color: #002b52;
+}
+
+.nav-footer {
+  li {
+    padding: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      padding: 0;
+    }
+  }
+}
+
+.content-info {
+  .nav li {
+    padding-left: 0;
+
+    @extend .nav-item;
+
+    a {
+      @extend .nav-link;
+
+      padding: 0;
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

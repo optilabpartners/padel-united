@@ -1,0 +1,10 @@
+.woocommerce-checkout {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    border-radius: 5px !important;
+    border-width: 1px !important;
+    padding: 5px !important;
+  }
+}
