@@ -16,10 +16,9 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         ]);
     
     $wp_customize->add_section( 'general_settings', array(
-        'title'          => 'General Settings',
+        'title'          => 'Generala Inställningar',
         'priority'       => 400,
     ) );
-    
     
     $wp_customize->add_setting( 'google_analytics', array(
         'default'        => '',
@@ -30,6 +29,50 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'section' => 'general_settings',
         'settings' => 'google_analytics',
         'type'  => 'textarea'
+    )));
+
+    $wp_customize->add_setting( 'antal_hallar', array(
+        'default'        => '',
+    ) );
+
+    $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'antal_hallar', array(
+        'label' => __( 'Antal Hallar'),
+        'section' => 'general_settings',
+        'settings' => 'antal_hallar',
+        'type'  => 'text'
+    )));
+
+    $wp_customize->add_setting( 'antal_banor', array(
+        'default'        => '',
+    ) );
+
+    $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'antal_banor', array(
+        'label' => __( 'Antal Banor'),
+        'section' => 'general_settings',
+        'settings' => 'antal_banor',
+        'type'  => 'text'
+    )));
+
+    $wp_customize->add_setting( 'antal_turneringar', array(
+        'default'        => '',
+    ) );
+
+    $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'antal_turneringar', array(
+        'label' => __( 'Antal Turneringar'),
+        'section' => 'general_settings',
+        'settings' => 'antal_turneringar',
+        'type'  => 'text'
+    )));
+
+    $wp_customize->add_setting( 'antal_medlemmar', array(
+        'default'        => '',
+    ) );
+
+    $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'antal_medlemmar', array(
+        'label' => __( 'Antal Medlemmar'),
+        'section' => 'general_settings',
+        'settings' => 'antal_medlemmar',
+        'type'  => 'text'
     )));
     
 });

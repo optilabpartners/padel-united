@@ -137,98 +137,20 @@ function display_sidebar()
     return $display;
 }
 
-add_shortcode( 'lakemedel', function($atts) {
-    $atts = shortcode_atts(
-        array(
-          'text' => "Behandla med receptfria läkemedel"
-        ),
-        $atts,
-        'lakemedel'
-        );
-    ob_start();
-    ?>
-    <div class="text-center pb-3"><a class="btn btn-primary" onclick="javascript: trackBrokerLink('Behandling'); return true;" href="/go/behandla/" target="_blank" rel="nofollow"><?=$atts['text']?></a></div>
-    <?php return ob_get_clean();
-});
-
-add_shortcode( 'lakarvard', function($atts) {
-    $atts = shortcode_atts(
-        array(
-            'text' => "Sök läkarvård"
-        ),
-        $atts,
-        'lakarvard'
-        );
-    ob_start();
-    ?>
-    <div class="text-center pb-3"><a class="btn btn-primary" onclick="javascript: trackBrokerLink('Läkarvård'); return true;" href="/go/doktor/" target="_blank" rel="nofollow"><?=$atts['text']?></a></div>
-    <?php return ob_get_clean();
-});
-
-// Add job role
-add_action( 'show_user_profile', __NAMESPACE__ . '\\custom_user_profile_fields' );
-add_action( 'edit_user_profile', __NAMESPACE__ . '\\custom_user_profile_fields' );
-function custom_user_profile_fields( $user ) {
-    ?>
-	<table class="form-table">
-		<tr>
-			<th><label for="company"><?php _e("Company"); ?></label></th>
-			<td>
-				<input type="text" name="company" id="company" class="regular-text" value="<?php echo esc_attr( get_the_author_meta( 'company', $user->ID ) ); ?>" /><br />
-        		<span class="description"><?php _e("Please enter a company"); ?></span>
-			</td>
-		</tr>
-		<tr>
-			<th><label for="company_title"><?php _e("Company Title"); ?></label></th>
-			<td>
-				<input type="text" name="company_title" id="company_title" class="regular-text" value="<?php echo esc_attr( get_the_author_meta( 'company_title', $user->ID ) ); ?>" /><br />
-        		<span class="description"><?php _e("Please enter a company title"); ?></span>
-			</td>
-		</tr>
-  </table>
-<?php
-}
-
-add_action( 'personal_options_update', __NAMESPACE__ . '\\save_custom_user_profile_fields' );
-add_action( 'edit_user_profile_update', __NAMESPACE__ . '\\save_custom_user_profile_fields' );
-function save_custom_user_profile_fields( $user_id ) {
-  if ( current_user_can( 'edit_user', $user_id ) ) {
-    update_user_meta( $user_id, 'company', $_POST['company'] );
-  }
-  if ( current_user_can( 'edit_user', $user_id ) ) {
-      update_user_meta( $user_id, 'company_title', $_POST['company_title'] );
-  }
-  return true;
-}
-
-//Short code for conversion buttons to be used on pages and posts
-function cta_buttons( $atts ) {
-    $atts = shortcode_atts( array(
-        'cta_button_one_text' => '',
-        'cta_button_one_url' => '',
-        'cta_button_two_text' => '',
-        'cta_button_two_url' => ''
-    ), $atts, 'cta_buttons' );
+//Visa antalet hallar, banor, turneringar, medlemmar
+function visa_general_info( $atts ) {
+    $atts = shortcode_atts( array(), $atts, 'visa_general_info' );
     ob_start();?>
-    <div class="container">
-    	<div class="row text-center">
-    	<?php if ( $atts['cta_button_two_text'] != '' ) { ?>
-    		<div class="col-md-6 mb-2">
-    			<a href="<?php echo $atts['cta_button_one_url']?>" class="btn btn-primary" onclick="javascript: trackBrokerLink('Behandling'); return true;" target="_blank" rel="noopener nofollow"><?php echo $atts['cta_button_one_text']?></a>
-    		</div>
-    		<div class="col-md-6 mb-2">
-    			<a href="<?php echo $atts['cta_button_two_url']?>" class="btn btn-primary" onclick="javascript: trackBrokerLink('Behandling'); return true;" target="_blank" rel="noopener nofollow"><?php echo $atts['cta_button_two_text']?></a>
-    		</div>
-    	<?php } else { ?>
-    		<div class="col-md-12 mb-2">
-    			<a href="<?php echo $atts['cta_button_one_url']?>" class="btn btn-primary" onclick="javascript: trackBrokerLink('Behandling'); return true;" target="_blank" rel="noopener nofollow"><?php echo $atts['cta_button_one_text']?></a>
-    		</div>
-    	<?php } ?>
-    	</div>
-    </div>
+    <div class="container w-75">
+		<div class="row text-center pu-darkblue">
+			<div class="col-6 col-md-3"><h2 class="h1"><?php echo get_theme_mod('antal_hallar') ?></h2><h5>Hallar</h5></div>
+			<div class="col-6 col-md-3"><h2 class="h1"><?php echo get_theme_mod('antal_banor') ?></h2><h5>Banor</h5></div>
+			<div class="col-6 col-md-3"><h2 class="h1"><?php echo get_theme_mod('antal_turneringar') ?></h2><h5>Turneringar</h5></div>
+			<div class="col-6 col-md-3"><h2 class="h1"><?php echo get_theme_mod('antal_medlemmar') ?></h2><h5>Medlemmar</h5></div>
+		</div>
+	</div>
     <?php
     $content = ob_get_clean();
     return $content;
 }
-
-add_shortcode( 'cta_buttons', __NAMESPACE__ . '\\cta_buttons' );
+add_shortcode( 'visa_general_info', __NAMESPACE__ . '\visa_general_info' );

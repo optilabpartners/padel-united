@@ -25,13 +25,13 @@ h2:target::before {
 }
 
 .btn-primary {
-  background-color: #002b52 !important;
+  background-color: $pu-teal !important;
   color: #fff;
-  border-color: #002b52 !important;
+  border-color: $pu-teal !important;
 
   &:hover {
-    background-color: #36aab2 !important;
-    border-color: #36aab2 !important;
+    background-color: $pu-darkblue !important;
+    border-color: $pu-darkblue !important;
   }
 }
 
@@ -65,5 +65,30 @@ h2:target::before {
     &::after {
       display: none;
     }
+  }
+}
+
+#showAllBanor {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  div {
+    min-width: 250px;
+  }
+
+  ul {
+    border-top: 4px solid $pu-orange;
+    border-radius: 0;
+  }
+
+  li {
+    &:hover {
+      background-color: $pu-yellow;
+    }
+  }
+
+  a {
+    color: $pu-darkblue;
   }
 }

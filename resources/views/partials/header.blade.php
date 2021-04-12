@@ -62,15 +62,34 @@
 			</div>
 		</div>
 	</div>
-@else
+@elseif( is_front_page() )
 	<div class="jumbotron d-flex align-items-center min-vh-60" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
 					<h1>{!! App::title() !!}</h1>
-					<button class="btn btn-primary btn-lg btn-huge">BOKA BANA</button><br /><br />
-					<a class="h3 text-white text-decoration-none" href="https://www.google.se/maps/place/Elektronv%C3%A4gen+4,+141+49+Huddinge/@59.2220457,17.954668,17z/data=!3m1!4b1!4m5!3m4!1s0x465f70e7e98ee98d:0x3be588b17646d39d!8m2!3d59.2220457!4d17.9568567?shorturl=1" target="_blank">Hitta Hit <i class="fas fa-map-marker-alt"></i></a><br /><br />
-					<a class="h3 text-white text-decoration-none" href="#">Ring till oss <i class="fas fa-phone-square"></i></a>
+					<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
+						BOKA BANA NU
+					</button>
+					<div class="collapse" id="showAllBanor">
+						<div class="card-body pt-0 mt-2">
+							<ul class="list-group">
+								<li class="list-group-item list-group-item-action"><a href="#">Västerhaninge</a></li>
+								<li class="list-group-item list-group-item-action"><a href="#">Rosersberg</a></li>
+								<li class="list-group-item list-group-item-action"><a href="#">Flemingsberg</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+@else
+<div class="jumbotron d-flex align-items-center min-vh-60" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+		<div class="container justify-content-center text-white jumbotron-text-box">
+			<div class="row text-center">
+				<div class="col-12">
+					<h1>{!! App::title() !!}</h1>
 				</div>
 			</div>
 		</div>
