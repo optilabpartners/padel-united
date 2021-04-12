@@ -40,16 +40,16 @@
 		</div>
 	</div>
 </header>
+@if ( has_post_thumbnail() )
+@php
+	$featured_image = get_the_post_thumbnail_url( get_the_ID() );
+@endphp
+@else
+@php
+	$featured_image = App\asset_path('images/general-jumbotron.jpg');
+@endphp
+@endif
 @if ('omrade_hall' == get_post_type())
-	@if ( has_post_thumbnail() )
-		@php
-			$featured_image = get_the_post_thumbnail_url( get_the_ID() );
-		@endphp
-	@else
-		@php
-			$featured_image = App\asset_path('images/general-jumbotron.jpg');
-		@endphp
-	@endif
 	<div class="jumbotron d-flex align-items-center min-vh-60" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
