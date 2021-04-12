@@ -38,3 +38,32 @@ h2:target::before {
 .min-vh-60 {
   min-height: 60vh !important;
 }
+
+#v-pills-tab {
+  .nav-link {
+    border-radius: 0;
+    color: #000;
+    border-left: 2px solid red;
+
+    &.active {
+      background-color: #fff;
+      border-left: 2px solid blue;
+    }
+  }
+}
+
+#v-pills-tabContent {
+  .active {
+    background-color: #fff;
+  }
+}
+
+#accordionExample {
+  .accordion-button {
+    border-radius: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
