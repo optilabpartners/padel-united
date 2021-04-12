@@ -63,7 +63,7 @@
 		</div>
 	</div>
 @else
-	<div class="jumbotron d-flex align-items-center min-vh-60" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('/wp-content/uploads/2021/03/pv-2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+	<div class="jumbotron d-flex align-items-center min-vh-60" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
