@@ -9,7 +9,7 @@
 	@php
 		the_content()
 	@endphp
-	<div class="container-fluid alignfull d-none d-md-block" style="background-color: red;">
+	<!-- <div class="container-fluid alignfull d-none d-md-block" style="background-color: red;">
 		<div class="container pt-4 pb-4">
 			<div class="row">
 				<div class="d-flex align-items-start">
@@ -130,7 +130,7 @@ Företaget AB grundades 1971 och har sedan dess varit den största leverantören
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div> -->
     @php
       while ( $your_query->have_posts() ) : $your_query->the_post();
 	the_content();
