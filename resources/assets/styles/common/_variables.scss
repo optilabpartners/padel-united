@@ -6,12 +6,19 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 
 //Padel United Global Varibles
-$pu-darkblue: #0d2b4f;
+$pu-darkblue: #002b52;
 $pu-teal: #36aab2;
-$pu-lightblue: #407087;
-$pu-orange: #ee9e5f;
+$pu-lightblue: #3c7693;
+$pu-orange: #fb9b51;
 $pu-grey: #f0eee2;
-$pu-yellow:  #f1d670;
+$pu-warmyellow: #fec156;
+$pu-yellow:  #f6d55c;
+$pu-beige: #ffdbcb;
+$pu-darkbeige: #c5bbaa;
+$pu-beigegrey: #efeee1;
+$pu-lightgrey: #d1d2cc;
+$pu-grey: #c1c0bb;
+$pu-darkgrey: #9e9f99;
 
 .pu-darkblue {
   color: $pu-darkblue;

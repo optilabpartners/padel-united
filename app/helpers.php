@@ -141,12 +141,24 @@ function display_sidebar()
 function visa_general_info( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'visa_general_info' );
     ob_start();?>
-    <div class="container w-75">
+    <div class="container w-75 pt-md-4 pb-md-4">
 		<div class="row text-center pu-darkblue">
-			<div class="col-6 col-md-3"><h2 class="h1"><?php echo get_theme_mod('antal_hallar') ?></h2><h5>Hallar</h5></div>
-			<div class="col-6 col-md-3"><h2 class="h1"><?php echo get_theme_mod('antal_banor') ?></h2><h5>Banor</h5></div>
-			<div class="col-6 col-md-3"><h2 class="h1"><?php echo get_theme_mod('antal_turneringar') ?></h2><h5>Turneringar</h5></div>
-			<div class="col-6 col-md-3"><h2 class="h1"><?php echo get_theme_mod('antal_medlemmar') ?></h2><h5>Medlemmar</h5></div>
+			<div class="col-6 col-md-3">
+                <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="img-fluid" />
+                <h2 class="h1"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h2><h5>Hallar</h5>
+            </div>
+			<div class="col-6 col-md-3">
+                <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="img-fluid" />
+                <h2 class="h1"><strong><?php echo get_theme_mod('antal_banor') ?></strong></h2><h5>Banor</h5>
+            </div>
+			<div class="col-6 col-md-3">
+                <img src="<?php echo asset_path('images/icons/turneringar.png') ?>" alt="Turneringar" class="img-fluid" />
+                <h2 class="h1"><strong><?php echo get_theme_mod('antal_turneringar') ?></strong></h2><h5>Turneringar</h5>
+            </div>
+			<div class="col-6 col-md-3">
+                <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="img-fluid" />
+                <h2 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h2><h5>Medlemmar</h5>
+            </div>
 		</div>
 	</div>
     <?php
