@@ -30,4 +30,24 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function get_matchi_links()
+    {
+        $args = array(
+            'post_type' => 'omrade_hall',
+            'post_status' => 'publish',
+            'orderby' => 'title',
+            'meta_query' => array(
+                array(
+                    'key' => 'matchi_link',
+                    'value' => '',
+                    'compare' => '!='
+                )
+            )
+        );
+
+        $matchi_links = new \WP_Query( $args );
+        if ($matchi_links)
+           return $matchi_links;
+    }
 }

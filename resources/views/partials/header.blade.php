@@ -74,10 +74,15 @@
 					<div class="collapse" id="showAllBanor">
 						<div class="card-body pt-0 mt-2">
 							<ul class="list-group">
-								<li class="list-group-item list-group-item-action"><a href="#">Västerhaninge</a></li>
-								<li class="list-group-item list-group-item-action"><a href="#">Rosersberg</a></li>
-								<li class="list-group-item list-group-item-action"><a href="#">Flemingsberg</a></li>
-							</ul>
+							@if($get_matchi_links)
+								@while ($get_matchi_links->have_posts())
+								@php $get_matchi_links->the_post() @endphp
+								<li class="list-group-item list-group-item-action">
+									<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
+								</li>
+								@endwhile
+							@endif
+							</ul>	
 						</div>
 					</div>
 				</div>
