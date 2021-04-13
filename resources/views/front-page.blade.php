@@ -131,8 +131,6 @@ Företaget AB grundades 1971 och har sedan dess varit den största leverantören
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-	
-	<hr />
     @php
       while ( $your_query->have_posts() ) : $your_query->the_post();
 	the_content();

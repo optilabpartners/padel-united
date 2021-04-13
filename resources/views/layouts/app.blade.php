@@ -6,7 +6,7 @@
     @include('partials.header')
     <div class="wrap container" role="document">
       <div class="content row mt-3 mb-3">
-        <main class="main col-md-12 pe-md-4">
+        <main class="main col-md-12">
           <div class="row">
             <div class="col-md-12 bg-white">
               @yield('content')

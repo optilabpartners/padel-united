@@ -31,6 +31,7 @@ class App extends Controller
         return get_the_title();
     }
 
+    //Get the links for the dropdown list on the first page on the button Boka Bana Nu
     public function get_matchi_links()
     {
         $args = array(
@@ -50,5 +51,26 @@ class App extends Controller
         $matchi_links = new \WP_Query( $args );
         if ($matchi_links)
            return $matchi_links;
+    }
+
+    //Get all the Områdes pages from the Område Hall Page type
+    public function get_omrade_pages()
+    {
+        $args = array(
+            'post_type' => 'omrade_hall',
+            'post_status' => 'publish',
+            'orderby' => 'title',
+            'order' => 'ASC',
+            'meta_query' => array(
+                array(
+                    'key' => 'matchi_link',
+                    'value' => ''
+                )
+            )
+        );
+
+        $omrade_pages = new \WP_Query( $args );
+        if ($omrade_pages)
+           return $omrade_pages;
     }
 }

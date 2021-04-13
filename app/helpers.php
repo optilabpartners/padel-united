@@ -166,3 +166,52 @@ function visa_general_info( $atts ) {
     return $content;
 }
 add_shortcode( 'visa_general_info', __NAMESPACE__ . '\visa_general_info' );
+
+//Visa områdes boxar med excerpt och lite innehåll
+function omrades_excerpt_boxar( $atts ) {
+    $atts = shortcode_atts( array(), $atts, 'omrades_excerpt_boxar' );
+    ob_start();?>
+    <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
+        <div class="text-center">
+            <h2 class="text-white"><strong>VÄLJ OMRÅDE</strong></h2>
+        </div>
+        <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
+            <div class="row">
+                <div class="col-md-4 pe-md-1">
+                    <div class="pu-warmyellow-bg pt-2 pb-2"></div>
+                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white ">
+                        <h3>Se våra hallar i Stockholm</h3>
+                        <p>Lorum ipsum etc</p>
+                        <div>
+                            <button class="btn btn-primary float-md-end">Se Hall</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ps-md-1 pe-md-1">
+                    <div class="pu-warmyellow-bg pt-2 pb-2"></div>
+                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
+                        <h3>Se våra hallar i Stockholm</h3>
+                        <p>Lorum ipsum etc</p>
+                        <div>
+                            <button class="btn btn-primary float-md-end">Se Hall</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ps-md-1">
+                    <div class="pu-warmyellow-bg pt-2 pb-2"></div>
+                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
+                        <h3>Se våra hallar i Stockholm</h3>
+                        <p>Lorum ipsum etc</p>
+                        <div>
+                            <button class="btn btn-primary float-md-end">Se Hall</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+    $content = ob_get_clean();
+    return $content;
+}
+add_shortcode( 'omrades_excerpt_boxar', __NAMESPACE__ . '\omrades_excerpt_boxar' );
