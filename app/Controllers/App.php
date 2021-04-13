@@ -37,6 +37,7 @@ class App extends Controller
             'post_type' => 'omrade_hall',
             'post_status' => 'publish',
             'orderby' => 'title',
+            'order' => 'ASC',
             'meta_query' => array(
                 array(
                     'key' => 'matchi_link',
