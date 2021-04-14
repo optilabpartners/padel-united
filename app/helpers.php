@@ -141,7 +141,7 @@ function display_sidebar()
 function visa_general_info( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'visa_general_info' );
     ob_start();?>
-    <div class="container w-75 pt-md-4 pb-md-4">
+    <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
 		<div class="row text-center pu-darkblue">
 			<div class="col-6 col-md-3">
                 <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="img-fluid" />
@@ -176,7 +176,7 @@ function omrades_excerpt_boxar( $atts ) {
         'post_type' => 'omrade_hall',
         'post_status' => 'publish',
         'orderby' => 'title',
-        'order' => 'ASC',
+        'order' => 'DESC',
         'meta_query' => array(
             array(
                 'key' => 'matchi_link',
@@ -199,10 +199,19 @@ function omrades_excerpt_boxar( $atts ) {
                 <div class="col-md-4 pe-md-1">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white ">
-                        <h3>Se våra hallar i <?= the_title() ?></h3>
-                        <p>Lorum ipsum etc</p>
+                        <div class="container d-flex h-100 p-0">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img class="img-fluid" src="<?php echo asset_path('images/footer-logo.png') ?>" alt="Padel United Logga" />
+                                </div>
+                                <div class="col-9 justify-content-center align-self-center">
+                                    <h3>Se våra hallar i <?= the_title() ?></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <p><?= get_the_excerpt() ?></p>
                         <div>
-                            <button class="btn btn-primary float-md-end">Se Hall</button>
+                            <button class="btn btn-primary float-md-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></button>
                         </div>
                     </div>
                 </div>
