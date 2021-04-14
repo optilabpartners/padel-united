@@ -210,9 +210,7 @@ function omrades_excerpt_boxar( $atts ) {
                             </div>
                         </div>
                         <p><?= get_the_excerpt() ?></p>
-                        <div>
-                            <button class="btn btn-primary float-md-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></button>
-                        </div>
+                        <button class="btn btn-primary float-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></button>
                     </div>
                 </div>
                 <?php } ?>
