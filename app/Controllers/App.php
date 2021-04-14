@@ -34,6 +34,7 @@ class App extends Controller
     //Get the links for the dropdown list on the first page on the button Boka Bana Nu
     public function get_matchi_links()
     {
+        global $post;
         $args = array(
             'post_type' => 'omrade_hall',
             'post_status' => 'publish',

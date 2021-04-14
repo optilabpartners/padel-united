@@ -139,6 +139,7 @@ function display_sidebar()
 
 //Visa antalet hallar, banor, turneringar, medlemmar
 function visa_general_info( $atts ) {
+    global $post;
     $atts = shortcode_atts( array(), $atts, 'visa_general_info' );
     ob_start();?>
     <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
@@ -162,6 +163,7 @@ function visa_general_info( $atts ) {
 		</div>
 	</div>
     <?php
+    wp_reset_query();
     $content = ob_get_clean();
     return $content;
 }
@@ -169,6 +171,7 @@ add_shortcode( 'visa_general_info', __NAMESPACE__ . '\visa_general_info' );
 
 //Visa områdes boxar med excerpt och lite innehåll
 function omrades_excerpt_boxar( $atts ) {
+    global $post;
     $atts = shortcode_atts( array(), $atts, 'omrades_excerpt_boxar' );
     ob_start();
 
@@ -218,6 +221,7 @@ function omrades_excerpt_boxar( $atts ) {
         </div>
     </div>
     <?php
+    wp_reset_query();
     $content = ob_get_clean();
     return $content;
 }

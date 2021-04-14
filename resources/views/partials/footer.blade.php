@@ -5,6 +5,8 @@
 @else
 @php
 	$featured_image = App\asset_path('images/general-jumbotron.jpg');
+	echo get_the_ID();
+	echo get_post_type( get_the_ID() );
 @endphp
 @endif
 @if ('omrade_hall' == get_post_type())

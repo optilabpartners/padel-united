@@ -84,6 +84,7 @@
 									<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
 								</li>
 								@endwhile
+								@php wp_reset_postdata() @endphp
 							@endif
 							</ul>	
 						</div>
