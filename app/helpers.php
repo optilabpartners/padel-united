@@ -142,7 +142,7 @@ function visa_general_info( $atts ) {
     global $post;
     $atts = shortcode_atts( array(), $atts, 'visa_general_info' );
     ob_start();?>
-    <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
+    <div class="container w-md-75 pt-md-4 pb-md-4 ps-0 pe-0">
 		<div class="row text-center pu-darkblue">
 			<div class="col-6 col-md-3">
                 <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="img-fluid" />
@@ -226,3 +226,62 @@ function omrades_excerpt_boxar( $atts ) {
     return $content;
 }
 add_shortcode( 'omrades_excerpt_boxar', __NAMESPACE__ . '\omrades_excerpt_boxar' );
+
+//Visa generella ikoner för hela Padel United
+function visa_generella_ikoner( $atts ) {
+    global $post;
+    $atts = shortcode_atts( array(), $atts, 'visa_generella_ikoner' );
+    ob_start();
+    ?>
+    <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
+        <div class="text-center text-white">
+            <h2><strong>VÅRT HJÄRTA SLÅR FÖR PADEL</strong></h2>
+        </div>
+        <div class="container text-white ps-0 pe-0 ps-md-3 pe-md-3">
+            <div class="row">
+            <p>Padel är en fantastisk sport som alla kan utöva – oavsett erfarenhet eller spelnivå. På Padel United erbjuder vi spel för såväl nybörjare som elitspelare, för barn, ungdomar, vuxna och pensionärer och varje padelhall erbjuder också banor för handikappade där man kan komma in med rullstol. Har du aldrig spelat padel förut är du varmt välkommen till någon av våra anläggningar – vi kan garantera ett personligt bemötande och en rolig stund på banan. Välkommen till Padel United!</p>
+            </div>
+        </div>
+        <div class="container ps-0 pe-0 ps-md-3 pe-md-3 text-white text-center w-75">
+            <div class="row">
+                <div class="col-6 col-md-3 p-md-4 pb-4">
+                    <img src="<?php echo asset_path('images/icons/vpt_underlag.png') ?>" alt="VPT Underlag" class="img-fluid pb-2" />
+                    <h5>VTP-underlag: Mondo super court XN</h5>
+                </div>
+                <div class="col-6 col-md-3 p-md-4 pb-4">
+                    <img src="<?php echo asset_path('images/icons/panorama_glas.png') ?>" alt="Panorama glas på alla banor" class="img-fluid pb-2" />
+                    <h5>Panorama glas på alla banor</h5>
+                </div>
+                <div class="col-6 col-md-3 p-md-4 pb-4">
+                    <img src="<?php echo asset_path('images/icons/optimal_ljudisolering.png') ?>" alt="Optimal ljudisolering" class="img-fluid pb-2" />
+                    <h5>Optimal ljudisolering</h5>
+                </div>
+                <div class="col-6 col-md-3 p-md-4 pb-4">
+                    <img src="<?php echo asset_path('images/icons/belysning.png') ?>" alt="Skräddarsydd belysning" class="img-fluid pb-2" />
+                    <h5>Skräddasydd belysning</h5>
+                </div>
+                <div class="col-6 col-md-3 p-md-4 pb-4">
+                    <img src="<?php echo asset_path('images/icons/trivsam_luftig_miljo.png') ?>" alt="Trivsam luftig miljö" class="img-fluid pb-2" />
+                    <h5>Trivsam luftig miljö</h5>
+                </div>
+                <div class="col-6 col-md-3 p-md-4 pb-4">
+                    <img src="<?php echo asset_path('images/icons/barn_och_ungdom.png') ?>" alt="Barn & Ungdoms verksamhet" class="img-fluid pb-2" />
+                    <h5>Barn & ungdoms verksamhet</h5>
+                </div>
+                <div class="col-6 col-md-3 p-md-4 pb-4">
+                    <img src="<?php echo asset_path('images/icons/elittranare.png') ?>" alt="Elittränare" class="img-fluid pb-2" />
+                    <h5>Elittränare</h5>
+                </div>
+                <div class="col-6 col-md-3 p-md-4 pb-4">
+                    <img src="<?php echo asset_path('images/icons/lounge.png') ?>" alt="Lounge" class="img-fluid pb-2" />
+                    <h5>Supertrevlig lounge</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+    wp_reset_query();
+    $content = ob_get_clean();
+    return $content;
+}
+add_shortcode( 'visa_generella_ikoner', __NAMESPACE__ . '\visa_generella_ikoner' );
