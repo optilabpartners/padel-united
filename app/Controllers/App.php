@@ -52,25 +52,4 @@ class App extends Controller
         if ($matchi_links)
            return $matchi_links;
     }
-
-    //Get all the Områdes pages from the Område Hall Page type
-    public function get_omrade_pages()
-    {
-        $args = array(
-            'post_type' => 'omrade_hall',
-            'post_status' => 'publish',
-            'orderby' => 'title',
-            'order' => 'ASC',
-            'meta_query' => array(
-                array(
-                    'key' => 'matchi_link',
-                    'value' => ''
-                )
-            )
-        );
-
-        $omrade_pages = new \WP_Query( $args );
-        if ($omrade_pages)
-           return $omrade_pages;
-    }
 }

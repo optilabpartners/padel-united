@@ -170,43 +170,43 @@ add_shortcode( 'visa_general_info', __NAMESPACE__ . '\visa_general_info' );
 //Visa områdes boxar med excerpt och lite innehåll
 function omrades_excerpt_boxar( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'omrades_excerpt_boxar' );
-    ob_start();?>
+    ob_start();
+
+    $args = array(
+        'post_type' => 'omrade_hall',
+        'post_status' => 'publish',
+        'orderby' => 'title',
+        'order' => 'ASC',
+        'meta_query' => array(
+            array(
+                'key' => 'matchi_link',
+                'value' => ''
+            )
+        )
+    );
+
+    $omrade_pages = new \WP_Query( $args );
+    ?>
     <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
         <div class="text-center">
             <h2 class="text-white"><strong>VÄLJ OMRÅDE</strong></h2>
         </div>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
+                <?php 
+                while($omrade_pages->have_posts()) {
+                $omrade_pages->the_post(); ?>
                 <div class="col-md-4 pe-md-1">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white ">
-                        <h3>Se våra hallar i Stockholm</h3>
+                        <h3>Se våra hallar i <?= the_title() ?></h3>
                         <p>Lorum ipsum etc</p>
                         <div>
                             <button class="btn btn-primary float-md-end">Se Hall</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 ps-md-1 pe-md-1">
-                    <div class="pu-warmyellow-bg pt-2 pb-2"></div>
-                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
-                        <h3>Se våra hallar i Stockholm</h3>
-                        <p>Lorum ipsum etc</p>
-                        <div>
-                            <button class="btn btn-primary float-md-end">Se Hall</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ps-md-1">
-                    <div class="pu-warmyellow-bg pt-2 pb-2"></div>
-                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
-                        <h3>Se våra hallar i Stockholm</h3>
-                        <p>Lorum ipsum etc</p>
-                        <div>
-                            <button class="btn btn-primary float-md-end">Se Hall</button>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
