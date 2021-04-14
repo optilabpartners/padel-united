@@ -35,8 +35,12 @@ h2:target::before {
   }
 }
 
-.min-vh-40 {
-  min-height: 40vh !important;
+.min-vh-50 {
+  min-height: 50vh !important;
+}
+
+.min-vh-60 {
+  min-height: 60vh !important;
 }
 
 #v-pills-tab {
@@ -78,17 +82,24 @@ h2:target::before {
   }
 
   ul {
-    border-top: 4px solid $pu-orange;
+    border-top: 4px solid $pu-teal;
     border-radius: 0;
   }
 
   li {
-    &:hover {
-      background-color: $pu-yellow;
+    a {
+      color: #000;
+      text-decoration: none;
     }
-  }
 
-  a {
-    color: $pu-darkblue;
+    &:hover {
+      color: #fff;
+      background-color: $pu-orange;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
   }
 }

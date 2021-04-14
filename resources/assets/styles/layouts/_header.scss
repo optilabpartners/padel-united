@@ -34,11 +34,12 @@
   .nav-primary {
     .nav-item {
       &:hover {
-        border-bottom: 4px solid #36aab2;
+        border-bottom: 4px solid $pu-teal;
       }
 
       .nav-link {
         color: #fff;
+        text-transform: uppercase;
 
         &:hover {
           color: #fff;
@@ -83,19 +84,19 @@
       .dropdown-menu {
         position: relative;
         top: 0;
-        background-color: #002b52;
+        background-color: $pu-darkblue;
         border: none;
 
         &.show {
           border: none;
-          border-top: 3px solid #36aab2;
+          border-top: 3px solid $pu-teal;
           border-radius: 0;
           margin-top: 0;
-          background-color: #06192f;
+          background-color: $pu-darkblue;
           padding-bottom: 0;
 
           li {
-            border-bottom: 1px solid #002b52;
+            border-bottom: 1px solid $pu-teal;
           }
         }
       }
@@ -131,7 +132,7 @@
 
   &.show-nav {
     width: 102%;
-    background-color: #002b52;
+    background-color: $pu-darkblue;
     transition: width 0.2s ease;
     box-shadow: -10px 0 15px 0 rgba($color: #000, $alpha: 0.5);
     overflow-y: auto;
@@ -186,7 +187,7 @@
 
       a:hover {
         color: #fff;
-        background-color: #fb9b51;
+        background-color: $pu-orange;
       }
     }
   }

@@ -50,7 +50,7 @@
 @endphp
 @endif
 @if ('omrade_hall' == get_post_type())
-	<div class="jumbotron d-flex align-items-center min-vh-40" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
+	<div class="jumbotron d-flex align-items-center min-vh-60" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
@@ -63,7 +63,7 @@
 		</div>
 	</div>
 @elseif( is_front_page() )
-	<div class="jumbotron d-flex align-items-center min-vh-40" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+	<div class="jumbotron d-flex align-items-center min-vh-50" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
@@ -90,7 +90,7 @@
 		</div>
 	</div>
 @else
-<div class="jumbotron d-flex align-items-center min-vh-40" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+<div class="jumbotron d-flex align-items-center min-vh-50" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
