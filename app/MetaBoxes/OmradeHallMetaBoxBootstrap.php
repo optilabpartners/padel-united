@@ -52,7 +52,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         <input type="text" name="matchi_link" id="matchi_link" value="<?php echo $matchi_link; ?>">
       </div>
       <div class="form-field">
-        <label for="telefon_nummer">Telefon Nummer</label><br />
+        <label for="telefon_nummer">Telefon Nummer (+46735303030)</label><br />
         <input type="text" name="telefon_nummer" id="telefon_nummer" value="<?php echo $telefon_nummer; ?>">
       </div>
       <div class="form-field">

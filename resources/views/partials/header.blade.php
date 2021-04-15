@@ -60,10 +60,14 @@
 					<div class="row mt-4">
 						<div class="col-12">
 							<p class="text-center">
-								<img src="@asset('images/icons/pin.png')" style="height: 40px;" class="me-2 h-40" alt="Pin" />
-								<a class="h5 me-4 text-white text-decoration-none" href="{!! get_post_meta(get_the_ID(), 'maps_link', true) !!}" target="_blank">Hitta Hit </a>
-								<img src="@asset('images/icons/phone.png')" style="height: 40px;" class="me-2 h-40" alt="Phone" />
-								<a class="h5 text-white  text-decoration-none" href="tel:{!! get_post_meta(get_the_ID(), 'telefon_nummer', true) !!}">Ring till oss</i></a>
+								@if(get_post_meta(get_the_ID(), 'maps_link', true))
+									<img src="@asset('images/icons/pin.png')" style="height: 40px;" class="me-2 h-40" alt="Pin" />
+									<a class="h5 me-4 text-white text-decoration-none" href="{!! get_post_meta(get_the_ID(), 'maps_link', true) !!}" target="_blank">Hitta Hit </a>
+								@endif
+								@if(get_post_meta(get_the_ID(), 'telefon_nummer', true))
+									<img src="@asset('images/icons/phone.png')" style="height: 40px;" class="me-2 h-40" alt="Phone" />
+									<a class="h5 text-white  text-decoration-none" href="tel:{!! get_post_meta(get_the_ID(), 'telefon_nummer', true) !!}">Ring till oss</i></a>
+								@endif
 							</p>
 						</div>						
 					</div>
