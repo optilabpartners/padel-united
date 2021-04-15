@@ -48,7 +48,7 @@ function omrade_hall() {
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
         'show_in_rest'          => true,
-        'rewrite'               => array('slug' => '/', 'with_front' => false),
+        'rewrite'               => array('slug' => '', 'with_front' => false),
         'capability_type'       => 'post',
     );
     register_post_type( 'omrade_hall', $args );

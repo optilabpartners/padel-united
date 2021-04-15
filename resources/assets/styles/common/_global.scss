@@ -41,6 +41,35 @@ h2:target::before {
   }
 }
 
+.btn-secondary {
+  background-color: $pu-darkblue !important;
+  border-color: $pu-darkblue !important;
+
+  &:hover {
+    background-color: $pu-teal !important;
+    color: #fff;
+    border-color: $pu-teal !important;
+  }
+}
+
+.carousel-caption {
+  transform: translateY(-50%);
+  bottom: initial;
+  top: 50%;
+}
+
+.carousel-item {
+  @include media-breakpoint-up(lg) {
+    height: 450px;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 11rem !important;
+  width: 11rem !important;
+}
+
 .min-vh-50 {
   min-height: 50vh !important;
 }

@@ -345,3 +345,53 @@ function visa_general_info_hallar( $atts ) {
     return $content;
 }
 add_shortcode( 'visa_general_info_hallar', __NAMESPACE__ . '\visa_general_info_hallar' );
+
+//Hämta nyheter kopplade till en hall genom etiketter(tags)
+function nyheter_med_etikett( $atts ) {
+    global $post;
+    $atts = shortcode_atts( array(), $atts, 'nyheter_med_etikett' );
+    ob_start();
+    
+    $args = array(
+        'post_type' => 'post',
+        'tag' => 'flemingsberg',
+        'post_status' => 'publish',
+        'orderby' => 'title',
+        'order' => 'DESC',
+        'limit' => 2,
+    );
+
+    $nyheter = get_posts( $args );
+    ?>
+    <div id="hallNyheterCarousel" class="carousel slide alignfull" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+        <?php foreach ($nyheter as $key => $post) : setup_postdata( $post )?>
+            <button type="button" data-bs-target="#hallNyheterCarousel" data-bs-slide-to="<?=$key?>" <?php echo ($key == 0 ) ? 'class="active"' : ''?>></button>    
+        <?php endforeach; ?>  
+        </div>
+      <div class="carousel-inner">
+      <?php foreach ($nyheter as $key => $post) : setup_postdata( $post )?>
+        <div class="carousel-item <?php echo ($key == 0 ) ? 'active' : ''?> pu-teal-bg">
+          <img src="<?php echo asset_path('images/padel_boll.jpg') ?>" style="opacity: 0.3" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-block">
+            <h2 class="h1"><?php the_title() ?></h2>
+            <a href="<?php the_permalink() ?>" class="btn btn-lg btn-huge btn-secondary">Läs mer här</a>
+          </div>
+        </div>
+      <?php endforeach; ?>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#hallNyheterCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#hallNyheterCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <?php
+    wp_reset_query();
+    $content = ob_get_clean();
+    return $content;
+}
+add_shortcode( 'nyheter_med_etikett', __NAMESPACE__ . '\nyheter_med_etikett' );
