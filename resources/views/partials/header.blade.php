@@ -61,9 +61,9 @@
 						<div class="col-12">
 							<p class="text-center">
 								<img src="@asset('images/icons/pin.png')" style="height: 40px;" class="me-2 h-40" alt="Pin" />
-								<a class="h5 me-4 text-white text-decoration-none" href="https://www.google.se/maps/place/Elektronv%C3%A4gen+4,+141+49+Huddinge/@59.2220457,17.954668,17z/data=!3m1!4b1!4m5!3m4!1s0x465f70e7e98ee98d:0x3be588b17646d39d!8m2!3d59.2220457!4d17.9568567?shorturl=1" target="_blank">Hitta Hit </a>
+								<a class="h5 me-4 text-white text-decoration-none" href="{!! get_post_meta(get_the_ID(), 'maps_link', true) !!}" target="_blank">Hitta Hit </a>
 								<img src="@asset('images/icons/phone.png')" style="height: 40px;" class="me-2 h-40" alt="Phone" />
-								<a class="h5 text-white  text-decoration-none" href="#">Ring till oss</i></a>
+								<a class="h5 text-white  text-decoration-none" href="tel:{!! get_post_meta(get_the_ID(), 'telefon_nummer', true) !!}">Ring till oss</i></a>
 							</p>
 						</div>						
 					</div>
