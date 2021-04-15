@@ -117,5 +117,5 @@
 			</div>
 		</div>
 	</div>
-<div class="jumbo-cover">
+</div>
 @endif
