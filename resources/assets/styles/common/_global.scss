@@ -49,6 +49,11 @@ h2:target::before {
   min-height: 60vh !important;
 }
 
+//Set height of images to 40px. Used on icons here and there.
+.h-40 {
+  height: 40px;
+}
+
 .w-75 {
   @include media-breakpoint-down(lg) {
     width: 100% !important;
