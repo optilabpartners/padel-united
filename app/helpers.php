@@ -285,3 +285,35 @@ function visa_generella_ikoner( $atts ) {
     return $content;
 }
 add_shortcode( 'visa_generella_ikoner', __NAMESPACE__ . '\visa_generella_ikoner' );
+
+//Visa medlemskapsboxen
+function visa_medlemskap( $atts ) {
+    global $post;
+    $atts = shortcode_atts( array(), $atts, 'visa_medlemskap' );
+    ob_start();
+    $ingar_medlemskapet = array();
+    $ingar_medlemskapet = explode("\n", get_theme_mod('ingar_medlemskapet'));
+    ?>
+    <div class="container alignfullmobile p-0 mb-4">
+        <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
+        <div class="col-12 pu-lightblue-bg text-white p-4 clearfix">    
+            <div class="float-md-start"><h2 class="m-0 mb-2 mb-md-0"><strong>Detta ingår i medlemskapet</strong></h2></div>
+            <div class="float-md-end"><h2 class="m-0"><strong>Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</strong></h2></div>
+        </div>
+        <div class="col-12 p-2 border clearfix">
+            <ul class="float-start pu-darkblue">
+                <?php foreach($ingar_medlemskapet as $medlemskap) {?> 
+                    <li><?php echo($medlemskap); ?>    
+                <?php } ?>
+            </ul>
+            <div class="float-md-end text-center">
+                <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" target="_blank" class="btn btn-huge btn-primary">Bli medlem nu</a>
+            </div>
+        </div>
+    </div>
+    <?php
+    wp_reset_query();
+    $content = ob_get_clean();
+    return $content;
+}
+add_shortcode( 'visa_medlemskap', __NAMESPACE__ . '\visa_medlemskap' );

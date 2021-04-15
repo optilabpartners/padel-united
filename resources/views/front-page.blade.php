@@ -4,8 +4,6 @@
 	@php
 		the_content()
 	@endphp
-
-	{!! do_shortcode('[visa_generella_ikoner]') !!}
 	<!-- <div class="container-fluid alignfull d-none d-md-block" style="background-color: red;">
 		<div class="container pt-4 pb-4">
 			<div class="row">

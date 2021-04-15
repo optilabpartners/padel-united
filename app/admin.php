@@ -11,7 +11,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     $wp_customize->selective_refresh->add_partial('blogname', [
         'selector' => '.brand',
         'render_callback' => function () {
-        bloginfo('name');
+            bloginfo('name');
         }
         ]);
     
@@ -74,7 +74,45 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'settings' => 'antal_medlemmar',
         'type'  => 'text'
     )));
+
+    $wp_customize->add_section( 'medlemskap_settings', array(
+        'title'          => 'Medlemskaps Inställningar',
+        'priority'       => 500,
+    ) );
     
+    $wp_customize->add_setting( 'ingar_medlemskapet', array(
+        'default' => 'Skriv vad som ingår i medlemskapet. En sak per rad.',
+    ) );
+
+    $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'ingar_medlemskapet', array(
+        'label' => __('Ingår i Medlemskapet'),
+        'section' => 'medlemskap_settings',
+        'settings' => 'ingar_medlemskapet',
+        'type'  => 'textarea'
+    )));
+
+    $wp_customize->add_setting( 'medlemskaps_pris', array(
+        'default'        => '',
+    ) );
+
+    $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'medlemskaps_pris', array(
+        'label' => __( 'Pris'),
+        'section' => 'medlemskap_settings',
+        'settings' => 'medlemskaps_pris',
+        'type'  => 'text'
+    )));
+
+    $wp_customize->add_setting( 'medlemskaps_link', array(
+        'default'        => '',
+    ) );
+
+    $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'medlemskaps_link', array(
+        'label' => __( 'Länk'),
+        'section' => 'medlemskap_settings',
+        'settings' => 'medlemskaps_link',
+        'type'  => 'text'
+    )));
+
 });
     
 /**
