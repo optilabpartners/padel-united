@@ -142,22 +142,22 @@ function visa_general_info( $atts ) {
     global $post;
     $atts = shortcode_atts( array(), $atts, 'visa_general_info' );
     ob_start();?>
-    <div class="container w-md-75 pt-md-4 pb-md-4 ps-0 pe-0">
+    <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
 		<div class="row text-center pu-darkblue">
 			<div class="col-6 col-md-3">
-                <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="img-fluid" />
+                <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h2><h5>Hallar</h5>
             </div>
 			<div class="col-6 col-md-3">
-                <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="img-fluid" />
+                <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_banor') ?></strong></h2><h5>Banor</h5>
             </div>
 			<div class="col-6 col-md-3">
-                <img src="<?php echo asset_path('images/icons/turneringar.png') ?>" alt="Turneringar" class="img-fluid" />
+                <img src="<?php echo asset_path('images/icons/turneringar.png') ?>" alt="Turneringar" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_turneringar') ?></strong></h2><h5>Turneringar</h5>
             </div>
 			<div class="col-6 col-md-3">
-                <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="img-fluid" />
+                <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h2><h5>Medlemmar</h5>
             </div>
 		</div>
@@ -317,3 +317,31 @@ function visa_medlemskap( $atts ) {
     return $content;
 }
 add_shortcode( 'visa_medlemskap', __NAMESPACE__ . '\visa_medlemskap' );
+
+//Visa Tak Höjd, Antalet Banor, Fri Parkering
+function visa_general_info_hallar( $atts ) {
+    global $post;
+    $atts = shortcode_atts( array(), $atts, 'visa_general_info_hallar' );
+    ob_start();?>
+    <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
+		<div class="row text-center pu-darkblue">
+			<div class="col-4">
+                <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Tak Höjd" class="w-160" />
+                <h2 class="h1"><strong><?php echo get_post_meta(get_the_ID(), 'tak_hojd', true) ?>m</strong></h2><h5>Tak Höjd</h5>
+            </div>
+			<div class="col-4">
+                <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
+                <h2 class="h1"><strong><?php echo get_theme_mod('antal_banor') ?></strong></h2><h5>Banor</h5>
+            </div>
+			<div class="col-4">
+                <img src="<?php echo asset_path('images/icons/fri_parkering.png') ?>" alt="Fri Parkering" class="w-160" />
+                <h2 class="h1"><strong>Fri</strong></h2><h5>Parkering</h5>
+            </div>
+		</div>
+	</div>
+    <?php
+    wp_reset_query();
+    $content = ob_get_clean();
+    return $content;
+}
+add_shortcode( 'visa_general_info_hallar', __NAMESPACE__ . '\visa_general_info_hallar' );

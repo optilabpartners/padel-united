@@ -87,6 +87,13 @@
         background-color: $pu-darkblue;
         border: none;
 
+        @include media-breakpoint-down(lg) {
+          &.show {
+            padding-top: 0 !important;
+            border-top: 1px solid $pu-teal !important;
+          }
+        }
+
         &.show {
           border: none;
           border-top: 3px solid $pu-teal;

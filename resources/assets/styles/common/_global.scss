@@ -54,6 +54,14 @@ h2:target::before {
   height: 40px;
 }
 
+.w-160 {
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+  }
+
+  max-width: 160px;
+}
+
 .w-75 {
   @include media-breakpoint-down(lg) {
     width: 100% !important;
