@@ -30,31 +30,32 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
       function($post) {
           wp_nonce_field( 'omrade_hall_item_general_information_codebox', 'padelunited_new_nonce' );
 
+          $hall_sida = (bool) get_post_meta($post->ID, 'hall_sida', true);
+          $hallSidaChecked = null;
+          if ($hall_sida) {
+            $hallSidaChecked = "checked";
+          }
           $matchi_link = get_post_meta($post->ID, 'matchi_link', true);
           $telefon_nummer = get_post_meta($post->ID, 'telefon_nummer', true);
           $maps_link = get_post_meta($post->ID, 'maps_link', true);
           $antal_banor = get_post_meta($post->ID, 'antal_banor', true);
           $tak_hojd = get_post_meta($post->ID, 'tak_hojd', true);
           $epost = get_post_meta($post->ID, 'epost', true);
-          $friParkering = (bool) get_post_meta($post->ID, 'fri_parkering', true);
-          $friParkeringChecked = '';
+          $fri_parkering = (bool) get_post_meta($post->ID, 'fri_parkering', true);
+          $friParkeringChecked = null;
             
-          if ($friParkeringChecked) {
+          if ($fri_parkering) {
             $friParkeringChecked = "checked";
           }
 
-          if ($hallSidaChecked) {
-            $hallSidaChecked = "checked";
-          }
-          
           $adress = get_post_meta($post->ID, 'adress', true);
           $hitta_hit = get_post_meta($post->ID, 'hitta_hit', true);
           $oppettider = get_post_meta($post->ID, 'oppettider', true);
           $google_maps_adress = get_post_meta($post->ID, 'google_maps_adress', true);
           ?>
       <div class="form-field">
-        <label for="hall_sida">Hall Sida?</label>
-        <input type="checkbox" id="hall_sida" name="hall_sida" value="1" <?= $hallSidaChecked ?>>
+        <label for="hallSida">Hall Sida?</label>
+        <input type="checkbox" id="hallSida" name="hall_sida" value="1" <?= $hallSidaChecked ?>>
       </div>
       <div class="form-field">
         <label for="matchi_link">Matchi Länk</label><br />
@@ -122,6 +123,14 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
 
         if ( defined( 'DOING_CRON' ) && DOING_CRON ) {
             return;
+        }
+
+        if (  !isset( $_POST['hall_sida'] ) ) {
+          delete_post_meta($post_id, 'hall_sida');
+        }
+
+        if (  !isset( $_POST['fri_parkering'] ) ) {
+          delete_post_meta($post_id, 'fri_parkering');
         }
 
         update_post_meta($post_id, 'hall_sida', $_POST['hall_sida']);
