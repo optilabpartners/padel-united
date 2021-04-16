@@ -335,7 +335,7 @@ function visa_general_info_hallar( $atts ) {
             </div>
 			<div class="col-4">
                 <img src="<?php echo asset_path('images/icons/fri_parkering.png') ?>" alt="Fri Parkering" class="w-160" />
-                <h2 class="h1 mb-0"><strong>Fri</strong></h2><h5>Parkering</h5>
+                <h2 class="h1 mb-0"><strong>FRI</strong></h2><h5>Parkering</h5>
             </div>
 		</div>
 	</div>

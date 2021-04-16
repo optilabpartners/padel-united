@@ -7,40 +7,41 @@
 	$featured_image = App\asset_path('images/general-jumbotron.jpg');
 @endphp
 @endif
+@if (('omrade_hall' == get_post_type()) || is_front_page())
 <div class="jumbotron d-flex align-items-center" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
 	<div class="container justify-content-center text-white pt-4 pb-4">
 		<div class="row text-center">
 			<div class="col-12">
-@if ('omrade_hall' == get_post_type())
-	<h2>Padel United Välkomnar alla</h2>
-	<p>Text som ska ligga här!</p>
-	<button class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</button>
-@elseif( is_front_page() )
-	<h2>Padel United Välkomnar alla</h2>
-	<p>Text som ska ligga här!</p>
-	<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
-		BOKA BANA NU
-	</button>
-	<div class="collapse" id="showAllBanor">
-		<div class="card-body pt-0 mt-2">
-			<ul class="list-group">
-			@if($get_matchi_links)
-				@while ($get_matchi_links->have_posts())
-				@php $get_matchi_links->the_post() @endphp
-				<li class="list-group-item list-group-item-action">
-					<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
-				</li>
-				@endwhile
+			@if ('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true))
+			<h2>{!! get_theme_mod('above_hall_footer_title') !!}</h2>
+				<p>{!! get_theme_mod('above_hall_footer_text') !!}</p>
+				<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</a>
+			@elseif( is_front_page() )
+				<h2>{!! get_theme_mod('above_footer_title') !!}</h2>
+				<p>{!! get_theme_mod('above_footer_text') !!}</p>
+				<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
+					BOKA BANA NU
+				</button>
+				<div class="collapse" id="showAllBanor">
+					<div class="card-body pt-0 mt-2">
+						<ul class="list-group">
+						@if($get_matchi_links)
+							@while ($get_matchi_links->have_posts())
+							@php $get_matchi_links->the_post() @endphp
+							<li class="list-group-item list-group-item-action">
+								<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
+							</li>
+							@endwhile
+						@endif
+						</ul>	
+					</div>
+				</div>
 			@endif
-			</ul>	
-		</div>
-	</div>
-@else
-@endif
 			</div>
 		</div>
 	</div>
 </div>
+@endif
 <footer class="content-info text-white pt-4 pb-4">
 	<div class="container">
 		<div class="row">

@@ -56,7 +56,7 @@
 			<div class="row text-center">
 				<div class="col-12">
 					<h1>{!! App::title() !!}</h1>
-					<button class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</button>
+					<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</a>
 					<div class="row mt-4">
 						<div class="col-12">
 							<p class="text-center">
