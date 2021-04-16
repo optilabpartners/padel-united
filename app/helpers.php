@@ -349,18 +349,21 @@ add_shortcode( 'visa_general_info_hallar', __NAMESPACE__ . '\visa_general_info_h
 //Hämta nyheter kopplade till en hall genom etiketter(tags)
 function nyheter_med_etikett( $atts ) {
     global $post;
-    $atts = shortcode_atts( array(), $atts, 'nyheter_med_etikett' );
+    $atts = shortcode_atts( array(
+        'etiketter' => '',
+        'limit' => 3
+    ), $atts, 'nyheter_med_etikett' );
     ob_start();
     
     $args = array(
+        'numberposts' => $atts['limit'],
         'post_type' => 'post',
-        'tag' => 'flemingsberg',
+        'tag' => $atts['etiketter'],
         'post_status' => 'publish',
-        'orderby' => 'title',
-        'order' => 'DESC',
-        'limit' => 2,
+        'orderby' => 'date',
+        'order' => 'DESC'
     );
-
+    
     $nyheter = get_posts( $args );
     ?>
     <div id="hallNyheterCarousel" class="carousel slide alignfull" data-bs-ride="carousel">
@@ -372,10 +375,12 @@ function nyheter_med_etikett( $atts ) {
       <div class="carousel-inner">
       <?php foreach ($nyheter as $key => $post) : setup_postdata( $post )?>
         <div class="carousel-item <?php echo ($key == 0 ) ? 'active' : ''?> pu-teal-bg">
-          <img src="<?php echo asset_path('images/padel_boll.jpg') ?>" style="opacity: 0.3" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-block">
-            <h2 class="h1"><?php the_title() ?></h2>
-            <a href="<?php the_permalink() ?>" class="btn btn-lg btn-huge btn-secondary">Läs mer här</a>
+          <img src="<?php echo asset_path('images/padel_boll.jpg') ?>" style="opacity: 0.3" class="d-block w-100" alt="Padel Boll">
+          <div class="carousel-caption d-block pt-0 pt-md-4">
+            <h2 class="h1"><a href="<?php the_permalink() ?>" class="text-white text-decoration-none"><?php the_title() ?></a></h2>
+            <div class="d-none d-md-block">
+                <a href="<?php the_permalink() ?>" class="btn btn-lg btn-huge btn-secondary">LÄS MER</a>
+            </div>
           </div>
         </div>
       <?php endforeach; ?>
