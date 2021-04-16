@@ -36,7 +36,6 @@
 		</div>
 	</div>
 @else
-	<h2>{!! App::title() !!}</h2>
 @endif
 			</div>
 		</div>
