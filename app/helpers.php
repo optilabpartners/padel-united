@@ -400,3 +400,59 @@ function nyheter_med_etikett( $atts ) {
     return $content;
 }
 add_shortcode( 'nyheter_med_etikett', __NAMESPACE__ . '\nyheter_med_etikett' );
+
+//Kontakt ruta för Hall sidor
+function kontakt_box( $atts ) {
+    $atts = shortcode_atts( array(), $atts, 'kontakt_box' );
+    ob_start();
+    ?>
+    <div class="container ps-0 pe-0 mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-2 text-end">
+                        <img src="<?php echo asset_path('images/icons/mobile.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />
+                    </div>
+                    <div class="col-10 align-self-center">
+                        <h3 class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?></h3>
+                    </div>
+                    <div class="mt-2 col-2 text-end">
+                        <img src="<?php echo asset_path('images/icons/mail.png') ?>" class="w-70 pe-2 p-md-0" alt="Email" />
+                    </div>
+                    <div class="col-10 align-self-center">
+                        <h3 class="ps-2 ps-md-0 text-break"><?php echo get_post_meta(get_the_ID(), 'epost', true) ?></h3>
+                    </div>
+                    <div class="mt-2 col-2 text-end">
+                        <img src="<?php echo asset_path('images/icons/location.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />
+                    </div>
+                    <div class="mt-2 col-10 align-self-center">
+                        <h3 class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'adress', true) ?></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2 col-md-6">
+                <div class="row">
+                    <div class="col-2 text-end">
+                        <img src="<?php echo asset_path('images/icons/building.png') ?>" class="w-70 pe-2 p-md-0" alt="Öppettider" />
+                    </div>
+                    <div class="col-10 align-self-center">
+                        <h3 class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'oppettider', true) ?></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 class="text-center">Hitta Hit</h2>
+            <div class="mt-2 col-12 col-md-6">
+                <p class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'hitta_hit', true) ?></p>
+            </div>
+            <div class="mt-2 col-12 col-md-6">
+                <iframe src="<?php echo get_post_meta(get_the_ID(), 'google_maps_adress', true) ?>" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <?php
+    $content = ob_get_clean();
+    return $content;
+}
+add_shortcode( 'kontakt_box', __NAMESPACE__ . '\kontakt_box' );

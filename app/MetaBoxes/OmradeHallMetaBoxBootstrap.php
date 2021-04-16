@@ -26,7 +26,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
 
     $setup->add_meta_box(
       'omrade_hall_item_general_information_codebox',
-      'General Hall Information',
+      'Generell Hall Information',
       function($post) {
           wp_nonce_field( 'omrade_hall_item_general_information_codebox', 'padelunited_new_nonce' );
 
@@ -46,6 +46,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
           $adress = get_post_meta($post->ID, 'adress', true);
           $hitta_hit = get_post_meta($post->ID, 'hitta_hit', true);
           $oppettider = get_post_meta($post->ID, 'oppettider', true);
+          $google_maps_adress = get_post_meta($post->ID, 'google_maps_adress', true);
           ?>
       <div class="form-field">
         <label for="matchi_link">Matchi Länk</label><br />
@@ -87,6 +88,10 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         <label for="oppettider">Öppettider</label><br />
         <textarea id="oppettider" name="oppettider" row="5" ><?php echo  $oppettider; ?></textarea>
       </div>
+      <div class="form-field">
+        <label for="google_maps_adress">Google Maps Adress</label><br />
+        <input type="text" name="google_maps_adress" id="google_maps_adress" value="<?php echo $google_maps_adress; ?>">
+      </div>
     <?php
 
     },
@@ -121,6 +126,6 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         update_post_meta($post_id, 'adress', $_POST['adress']);
         update_post_meta($post_id, 'hitta_hit', $_POST['hitta_hit']);
         update_post_meta($post_id, 'oppettider', $_POST['oppettider']);
+        update_post_meta($post_id, 'google_maps_adress', $_POST['google_maps_adress']);
     }
-
 }
