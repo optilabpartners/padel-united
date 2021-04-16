@@ -325,18 +325,20 @@ function visa_general_info_hallar( $atts ) {
     ob_start();?>
     <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
 		<div class="row text-center pu-darkblue">
-			<div class="col-4">
+			<div class="col">
                 <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Tak Höjd" class="w-160" />
                 <h2 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'tak_hojd', true) ?>m</strong></h2><h5>Tak Höjd</h5>
             </div>
-			<div class="col-4">
+			<div class="col">
                 <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
                 <h2 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'antal_banor', true) ?></strong></h2><h5>Banor</h5>
             </div>
-			<div class="col-4">
+            <?php if(get_post_meta(get_the_ID(), 'fri_parkering', true)) {?>
+			<div class="col">
                 <img src="<?php echo asset_path('images/icons/fri_parkering.png') ?>" alt="Fri Parkering" class="w-160" />
                 <h2 class="h1 mb-0"><strong>FRI</strong></h2><h5>Parkering</h5>
             </div>
+            <?php } ?>
 		</div>
 	</div>
     <?php
