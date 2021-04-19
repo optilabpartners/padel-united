@@ -107,6 +107,48 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
     $post->post_type, 'normal', 'core'
   );
 
+  $setup->add_meta_box(
+    'vart_seriespel_codebox',
+    'Vårt Seriespel',
+    function($post) {
+        wp_nonce_field( 'vart_seriespel_codebox', 'padelunited_new_nonce' );
+        $vart_seriespel = get_post_meta($post->ID, 'vart_seriespel', true);?>
+        <div class="form-field">
+          <?php wp_editor( $vart_seriespel, 'vart_seriespel', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+        </div>
+    <?php
+    },
+    $post->post_type , 'normal', 'core'
+  );
+
+  $setup->add_meta_box(
+    'abonnemang_codebox',
+    'Abonnemang',
+    function($post) {
+        wp_nonce_field( 'abonnemang_codebox', 'padelunited_new_nonce' );
+        $abonnemang = get_post_meta($post->ID, 'abonnemang', true);?>
+        <div class="form-field">
+          <?php wp_editor( $abonnemang, 'abonnemang', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+        </div>
+    <?php
+    },
+    $post->post_type , 'normal', 'core'
+  );
+
+  $setup->add_meta_box(
+    'ungdomar_skola_codebox',
+    'Ungdomar/Skola',
+    function($post) {
+        wp_nonce_field( 'ungdomar_skola_codebox', 'padelunited_new_nonce' );
+        $ungdomar_skola = get_post_meta($post->ID, 'ungdomar_skola', true);?>
+        <div class="form-field">
+          <?php wp_editor( $ungdomar_skola, 'ungdomar_skola', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+        </div>
+    <?php
+    },
+    $post->post_type , 'normal', 'core'
+  );
+
   $setup->init(function() { return true; });
   }
 
@@ -145,5 +187,9 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         update_post_meta($post_id, 'hitta_hit', $_POST['hitta_hit']);
         update_post_meta($post_id, 'oppettider', $_POST['oppettider']);
         update_post_meta($post_id, 'google_maps_adress', $_POST['google_maps_adress']);
+
+        update_post_meta($post_id, 'vart_seriespel', $_POST['vart_seriespel']);
+        update_post_meta($post_id, 'abonnemang', $_POST['abonnemang']);
+        update_post_meta($post_id, 'ungdomar_skola', $_POST['ungdomar_skola']);
     }
 }

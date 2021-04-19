@@ -107,11 +107,14 @@ h2:target::before {
   .nav-link {
     border-radius: 0;
     color: #000;
-    border-left: 2px solid red;
+    border-left: 4px solid $pu-beigegrey;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 0;
 
     &.active {
       background-color: #fff;
-      border-left: 2px solid blue;
+      border-left: 4px solid $pu-teal;
+      border-bottom: 1px solid lightgrey;
     }
   }
 }
@@ -122,12 +125,23 @@ h2:target::before {
   }
 }
 
-#accordionExample {
+#padelUnitedAccordion {
   .accordion-button {
     border-radius: 0;
+    border-left: 4px solid transparent;
 
-    &::after {
-      display: none;
+    &.h5 {
+      margin-bottom: 0;
+    }
+
+    &:not(.collapsed) {
+      border-left: 4px solid $pu-teal;
+    }
+
+    &.active {
+      background-color: #fff;
+      border-left: 4px solid $pu-teal;
+      border-bottom: 1px solid lightgrey;
     }
   }
 }

@@ -458,3 +458,85 @@ function kontakt_box( $atts ) {
     return $content;
 }
 add_shortcode( 'kontakt_box', __NAMESPACE__ . '\kontakt_box' );
+
+//Våra Tränare box/accordion
+function vara_tranare( $atts ) {
+    $atts = shortcode_atts( array(), $atts, 'vara_tranare' );
+    ob_start();
+    ?>
+    <div class="alignfull pu-beigegrey-bg">
+        <div class="container pt-4 pb-4 d-none d-md-block">
+            <h2 class="pu-darkblue text-center"><strong>Våra Tränare</strong></h2>
+            <div class="row">
+                <div class="d-flex align-items-start">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active h5 pu-darkblue" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            Vårt Seriespel
+                        </button>
+                        <button class="nav-link h5 pu-darkblue" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            Abonnemang
+                        </button>
+                        <button class="nav-link h5 pu-darkblue" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                            Ungdomar/Skola
+                        </button>
+                    </div>
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active p-4" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <?php echo get_post_meta(get_the_ID(), 'vart_seriespel', true) ?>
+                        </div>
+                        <div class="tab-pane fade p-4" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <?php echo get_post_meta(get_the_ID(), 'abonnemang', true) ?>
+                        </div>
+                        <div class="tab-pane fade p-4" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            <?php echo get_post_meta(get_the_ID(), 'ungdomar_skola', true) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-block d-md-none pt-4 pb-4">
+            <h2 class="pu-darkblue text-center"><strong>Våra Tränare</strong></h2>
+            <div class="accordion accordion-flush" id="padelUnitedAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header bg-white" id="headingOne">
+                        <button class="accordion-button h5 pu-darkblue bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Vårt Seriespel
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#padelUnitedAccordion">
+                        <div class="accordion-body bg-white">
+                            <?php echo get_post_meta(get_the_ID(), 'vart_seriespel', true) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header bg-white" id="headingTwo">
+                        <button class="accordion-button h5 pu-darkblue bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Abonnemang
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#padelUnitedAccordion">
+                        <div class="accordion-body bg-white">
+                            <?php echo get_post_meta(get_the_ID(), 'abonnemang', true) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header bg-white" id="headingThree">
+                        <button class="accordion-button h5 pu-darkblue bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Ungdomar/Skola
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#padelUnitedAccordion">
+                        <div class="accordion-body bg-white">
+                            <?php echo get_post_meta(get_the_ID(), 'ungdomar_skola', true) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <?php
+    $content = ob_get_clean();
+    return $content;
+}
+add_shortcode( 'vara_tranare', __NAMESPACE__ . '\vara_tranare' );

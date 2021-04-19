@@ -21,7 +21,7 @@ $pu-grey: #c1c0bb;
 $pu-darkgrey: #9e9f99;
 
 .pu-darkblue {
-  color: $pu-darkblue;
+  color: $pu-darkblue !important;
 }
 
 .pu-darkblue-bg {
@@ -42,4 +42,12 @@ $pu-darkgrey: #9e9f99;
 
 .pu-teal-bg {
   background-color: $pu-teal;
+}
+
+.pu-beigegrey-bg {
+  background-color: $pu-beigegrey;
+}
+
+.pu-beigegrey {
+  color: $pu-beigegrey;
 }
