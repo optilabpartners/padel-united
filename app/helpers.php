@@ -257,35 +257,35 @@ function visa_generella_ikoner( $atts ) {
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3 text-white text-center w-75">
             <div class="row">
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/vpt_underlag.png') ?>" alt="VPT Underlag" class="img-fluid pb-2" />
+                    <img src="<?php echo asset_path('images/icons/vpt_underlag.png') ?>" alt="VPT Underlag" class="w-160 pb-2" />
                     <h5>VTP-underlag: Mondo super court XN</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/panorama_glas.png') ?>" alt="Panorama glas på alla banor" class="img-fluid pb-2" />
+                    <img src="<?php echo asset_path('images/icons/panorama_glas.png') ?>" alt="Panorama glas på alla banor" class="w-160 pb-2" />
                     <h5>Panorama glas på alla banor</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/optimal_ljudisolering.png') ?>" alt="Optimal ljudisolering" class="img-fluid pb-2" />
+                    <img src="<?php echo asset_path('images/icons/optimal_ljudisolering.png') ?>" alt="Optimal ljudisolering" class="w-160 pb-2" />
                     <h5>Optimal ljudisolering</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/belysning.png') ?>" alt="Skräddarsydd belysning" class="img-fluid pb-2" />
+                    <img src="<?php echo asset_path('images/icons/belysning.png') ?>" alt="Skräddarsydd belysning" class="w-160 pb-2" />
                     <h5>Skräddasydd belysning</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/trivsam_luftig_miljo.png') ?>" alt="Trivsam luftig miljö" class="img-fluid pb-2" />
+                    <img src="<?php echo asset_path('images/icons/trivsam_luftig_miljo.png') ?>" alt="Trivsam luftig miljö" class="w-160 pb-2" />
                     <h5>Trivsam luftig miljö</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/barn_och_ungdom.png') ?>" alt="Barn & Ungdoms verksamhet" class="img-fluid pb-2" />
+                    <img src="<?php echo asset_path('images/icons/barn_och_ungdom.png') ?>" alt="Barn & Ungdoms verksamhet" class="w-160 pb-2" />
                     <h5>Barn & ungdoms verksamhet</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/elittranare.png') ?>" alt="Elittränare" class="img-fluid pb-2" />
+                    <img src="<?php echo asset_path('images/icons/elittranare.png') ?>" alt="Elittränare" class="w-160 pb-2" />
                     <h5>Elittränare</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/lounge.png') ?>" alt="Lounge" class="img-fluid pb-2" />
+                    <img src="<?php echo asset_path('images/icons/lounge.png') ?>" alt="Lounge" class="w-160 pb-2" />
                     <h5>Supertrevlig lounge</h5>
                 </div>
             </div>
