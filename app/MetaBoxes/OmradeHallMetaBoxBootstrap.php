@@ -108,6 +108,20 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
   );
 
   $setup->add_meta_box(
+    'tranare_codebox',
+    'Tränare',
+    function($post) {
+        wp_nonce_field( 'tranare_codebox', 'padelunited_new_nonce' );
+        $tranare = get_post_meta($post->ID, 'tranare', true);?>
+        <div class="form-field">
+          <?php wp_editor( $tranare, 'tranare', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+        </div>
+    <?php
+    },
+    $post->post_type , 'normal', 'core'
+  );
+
+  $setup->add_meta_box(
     'vart_seriespel_codebox',
     'Vårt Seriespel',
     function($post) {
@@ -122,13 +136,13 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
   );
 
   $setup->add_meta_box(
-    'abonnemang_codebox',
-    'Abonnemang',
+    'ungdomsverksamhet_codebox',
+    'Ungdomsverksamhet',
     function($post) {
-        wp_nonce_field( 'abonnemang_codebox', 'padelunited_new_nonce' );
-        $abonnemang = get_post_meta($post->ID, 'abonnemang', true);?>
+        wp_nonce_field( 'ungdomsverksamhet_codebox', 'padelunited_new_nonce' );
+        $ungdomsverksamhet = get_post_meta($post->ID, 'ungdomsverksamhet', true);?>
         <div class="form-field">
-          <?php wp_editor( $abonnemang, 'abonnemang', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+          <?php wp_editor( $ungdomsverksamhet, 'ungdomsverksamhet', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
         </div>
     <?php
     },
@@ -136,13 +150,27 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
   );
 
   $setup->add_meta_box(
-    'ungdomar_skola_codebox',
-    'Ungdomar/Skola',
+    'foretag_codebox',
+    'Företag & Skola',
     function($post) {
-        wp_nonce_field( 'ungdomar_skola_codebox', 'padelunited_new_nonce' );
-        $ungdomar_skola = get_post_meta($post->ID, 'ungdomar_skola', true);?>
+        wp_nonce_field( 'foretag_codebox', 'padelunited_new_nonce' );
+        $foretag = get_post_meta($post->ID, 'foretag', true);?>
         <div class="form-field">
-          <?php wp_editor( $ungdomar_skola, 'ungdomar_skola', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+          <?php wp_editor( $foretag, 'foretag', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+        </div>
+    <?php
+    },
+    $post->post_type , 'normal', 'core'
+  );
+
+  $setup->add_meta_box(
+    'abonnemang_codebox',
+    'Abonnemang',
+    function($post) {
+        wp_nonce_field( 'abonnemang_codebox', 'padelunited_new_nonce' );
+        $abonnemang = get_post_meta($post->ID, 'abonnemang', true);?>
+        <div class="form-field">
+          <?php wp_editor( $abonnemang, 'abonnemang', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
         </div>
     <?php
     },
@@ -188,8 +216,10 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         update_post_meta($post_id, 'oppettider', $_POST['oppettider']);
         update_post_meta($post_id, 'google_maps_adress', $_POST['google_maps_adress']);
 
+        update_post_meta($post_id, 'tranare', $_POST['vart_seriespel']);
         update_post_meta($post_id, 'vart_seriespel', $_POST['vart_seriespel']);
+        update_post_meta($post_id, 'ungdomsverksamhet', $_POST['ungdomsverksamhet']);
+        update_post_meta($post_id, 'foretag', $_POST['foretag']);
         update_post_meta($post_id, 'abonnemang', $_POST['abonnemang']);
-        update_post_meta($post_id, 'ungdomar_skola', $_POST['ungdomar_skola']);
     }
 }
