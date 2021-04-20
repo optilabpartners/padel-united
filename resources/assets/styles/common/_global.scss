@@ -3,6 +3,14 @@ body {
   overflow-x: hidden;
 }
 
+@include media-breakpoint-up(lg) {
+  a:hover {
+    &:not(.btn) {
+      text-decoration: underline !important;
+    }
+  }
+}
+
 h2:target::before {
   content: "";
   display: block;
