@@ -31,6 +31,14 @@ export default {
       } else {
         $("#ct-menu").removeClass("addWhiteBg");
       }
+      
+      //Fixing so that accordions scroll to open
+      $('.accordion-collapse').on('shown.bs.collapse', function () {
+        var $panel = $(this).closest('.accordion-item');
+        $('html,body').animate({
+            scrollTop: $panel.offset().top
+        }, 500); 
+      }); 
     });
   },
 };
