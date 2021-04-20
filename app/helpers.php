@@ -196,27 +196,39 @@ function omrades_excerpt_boxar( $atts ) {
         </div>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
-                <?php 
-                while($omrade_pages->have_posts()) {
-                $omrade_pages->the_post(); ?>
+                <?php
+                $counter = 1;
+                while($omrade_pages->have_posts() ) : $omrade_pages->the_post();?>
                 <div class="col-md-4 pe-md-1">
-                    <div class="pu-warmyellow-bg pt-2 pb-2"></div>
-                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
+                    <div class="<?php if ($counter % 3 == 1) {
+                        echo 'pu-warmyellow-bg';
+                    } else if ($counter % 3 == 2) {
+                        echo 'pu-yellow-bg';
+                    } else if ($counter % 3 == 0) {
+                        echo 'pu-orange-bg';
+                    } ?> pt-2 pb-2"></div>
+                    <div class="<?php if ($counter % 3 == 1) {
+                        echo 'pu-warmyellow-bg';
+                    } else if ($counter % 3 == 2) {
+                        echo 'pu-yellow-bg';
+                    } else if ($counter % 3 == 0) {
+                        echo 'pu-orange-bg';
+                    } ?> mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
                             <div class="row">
                                 <div class="col-3">
                                     <img class="img-fluid" src="<?php echo asset_path('images/footer-logo.png') ?>" alt="Padel United Logga" />
                                 </div>
                                 <div class="col-9 justify-content-center align-self-center">
-                                    <h3>Se våra hallar i <?= the_title() ?></h3>
+                                    <h3>Se våra hallar i <?php the_title() ?></h3>
                                 </div>
                             </div>
                         </div>
-                        <p><?= get_the_excerpt() ?></p>
+                        <p><?php get_the_excerpt() ?></p>
                         <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-primary float-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-                <?php } ?>
+                <?php $counter++; endwhile ?>
             </div>
         </div>
     </div>
