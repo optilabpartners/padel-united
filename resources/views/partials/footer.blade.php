@@ -66,10 +66,10 @@
 			</div>
 			<div class="col-md-5 mb-4 mb-md-0">
 				<div class="row">
-					<div class="col-4">
+					<div class="col-3">
 						<img class="img-fluid" src="@asset('images/footer-logo.png')" alt="Padel United Footer Logga" />
 					</div>
-					<div class="col-8">
+					<div class="col-9">
 						@if (has_nav_menu('footer_second_navigation'))
 							{!! wp_nav_menu(['theme_location' => 'footer_second_navigation', 'menu_class' => 'nav flex-column']) !!}
 						@endif
