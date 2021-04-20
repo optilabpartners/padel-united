@@ -470,19 +470,19 @@ function aktiviteter( $atts ) {
             <div class="row">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active h5 pu-darkblue" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                        <button class="nav-link active h5 pu-darkblue text-start" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
                             Tränare
                         </button>
-                        <button class="nav-link h5 pu-darkblue" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <button class="nav-link h5 pu-darkblue text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
                             Vårt Seriespel
                         </button>
-                        <button class="nav-link h5 pu-darkblue" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                        <button class="nav-link h5 pu-darkblue text-start" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
                             Ungdomsverksamhet
                         </button>
-                        <button class="nav-link h5 pu-darkblue" id="v-pills-foretag-tab" data-bs-toggle="pill" data-bs-target="#v-pills-foretag" type="button" role="tab" aria-controls="v-pills-foretag" aria-selected="false">
+                        <button class="nav-link h5 pu-darkblue text-start" id="v-pills-foretag-tab" data-bs-toggle="pill" data-bs-target="#v-pills-foretag" type="button" role="tab" aria-controls="v-pills-foretag" aria-selected="false">
                             Företag & Skola
                         </button>
-                        <button class="nav-link h5 pu-darkblue" id="v-pills-abonnemang-tab" data-bs-toggle="pill" data-bs-target="#v-pills-abonnemang" type="button" role="tab" aria-controls="v-pills-abonnemang" aria-selected="false">
+                        <button class="nav-link h5 pu-darkblue text-start" id="v-pills-abonnemang-tab" data-bs-toggle="pill" data-bs-target="#v-pills-abonnemang" type="button" role="tab" aria-controls="v-pills-abonnemang" aria-selected="false">
                             Abonnemang
                         </button>
                     </div>
