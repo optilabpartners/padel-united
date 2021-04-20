@@ -18,7 +18,7 @@
                     <div class="container d-flex h-100 p-0">
                       <div class="row">
                           <div class="col-12 justify-content-center align-self-center">
-                              <h3><?php the_title() ?></h3>
+                              <h4><?php the_title() ?></h4>
                           </div>
                       </div>
                     </div>
