@@ -550,7 +550,7 @@ function pris_boxar( $atts ) {
         <h2 class="text-white text-center"><strong>PRISER</strong></h2>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
-                <div class="col pe-md-1">
+                <div class="col pe-md-1 mb-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
@@ -563,7 +563,7 @@ function pris_boxar( $atts ) {
                         </div>
                     </div>
                 </div>
-                <div class="col pe-md-1">
+                <div class="col pe-md-1 mb-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
@@ -576,7 +576,7 @@ function pris_boxar( $atts ) {
                         </div>
                     </div>
                 </div>
-                <div class="col pe-md-1">
+                <div class="col pe-md-1 mb-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
@@ -591,7 +591,7 @@ function pris_boxar( $atts ) {
                 </div>
             </div>
         </div>
-        <p class="pt-4 text-white text-center">Hyra av racket kostar 40 kr/tillfälle</p>
+        <p class="text-white text-center">Hyra av racket kostar 40 kr/tillfälle</p>
     </div>
     <?php
     $content = ob_get_clean();
