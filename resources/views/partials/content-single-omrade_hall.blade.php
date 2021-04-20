@@ -12,7 +12,7 @@
         @if($get_children_pages)
           @while ($get_children_pages->have_posts())
             @php $get_children_pages->the_post() @endphp
-            <div class="col-md-3 col-10 pe-md-1 mb-4">
+            <div class="col-md-4 col-10 pe-md-1 mb-4">
                 <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                 <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                     <div class="container d-flex h-100 p-0">
