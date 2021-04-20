@@ -213,7 +213,7 @@ function omrades_excerpt_boxar( $atts ) {
                         echo 'pu-yellow-bg';
                     } else if ($counter % 3 == 0) {
                         echo 'pu-orange-bg';
-                    } ?> mt-2 p-4 clearfix text-white">
+                    } ?> mt-2 p-4 clearfix text-black">
                         <div class="container d-flex h-100 p-0">
                             <div class="row">
                                 <div class="col-3">
