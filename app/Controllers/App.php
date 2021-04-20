@@ -53,4 +53,23 @@ class App extends Controller
         if ($matchi_links)
            return $matchi_links;
     }
+
+    //Get children of this Områdes sida.
+    public function get_children_pages()
+    {
+        global $post;
+        $args = array(
+            'post_type'      => 'omrade_hall',
+            'posts_per_page' => -1,
+            'post_parent'    => $post->ID,
+            'order'          => 'ASC',
+            'orderby'        => 'title'
+         );
+        
+        
+        $parent = new \WP_Query( $args );
+
+        if ($parent)
+           return $parent;
+    }
 }

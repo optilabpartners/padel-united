@@ -56,21 +56,44 @@
 			<div class="row text-center">
 				<div class="col-12">
 					<h1>{!! App::title() !!}</h1>
-					<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</a>
-					<div class="row mt-4">
-						<div class="col-12">
-							<p class="text-center">
-								@if(get_post_meta(get_the_ID(), 'maps_link', true))
-									<img src="@asset('images/icons/pin.png')" style="height: 40px;" class="me-2 h-40" alt="Pin" />
-									<a class="h5 me-4 text-white text-decoration-none" href="{!! get_post_meta(get_the_ID(), 'maps_link', true) !!}" target="_blank">Hitta Hit </a>
+					@if($get_children_pages && !get_post_meta(get_the_ID(), 'hall_sida', true))
+						<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
+							BOKA BANA NU
+						</button>
+						<div class="collapse" id="showAllBanor">
+							<div class="card-body pt-0 mt-2">
+								<ul class="list-group">
+								@if($get_children_pages)
+									@while ($get_children_pages->have_posts())
+									@php $get_children_pages->the_post() @endphp
+									<li class="list-group-item list-group-item-action">
+										<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
+									</li>
+									@endwhile
+									@php wp_reset_postdata() @endphp
 								@endif
-								@if(get_post_meta(get_the_ID(), 'telefon_nummer', true))
-									<img src="@asset('images/icons/phone.png')" style="height: 40px;" class="me-2 h-40" alt="Phone" />
-									<a class="h5 text-white  text-decoration-none" href="tel:{!! get_post_meta(get_the_ID(), 'telefon_nummer', true) !!}">Ring till oss</i></a>
-								@endif
-							</p>
-						</div>						
-					</div>
+								</ul>	
+							</div>
+						</div>
+					@else
+						<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</a>
+					@endif
+					@if (get_post_meta(get_the_ID(), 'hall_sida', true))
+						<div class="row mt-4">
+							<div class="col-12">
+								<p class="text-center">
+									@if(get_post_meta(get_the_ID(), 'maps_link', true))
+										<img src="@asset('images/icons/pin.png')" style="height: 40px;" class="me-2 h-40" alt="Pin" />
+										<a class="h5 me-4 text-white text-decoration-none" href="{!! get_post_meta(get_the_ID(), 'maps_link', true) !!}" target="_blank">Hitta Hit </a>
+									@endif
+									@if(get_post_meta(get_the_ID(), 'telefon_nummer', true))
+										<img src="@asset('images/icons/phone.png')" style="height: 40px;" class="me-2 h-40" alt="Phone" />
+										<a class="h5 text-white  text-decoration-none" href="tel:{!! get_post_meta(get_the_ID(), 'telefon_nummer', true) !!}">Ring till oss</i></a>
+									@endif
+								</p>
+							</div>						
+						</div>
+					@endif
 				</div>
 			</div>
 		</div>
