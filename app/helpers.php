@@ -307,7 +307,7 @@ function visa_medlemskap( $atts ) {
                 <?php } ?>
             </ul>
             <div class="float-md-end text-center">
-                <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" target="_blank" class="btn btn-huge btn-primary">Bli medlem nu</a>
+                <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" target="_blank" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
             </div>
         </div>
     </div>
