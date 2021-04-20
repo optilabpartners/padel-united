@@ -294,7 +294,7 @@ function visa_medlemskap( $atts ) {
     $ingar_medlemskapet = array();
     $ingar_medlemskapet = explode("\n", get_theme_mod('ingar_medlemskapet'));
     ?>
-    <div class="container alignfullmobile p-0 mb-4">
+    <div class="container alignfullmobile p-0 mb-4 mt-4">
         <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
         <div class="col-12 pu-lightblue-bg text-white p-4 clearfix">    
             <div class="float-md-start"><h2 class="m-0 mb-2 mb-md-0"><strong>Detta ingår i medlemskapet</strong></h2></div>
@@ -368,7 +368,7 @@ function nyheter_med_etikett( $atts ) {
     
     $nyheter = get_posts( $args );
     ?>
-    <div id="hallNyheterCarousel" class="carousel slide alignfull mb-4" data-bs-ride="carousel">
+    <div id="hallNyheterCarousel" class="carousel slide alignfull" data-bs-ride="carousel">
         <div class="carousel-indicators">
         <?php foreach ($nyheter as $key => $post) : setup_postdata( $post )?>
             <button type="button" data-bs-target="#hallNyheterCarousel" data-bs-slide-to="<?=$key?>" <?php echo ($key == 0 ) ? 'class="active"' : ''?>></button>    
