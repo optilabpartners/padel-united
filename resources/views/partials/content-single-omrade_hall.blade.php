@@ -2,7 +2,7 @@
   <div class="entry-content">
     {!! do_shortcode( '[visa_general_info_hallar]') !!}
 
-    <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
+    <div class="container alignfull pu-darkblue-bg pt-4 pb-4 mb-4">
         <h2 class="text-white text-center"><strong>PRISER</strong></h2>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
