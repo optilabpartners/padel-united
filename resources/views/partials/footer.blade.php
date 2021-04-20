@@ -7,7 +7,7 @@
 	$featured_image = App\asset_path('images/general-jumbotron.jpg');
 @endphp
 @endif
-@if (('omrade_hall' == get_post_type()) || is_front_page())
+@if (('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true)) || is_front_page())
 <div class="jumbotron d-flex align-items-center" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
 	<div class="container justify-content-center text-white pt-4 pb-4">
 		<div class="row text-center">
