@@ -201,7 +201,7 @@ function omrades_excerpt_boxar( $atts ) {
                 $omrade_pages->the_post(); ?>
                 <div class="col-md-4 pe-md-1">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
-                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white ">
+                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
                             <div class="row">
                                 <div class="col-3">
