@@ -323,7 +323,7 @@ function visa_general_info_hallar( $atts ) {
     global $post;
     $atts = shortcode_atts( array(), $atts, 'visa_general_info_hallar' );
     ob_start();?>
-    <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
+    <div class="container w-75 pt-4 pb-4 ps-0 pe-0">
 		<div class="row text-center pu-darkblue">
 			<div class="col">
                 <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Tak Höjd" class="w-160" />
