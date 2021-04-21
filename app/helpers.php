@@ -179,7 +179,7 @@ function omrades_excerpt_boxar( $atts ) {
         'post_type' => 'omrade_hall',
         'post_status' => 'publish',
         'orderby' => 'title',
-        'order' => 'DESC',
+        'order' => 'ASC',
         'meta_query' => array(
             array(
                 'key' => 'matchi_link',
