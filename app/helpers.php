@@ -274,7 +274,7 @@ function visa_generella_ikoner( $atts ) {
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/trivsam_luftig_miljo.png') ?>" alt="Trivsam luftig miljö" class="w-160 pb-2" />
-                    <h5>Trivsam luftig miljö</h5>
+                    <h5>Streama din match hos oss</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/barn_och_ungdom.png') ?>" alt="Barn & Ungdoms verksamhet" class="w-160 pb-2" />
@@ -282,11 +282,11 @@ function visa_generella_ikoner( $atts ) {
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/elittranare.png') ?>" alt="Elittränare" class="w-160 pb-2" />
-                    <h5>Elittränare</h5>
+                    <h5>Tränare</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/lounge.png') ?>" alt="Lounge" class="w-160 pb-2" />
-                    <h5>Supertrevlig lounge</h5>
+                    <h5>Shop & Lounge</h5>
                 </div>
             </div>
         </div>

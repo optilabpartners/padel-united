@@ -42,9 +42,8 @@ class App extends Controller
             'order' => 'ASC',
             'meta_query' => array(
                 array(
-                    'key' => 'matchi_link',
-                    'value' => '',
-                    'compare' => '!='
+                    'key' => 'hall_sida',
+                    'value' => 1
                 )
             )
         );
