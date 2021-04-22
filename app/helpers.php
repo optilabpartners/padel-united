@@ -224,7 +224,7 @@ function omrades_excerpt_boxar( $atts ) {
                                 </div>
                             </div>
                         </div>
-                        <p><?php get_the_excerpt() ?></p>
+                        <p><?php echo(get_the_excerpt()) ?></p>
                         <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-primary float-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
