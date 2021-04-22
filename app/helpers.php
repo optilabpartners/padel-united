@@ -144,22 +144,29 @@ function visa_general_info( $atts ) {
     ob_start();?>
     <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
 		<div class="row text-center pu-darkblue">
-			<div class="col-6 col-md-3">
+			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h2><h5>Hallar</h5>
             </div>
-			<div class="col-6 col-md-3">
+			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_banor') ?></strong></h2><h5>Banor</h5>
             </div>
-			<div class="col-6 col-md-3">
+            <?php if(get_theme_mod('antal_turneringar')) {?>
+			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/turneringar.png') ?>" alt="Turneringar" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_turneringar') ?></strong></h2><h5>Turneringar</h5>
             </div>
-			<div class="col-6 col-md-3">
+            <div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h2><h5>Medlemmar</h5>
             </div>
+            <?php } else { ?>
+			<div class="col-6 col-md offset-3 offset-md-0">
+                <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="w-160" />
+                <h2 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h2><h5>Medlemmar</h5>
+            </div>
+            <?php } ?>
 		</div>
 	</div>
     <?php
