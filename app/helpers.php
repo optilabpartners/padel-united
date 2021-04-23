@@ -571,7 +571,7 @@ function aktiviteter( $atts ) {
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#padelUnitedAccordion">
                         <div class="accordion-body bg-white">
-                            <?php echo get_post_meta(get_the_ID(), 'ungdomar_skola', true) ?>
+                            <?php echo get_post_meta(get_the_ID(), 'ungdomsverksamhet', true) ?>
                         </div>
                     </div>
                 </div>
