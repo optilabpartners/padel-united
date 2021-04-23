@@ -376,7 +376,7 @@ function nyheter_med_etikett( $atts ) {
     ), $atts, 'nyheter_med_etikett' );
     ob_start();
 
-    array_push($atts['etiketter'], 'alla');
+    $atts['etiketter'] = $atts['etiketter'] . ',alla';
     
     $args = array(
         'numberposts' => $atts['limit'],
