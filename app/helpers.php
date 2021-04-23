@@ -280,7 +280,7 @@ function visa_generella_ikoner( $atts ) {
                     <h5>Skräddasydd belysning</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/trivsam_luftig_miljo.png') ?>" alt="Trivsam luftig miljö" class="w-160 pb-2" />
+                    <img src="<?php echo asset_path('images/icons/stream.png') ?>" alt="Streama din match" class="w-160 pb-2" />
                     <h5>Streama din match hos oss</h5>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
