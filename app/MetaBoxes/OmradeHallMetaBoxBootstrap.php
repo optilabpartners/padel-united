@@ -216,7 +216,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         update_post_meta($post_id, 'oppettider', $_POST['oppettider']);
         update_post_meta($post_id, 'google_maps_adress', $_POST['google_maps_adress']);
 
-        update_post_meta($post_id, 'tranare', $_POST['vart_seriespel']);
+        update_post_meta($post_id, 'tranare', $_POST['tranare']);
         update_post_meta($post_id, 'vart_seriespel', $_POST['vart_seriespel']);
         update_post_meta($post_id, 'ungdomsverksamhet', $_POST['ungdomsverksamhet']);
         update_post_meta($post_id, 'foretag', $_POST['foretag']);

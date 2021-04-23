@@ -67,7 +67,6 @@ class App extends Controller
         
         
         $parent = new \WP_Query( $args );
-
         if ($parent)
            return $parent;
     }

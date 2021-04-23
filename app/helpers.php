@@ -480,10 +480,19 @@ function kontakt_box( $atts ) {
 }
 add_shortcode( 'kontakt_box', __NAMESPACE__ . '\kontakt_box' );
 
-//Våra Tränare box/accordion
+//Aktiviteter box på hall sidorna
 function aktiviteter( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'aktiviteter' );
     ob_start();
+
+    $args = array(
+        'post_type' => 'omrade_hall',
+        'post_status' => 'publish',
+        'p' => 14,
+    );
+
+    $aktiviteter = new \WP_Query( $args );
+    while($aktiviteter->have_posts() ) : $aktiviteter->the_post();
     ?>
     <div class="alignfull pu-beigegrey-bg mb-4">
         <div class="container pt-4 pb-4 d-none d-md-block">
@@ -594,6 +603,7 @@ function aktiviteter( $atts ) {
         </div>
     </div>
     <?php
+    endwhile;
     $content = ob_get_clean();
     return $content;
 }
