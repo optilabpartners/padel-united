@@ -52,6 +52,9 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
           $hitta_hit = get_post_meta($post->ID, 'hitta_hit', true);
           $oppettider = get_post_meta($post->ID, 'oppettider', true);
           $google_maps_adress = get_post_meta($post->ID, 'google_maps_adress', true);
+
+          $facebook = get_post_meta($post->ID, 'facebook', true);
+          $instagram = get_post_meta($post->ID, 'instagram', true);
           ?>
       <div class="form-field">
         <label for="hallSida">Hall Sida?</label>
@@ -100,6 +103,14 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
       <div class="form-field">
         <label for="google_maps_adress">Google Maps Adress</label><br />
         <input type="text" name="google_maps_adress" id="google_maps_adress" value="<?php echo $google_maps_adress; ?>">
+      </div>
+      <div class="form-field">
+        <label for="facebook">Facebook</label><br />
+        <input type="text" name="facebook" id="facebook" value="<?php echo $facebook; ?>">
+      </div>
+      <div class="form-field">
+        <label for="instagram">Instagram</label><br />
+        <input type="text" name="instagram" id="instagram" value="<?php echo $instagram; ?>">
       </div>
     <?php
 
@@ -221,5 +232,8 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         update_post_meta($post_id, 'ungdomsverksamhet', $_POST['ungdomsverksamhet']);
         update_post_meta($post_id, 'foretag', $_POST['foretag']);
         update_post_meta($post_id, 'abonnemang', $_POST['abonnemang']);
+
+        update_post_meta($post_id, 'facebook', $_POST['facebook']);
+        update_post_meta($post_id, 'instagram', $_POST['instagram']);
     }
 }

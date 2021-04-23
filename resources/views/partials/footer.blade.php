@@ -7,6 +7,24 @@
 	$featured_image = App\asset_path('images/general-jumbotron.jpg');
 @endphp
 @endif
+
+@if ('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true))
+	@if (get_post_meta(get_the_ID(), 'facebook', true) || get_post_meta(get_the_ID(), 'instagram', true))
+	<div class="container pt-4 pb-4">
+		<div class="row text-center">	
+			<div class="col">
+				@if (get_post_meta(get_the_ID(), 'facebook', true))
+					<a href="{!! get_post_meta(get_the_ID(), 'facebook', true) !!}" target="_blank" class="pe-4"><img src="@asset('images/icons/facebook.png')" class="w-65" alt="Facebook" /></a>
+				@endif
+				@if (get_post_meta(get_the_ID(), 'instagram', true))
+					<a href="{!! get_post_meta(get_the_ID(), 'instagram', true) !!}" target="_blank" class="ps-4"><img src="@asset('images/icons/instagram.png')" class="w-65" alt="Instagram" /></a>
+				@endif
+			</div>
+		</div>
+	</div>
+	@endif
+@endif
+
 @if (('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true)) || is_front_page())
 <div class="jumbotron d-flex align-items-center" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
 	<div class="container justify-content-center text-white pt-4 pb-4">
