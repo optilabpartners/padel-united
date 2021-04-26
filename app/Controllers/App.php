@@ -57,6 +57,7 @@ class App extends Controller
     public function get_children_pages()
     {
         global $post;
+        $parent = false;
         $args = array(
             'post_type'      => 'omrade_hall',
             'posts_per_page' => -1,
@@ -67,7 +68,11 @@ class App extends Controller
         
         
         $parent = new \WP_Query( $args );
-        if ($parent)
-           return $parent;
+        if ($parent->have_posts()) {
+            return $parent;
+        } else {
+            return $parent;
+        }
+         
     }
 }
