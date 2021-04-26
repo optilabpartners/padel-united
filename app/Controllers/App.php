@@ -49,6 +49,7 @@ class App extends Controller
         );
 
         $matchi_links = new \WP_Query( $args );
+        wp_reset_query();
         if ($matchi_links)
            return $matchi_links;
     }
@@ -68,6 +69,7 @@ class App extends Controller
         
         
         $parent = new \WP_Query( $args );
+        wp_reset_query();
         if ($parent->have_posts()) {
             return $parent;
         } else {
