@@ -144,12 +144,10 @@ function visa_general_info( $atts ) {
     ob_start();?>
     <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
 		<div class="row text-center pu-darkblue">
-            <?php if(get_theme_mod('antal_hallar')) {?>
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h2><h5>Hallar</h5>
             </div>
-            <?php } ?>
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
                 <h2 class="h1"><strong><?php echo get_theme_mod('antal_banor') ?></strong></h2><h5>Banor</h5>
@@ -346,10 +344,12 @@ function visa_general_info_hallar( $atts ) {
     ob_start();?>
     <div class="container w-75 pt-4 pb-4 ps-0 pe-0">
 		<div class="row text-center pu-darkblue">
+            <?php if(get_post_meta(get_the_ID(), 'tak_hojd', true)) {?>
 			<div class="col">
                 <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Tak Höjd" class="w-160" />
                 <h2 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'tak_hojd', true) ?>m</strong></h2><h5>Tak Höjd</h5>
             </div>
+            <?php } ?>
 			<div class="col">
                 <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
                 <h2 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'antal_banor', true) ?></strong></h2><h5>Banor</h5>
