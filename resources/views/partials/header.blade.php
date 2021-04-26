@@ -49,6 +49,11 @@
 	$featured_image = App\asset_path('images/general-jumbotron.jpg');
 @endphp
 @endif
+
+@php
+$hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
+@endphp
+
 @if ('omrade_hall' == get_post_type())
 <div class="jumbotron-cover">
 	<div class="jumbotron d-flex align-items-center min-vh-60" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
@@ -56,7 +61,7 @@
 			<div class="row text-center">
 				<div class="col-12">
 					<h1>{!! App::title() !!}</h1>
-					@if($get_children_pages && !get_post_meta(get_the_ID(), 'hall_sida', true))
+					@if ($get_children_pages && $hallsida != 1)
 						<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
 							BOKA BANA NU
 						</button>
