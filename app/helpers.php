@@ -604,6 +604,7 @@ function aktiviteter( $atts ) {
     </div>
     <?php
     endwhile;
+    wp_reset_query();
     $content = ob_get_clean();
     return $content;
 }
