@@ -52,8 +52,6 @@
 
 @php
 $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
-echo($hallsida);
-echo(get_post_type());
 @endphp
 
 @if ('omrade_hall' == get_post_type())
