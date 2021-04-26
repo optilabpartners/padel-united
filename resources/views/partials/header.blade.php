@@ -61,7 +61,7 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 			<div class="row text-center">
 				<div class="col-12">
 					<h1>{!! App::title() !!}</h1>
-					@if ($get_children_pages && $hallsida != 1)
+					@if ($get_children_pages->have_posts() && $hallsida != 1)
 						<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
 							BOKA BANA NU
 						</button>
@@ -80,7 +80,7 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 								</ul>	
 							</div>
 						</div>
-					@else
+					@elseif($get_children_pages->have_posts() && $hallsida == 1)
 						<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</a>
 					@endif
 					@if (get_post_meta(get_the_ID(), 'hall_sida', true))
