@@ -80,7 +80,7 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 								</ul>	
 							</div>
 						</div>
-					@elseif($get_children_pages->have_posts() && $hallsida == 1)
+					@elseif(!$get_children_pages->have_posts() && $hallsida == 1)
 						<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</a>
 					@endif
 					@if (get_post_meta(get_the_ID(), 'hall_sida', true))
