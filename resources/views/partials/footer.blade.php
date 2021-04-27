@@ -48,13 +48,13 @@
 	<div class="container">
 		<div class="row">
 			<nav class="nav-footer col-md-4 mb-4 mb-md-0">
-				<h3 class="text-red"><strong>Våra Hallar</strong></h3>
+				<h3 class="text-red">Våra Hallar</h3>
 				@if (has_nav_menu('footer_navigation'))
 					{!! wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'nav flex-column']) !!}
         		@endif
 			</nav>
 			<div class="col-md-3 mt-2 mt-md-0 mb-4 mb-md-0">
-				<h3><strong>Kontakt</strong></h3>
+				<h3>Kontakt</h3>
 				<div class="row">
 					<div class="col-2 col-md-3">
 						<img src="@asset('images/icons/pin.png')" class="img-fluid" alt="Pin" />
