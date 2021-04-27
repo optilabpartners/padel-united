@@ -37,23 +37,7 @@
 			@elseif( is_front_page() )
 				<h2>{!! get_theme_mod('above_footer_title') !!}</h2>
 				<p>{!! get_theme_mod('above_footer_text') !!}</p>
-				<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
-					BOKA BANA NU
-				</button>
-				<div class="collapse" id="showAllBanor">
-					<div class="card-body pt-0 mt-2">
-						<ul class="list-group">
-						@if($get_matchi_links)
-							@while ($get_matchi_links->have_posts())
-							@php $get_matchi_links->the_post() @endphp
-							<li class="list-group-item list-group-item-action">
-								<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
-							</li>
-							@endwhile
-						@endif
-						</ul>	
-					</div>
-				</div>
+				<a href="https://matchi.se" target="_blank" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
 			@endif
 			</div>
 		</div>
