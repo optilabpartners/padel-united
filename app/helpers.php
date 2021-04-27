@@ -461,7 +461,7 @@ function kontakt_box( $atts ) {
                         <img src="<?php echo asset_path('images/icons/building.png') ?>" class="w-70 pe-2 p-md-0" alt="Öppettider" />
                     </div>
                     <div class="col-10 align-self-center">
-                        <h3 class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'oppettider', true) ?></h3>
+                        <p class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'oppettider', true) ?></p>
                     </div>
                 </div>
             </div>
