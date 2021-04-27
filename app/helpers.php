@@ -439,19 +439,19 @@ function kontakt_box( $atts ) {
                         <img src="<?php echo asset_path('images/icons/mobile.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />
                     </div>
                     <div class="col-10 align-self-center">
-                        <h3 class="ps-2 ps-md-0"><a class="pu-darkblue text-decoration-none" href="tel:<?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?>"><?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?></a></h3>
+                        <p class="ps-2 ps-md-0"><a class="pu-darkblue text-decoration-none" href="tel:<?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?>"><?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?></a></p>
                     </div>
                     <div class="mt-2 col-2 text-end">
                         <img src="<?php echo asset_path('images/icons/mail.png') ?>" class="w-70 pe-2 p-md-0" alt="Email" />
                     </div>
                     <div class="col-10 align-self-center">
-                        <h3 class="ps-2 ps-md-0 text-break"><a class="pu-darkblue text-decoration-none" href="mailto:<?php echo get_post_meta(get_the_ID(), 'epost', true) ?>"><?php echo get_post_meta(get_the_ID(), 'epost', true) ?></a></h3>
+                        <p class="ps-2 ps-md-0 text-break"><a class="pu-darkblue text-decoration-none" href="mailto:<?php echo get_post_meta(get_the_ID(), 'epost', true) ?>"><?php echo get_post_meta(get_the_ID(), 'epost', true) ?></a></p>
                     </div>
                     <div class="mt-2 col-2 text-end">
                         <img src="<?php echo asset_path('images/icons/location.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />
                     </div>
                     <div class="mt-2 col-10 align-self-center">
-                        <h3 class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'adress', true) ?></h3>
+                        <p class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'adress', true) ?></p>
                     </div>
                 </div>
             </div>
