@@ -199,7 +199,7 @@ function omrades_excerpt_boxar( $atts ) {
     ?>
     <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
         <div class="text-center">
-            <h2 class="pt-4 pb-4 text-white"><strong>VÄLJ OMRÅDE</strong></h2>
+            <h2 class="pt-4 pb-4 text-white">VÄLJ OMRÅDE</h2>
         </div>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
@@ -254,7 +254,7 @@ function visa_generella_ikoner( $atts ) {
     ?>
     <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
         <div class="text-center text-white">
-            <h2 class="pt-4 pb-4"><strong>Vårt hjärta slår för spelet</strong></h2>
+            <h2 class="pt-4 pb-4">Vårt hjärta slår för spelet</h2>
         </div>
         <div class="container text-white ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
@@ -467,7 +467,7 @@ function kontakt_box( $atts ) {
             </div>
         </div>
         <div class="row">
-            <h2 class="text-center">Hitta Hit</h2>
+            <h2 class="text-center pu-darkblue">Hitta Hit</h2>
             <div class="mt-2 col-12 col-md-6">
                 <p class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'hitta_hit', true) ?></p>
             </div>
@@ -498,7 +498,7 @@ function aktiviteter( $atts ) {
     ?>
     <div class="alignfull pu-beigegrey-bg mb-4">
         <div class="container pt-4 pb-4 d-none d-md-block">
-            <h2 class="pt-4 pb-4 pu-darkblue text-center"><strong>Aktiviteter</strong></h2>
+            <h2 class="pt-4 pb-4 pu-darkblue text-center">Aktiviteter</h2>
             <div class="row">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -539,7 +539,7 @@ function aktiviteter( $atts ) {
             </div>
         </div>
         <div class="container d-block d-md-none pt-4 pb-4">
-            <h2 class="pt-4 pb-4 pu-darkblue text-center"><strong>Aktiviteter</strong></h2>
+            <h2 class="pt-4 pb-4 pu-darkblue text-center">Aktiviteter</h2>
             <div class="accordion accordion-flush" id="padelUnitedAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header bg-white" id="headingOne">
@@ -618,7 +618,7 @@ function pris_boxar( $atts ) {
     ob_start();
     ?>
     <div class="container alignfull pu-darkblue-bg pt-4 pb-4 mb-4">
-        <h2 class="pt-4 pb-4 text-white text-center"><strong>PRISER</strong></h2>
+        <h2 class="pt-4 pb-4 text-white text-center">PRISER</h2>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
                 <div class="col pe-md-1 mb-4">
