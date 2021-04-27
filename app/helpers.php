@@ -214,13 +214,7 @@ function omrades_excerpt_boxar( $atts ) {
                     } else if ($counter % 3 == 0) {
                         echo 'pu-orange-bg';
                     } ?> pt-2 pb-2"></div>
-                    <div class="<?php if ($counter % 3 == 1) {
-                        echo 'pu-warmyellow-bg';
-                    } else if ($counter % 3 == 2) {
-                        echo 'pu-yellow-bg';
-                    } else if ($counter % 3 == 0) {
-                        echo 'pu-orange-bg';
-                    } ?> mt-2 p-4 clearfix text-black">
+                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
                             <div class="row">
                                 <div class="col-3">
