@@ -188,6 +188,48 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
     $post->post_type , 'normal', 'core'
   );
 
+  $setup->add_meta_box(
+    'pris_box_one_codebox',
+    'Pris Box Ett',
+    function($post) {
+        wp_nonce_field( 'pris_box_one_codebox', 'padelunited_new_nonce' );
+        $pris_box_one = get_post_meta($post->ID, 'pris_box_one', true);?>
+        <div class="form-field">
+          <?php wp_editor( $pris_box_one, 'pris_box_one', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+        </div>
+    <?php
+    },
+    $post->post_type , 'normal', 'core'
+  );
+
+  $setup->add_meta_box(
+    'pris_box_two_codebox',
+    'Pris Box Två',
+    function($post) {
+        wp_nonce_field( 'pris_box_two_codebox', 'padelunited_new_nonce' );
+        $pris_box_two = get_post_meta($post->ID, 'pris_box_two', true);?>
+        <div class="form-field">
+          <?php wp_editor( $pris_box_two, 'pris_box_two', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+        </div>
+    <?php
+    },
+    $post->post_type , 'normal', 'core'
+  );
+
+  $setup->add_meta_box(
+    'pris_box_three_codebox',
+    'Pris Box Tre',
+    function($post) {
+        wp_nonce_field( 'pris_box_three_codebox', 'padelunited_new_nonce' );
+        $pris_box_three = get_post_meta($post->ID, 'pris_box_three', true);?>
+        <div class="form-field">
+          <?php wp_editor( $pris_box_three, 'pris_box_three', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+        </div>
+    <?php
+    },
+    $post->post_type , 'normal', 'core'
+  );
+
   $setup->init(function() { return true; });
   }
 
@@ -235,5 +277,9 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
 
         update_post_meta($post_id, 'facebook', $_POST['facebook']);
         update_post_meta($post_id, 'instagram', $_POST['instagram']);
+
+        update_post_meta($post_id, 'pris_box_one', $_POST['pris_box_one']);
+        update_post_meta($post_id, 'pris_box_two', $_POST['pris_box_two']);
+        update_post_meta($post_id, 'pris_box_three', $_POST['pris_box_three']);
     }
 }

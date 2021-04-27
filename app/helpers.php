@@ -620,10 +620,7 @@ function pris_boxar( $atts ) {
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
                             <div class="row">
-                                <h3>Banhyra Dagtid</h3>
-                                <p>Gäller vardagar 06.00 – 17.00<br />
-                                  400 kr/tim<br />
-                                  360 kr/tim Plusmedlemmar</p>
+                                <?php echo get_post_meta(get_the_ID(), 'pris_box_one', true) ?>
                             </div>
                         </div>
                     </div>
@@ -633,30 +630,25 @@ function pris_boxar( $atts ) {
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
                             <div class="row">
-                                <h3>Banhyra Kväll & Helg</h3>
-                                <p>Gäller vardagar 06.00 – 17.00<br />
-                                  400 kr/tim<br />
-                                  360 kr/tim Plusmedlemmar</p>
+                                <?php echo get_post_meta(get_the_ID(), 'pris_box_two', true) ?>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php if(get_post_meta(get_the_ID(), 'pris_box_three', true)) { ?>
                 <div class="col pe-md-1 mb-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
                             <div class="row">
-                                <h3>Abonnemang</h3>
-                                <p>Gäller vardagar 06.00 – 17.00<br />
-                                  400 kr/tim<br />
-                                  360 kr/tim Plusmedlemmar</p>
+                            <?php echo get_post_meta(get_the_ID(), 'pris_box_three', true) ?>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php } ?>
             </div>
         </div>
-        <p class="text-white text-center">Hyra av racket kostar 40 kr/tillfälle</p>
     </div>
     <?php
     $content = ob_get_clean();
