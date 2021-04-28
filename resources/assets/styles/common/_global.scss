@@ -149,6 +149,7 @@ h2:target::before {
     border-left: 4px solid $pu-beigegrey;
     border-bottom: 1px solid lightgrey;
     margin-bottom: 0;
+    min-width: 335px;
 
     &.active {
       background-color: #fff;
