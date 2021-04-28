@@ -311,7 +311,7 @@ function visa_medlemskap( $atts ) {
     ?>
     <div class="container alignfullmobile p-0 mb-4 mt-4">
         <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
-        <div class="col-12 pu-lightblue-bg text-white p-4 clearfix">    
+        <div class="col-12 pu-lightblue-bg text-white ps-4 pe-4 clearfix">    
             <div class="float-md-start"><h2 class="m-0 mb-2 mb-md-0"><strong>Detta ingår i medlemskapet</strong></h2></div>
             <div class="float-md-end"><h2 class="m-0"><strong>Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</strong></h2></div>
         </div>
@@ -339,7 +339,7 @@ function visa_general_info_hallar( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'visa_general_info_hallar' );
     ob_start();?>
     <div class="container w-75 pt-4 pb-4 ps-0 pe-0">
-		<div class="row text-center pu-darkblue">
+		<div class="row text-center pu-darkblue pt-4 pb-4">
             <?php if(get_post_meta(get_the_ID(), 'tak_hojd', true)) {?>
 			<div class="col">
                 <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Tak Höjd" class="w-160" />
@@ -493,49 +493,49 @@ function aktiviteter( $atts ) {
     while($aktiviteter->have_posts() ) : $aktiviteter->the_post();
     ?>
     <div class="alignfull pu-beigegrey-bg mb-4">
-        <div class="container pt-4 pb-4 d-none d-md-block">
-            <h2 class="pt-4 pb-4 pu-darkblue text-center">Aktiviteter</h2>
+        <div class="container pb-4 d-none d-md-block">
+            <h2 class="pt-4 pb-4 pu-darkblue text-center text-uppercase">Aktiviteter</h2>
             <div class="row">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active h5 pu-darkblue text-start" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                        <button class="nav-link active h5 pu-darkblue text-start pt-4 pb-4" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
                             Tränare
                         </button>
-                        <button class="nav-link h5 pu-darkblue text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <button class="nav-link h5 pu-darkblue text-start pt-4 pb-4" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
                             Vårt Seriespel
                         </button>
-                        <button class="nav-link h5 pu-darkblue text-start" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                        <button class="nav-link h5 pu-darkblue text-start pt-4 pb-4" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
                             Ungdomsverksamhet
                         </button>
-                        <button class="nav-link h5 pu-darkblue text-start" id="v-pills-foretag-tab" data-bs-toggle="pill" data-bs-target="#v-pills-foretag" type="button" role="tab" aria-controls="v-pills-foretag" aria-selected="false">
+                        <button class="nav-link h5 pu-darkblue text-start pt-4 pb-4" id="v-pills-foretag-tab" data-bs-toggle="pill" data-bs-target="#v-pills-foretag" type="button" role="tab" aria-controls="v-pills-foretag" aria-selected="false">
                             Företag & Skola
                         </button>
-                        <button class="nav-link h5 pu-darkblue text-start" id="v-pills-abonnemang-tab" data-bs-toggle="pill" data-bs-target="#v-pills-abonnemang" type="button" role="tab" aria-controls="v-pills-abonnemang" aria-selected="false">
+                        <button class="nav-link h5 pu-darkblue text-start pt-4 pb-4" id="v-pills-abonnemang-tab" data-bs-toggle="pill" data-bs-target="#v-pills-abonnemang" type="button" role="tab" aria-controls="v-pills-abonnemang" aria-selected="false">
                             Abonnemang
                         </button>
                     </div>
                     <div class="tab-content" id="v-pills-tabContent">
-                        <div class="tab-pane fade show active p-4" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <?php echo get_post_meta(get_the_ID(), 'tranare', true) ?>
+                        <div class="tab-pane fade show active p-4 pt-0" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'tranare', true) ?></div>
                         </div>
-                        <div class="tab-pane fade p-4" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                            <?php echo get_post_meta(get_the_ID(), 'vart_seriespel', true) ?>
+                        <div class="tab-pane fade p-4 pt-0" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'vart_seriespel', true) ?></div>
                         </div>
-                        <div class="tab-pane fade p-4" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                            <?php echo get_post_meta(get_the_ID(), 'ungdomsverksamhet', true) ?>
+                        <div class="tab-pane fade p-4 pt-0" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'ungdomsverksamhet', true) ?></div>
                         </div>
-                        <div class="tab-pane fade p-4" id="v-pills-foretag" role="tabpanel" aria-labelledby="v-pills-foretag-tab">
-                            <?php echo get_post_meta(get_the_ID(), 'foretag', true) ?>
+                        <div class="tab-pane fade p-4 pt-0" id="v-pills-foretag" role="tabpanel" aria-labelledby="v-pills-foretag-tab">
+                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'foretag', true) ?></div>
                         </div>
-                        <div class="tab-pane fade p-4" id="v-pills-abonnemang" role="tabpanel" aria-labelledby="v-pills-abonnemang-tab">
-                            <?php echo get_post_meta(get_the_ID(), 'abonnemang', true) ?>
+                        <div class="tab-pane fade p-4 pt-0" id="v-pills-abonnemang" role="tabpanel" aria-labelledby="v-pills-abonnemang-tab">
+                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'abonnemang', true) ?></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container d-block d-md-none pt-4 pb-4">
-            <h2 class="pt-4 pb-4 pu-darkblue text-center">Aktiviteter</h2>
+            <h2 class="pt-4 pb-4 pu-darkblue text-center text-uppercase">Aktiviteter</h2>
             <div class="accordion accordion-flush" id="padelUnitedAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header bg-white" id="headingOne">
@@ -613,7 +613,7 @@ function pris_boxar( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'pris_boxar' );
     ob_start();
     ?>
-    <div class="container alignfull pu-darkblue-bg pt-4 pb-4 mb-4">
+    <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
         <h2 class="pt-4 pb-4 text-white text-center">PRISER</h2>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
