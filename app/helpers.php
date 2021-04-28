@@ -197,9 +197,9 @@ function omrades_excerpt_boxar( $atts ) {
 
     $omrade_pages = new \WP_Query( $args );
     ?>
-    <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
+    <div class="container alignfull pu-darkblue-bg pb-4">
         <div class="text-center">
-            <h2 class="pt-4 pb-4 text-white">VÄLJ OMRÅDE</h2>
+            <h2 class="text-white">VÄLJ OMRÅDE</h2>
         </div>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
