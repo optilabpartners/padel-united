@@ -44,7 +44,7 @@
 	</div>
 </div>
 @endif
-<footer class="content-info text-white pt-4 pb-4">
+<footer class="content-info text-white pb-4">
 	<div class="container">
 		<div class="row">
 			<nav class="nav-footer col-md-4 mb-4 mb-md-0">

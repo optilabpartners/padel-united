@@ -214,9 +214,9 @@ function omrades_excerpt_boxar( $atts ) {
                     } else if ($counter % 3 == 0) {
                         echo 'pu-orange-bg';
                     } ?> pt-2 pb-2"></div>
-                    <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
+                    <div class="pu-lightblue-bg mt-2 mb-4 p-4 text-white">
                         <div class="container d-flex h-100 p-0">
-                            <div class="row">
+                            <div class="row pt-4 pb-4">
                                 <div class="col-3">
                                     <img class="img-fluid" src="<?php echo asset_path('images/footer-logo.png') ?>" alt="Padel United Logga" />
                                 </div>
@@ -226,7 +226,9 @@ function omrades_excerpt_boxar( $atts ) {
                             </div>
                         </div>
                         <p><?php echo(get_the_excerpt()) ?></p>
-                        <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-primary float-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></a>
+                        <div class="pb-4 pt-4 clearfix">
+                            <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-primary float-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <?php $counter++; endwhile ?>
@@ -246,7 +248,7 @@ function visa_generella_ikoner( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'visa_generella_ikoner' );
     ob_start();
     ?>
-    <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
+    <div class="container alignfull pu-darkblue-bg pb-4">
         <div class="text-center text-white">
             <h2 class="pt-4 pb-4">Vårt hjärta slår för spelet</h2>
         </div>
