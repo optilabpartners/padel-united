@@ -539,7 +539,7 @@ function aktiviteter( $atts ) {
             </div>
         </div>
         <div class="container d-block d-md-none pt-4 pb-4">
-            <h2 class="pt-4 pb-4 pu-darkblue text-center fw-bold">Aktiviteter</h2>
+            <h2 class="pt-4 pb-4 text-center fw-bold">Aktiviteter</h2>
             <div class="accordion accordion-flush" id="padelUnitedAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header bg-white" id="headingOne">
