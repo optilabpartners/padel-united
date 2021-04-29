@@ -12,7 +12,7 @@
           @while ($get_children_pages->have_posts())
           @php $get_children_pages->the_post() @endphp
             <div class="col text-center mb-4">
-              <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-large btn-huge text-uppercase w-280 text-decoration text-white pu-orange-bg"><?php the_title() ?> <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-large btn-huge text-uppercase w-290 text-decoration text-white pu-orange-bg"><?php the_title() ?> <i class="fas fa-arrow-circle-right"></i></a>
             </div>
             @endwhile
           @php wp_reset_postdata() @endphp
