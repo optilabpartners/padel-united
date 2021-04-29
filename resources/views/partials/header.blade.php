@@ -56,11 +56,11 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 
 @if ('omrade_hall' == get_post_type())
 <div class="jumbotron-cover">
-	<div class="jumbotron d-flex align-items-center min-vh-60" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
+	<div class="jumbotron d-flex align-items-center min-vh-100" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
-					<h1 class="text-uppercase pb-2 pb-md-4">{!! App::title() !!}</h1>
+					<h1 class="text-uppercase pb-2 pb-md-4 fw-bold">{!! App::title() !!}</h1>
 					@if ($get_children_pages->have_posts() && $hallsida != 1)
 						<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
 							BOKA BANA NU
@@ -106,11 +106,11 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 </div>
 @elseif( is_front_page() )
 <div class="jumbotron-cover">
-	<div class="jumbotron d-flex align-items-center min-vh-50" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+	<div class="jumbotron d-flex align-items-center min-vh-100" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center justify-content-md-center">
 				<div class="col-12 col-md-6">
-					<h1 class="text-uppercase pb-2 pb-md-4">{!! App::title() !!}</h1>
+					<h1 class="text-uppercase pb-2 pb-md-4 fw-bold">{!! App::title() !!}</h1>
 					<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
 						BOKA BANA NU
 					</button>
@@ -136,11 +136,11 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 </div>
 @else
 <div class="jumbotron-cover">
-	<div class="jumbotron d-flex align-items-center min-vh-50" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+	<div class="jumbotron d-flex align-items-center min-vh-100" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
-					<h1 class="text-uppercase">{!! App::title() !!}</h1>
+					<h1 class="text-uppercase fw-bold">{!! App::title() !!}</h1>
 				</div>
 			</div>
 		</div>

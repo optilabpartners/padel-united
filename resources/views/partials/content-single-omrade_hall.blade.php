@@ -6,7 +6,7 @@
 
     @if($get_children_pages->have_posts())
     <div class="container alignfull pu-darkblue-bg pb-4">
-      <h2 class="pt-4 pb-4 text-white text-center text-uppercase">VÅRA HALLAR I {!! the_title() !!}</h2>
+      <h2 class="pt-4 pb-4 text-white text-center fw-bold">Våra Hallar i {!! the_title() !!}</h2>
       <div class="container ps-0 pe-0">
         <div class="row">
           @while ($get_children_pages->have_posts())

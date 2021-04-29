@@ -143,28 +143,28 @@ function visa_general_info( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'visa_general_info' );
     ob_start();?>
     <div class="container w-75 pt-md-4 pb-md-4 ps-0 pe-0">
-		<div class="row text-center pu-darkblue">
+		<div class="row text-center pu-darkblue pb-4">
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="w-160" />
-                <h2 class="h1"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h2><h5>Hallar</h5>
+                <h3 class="h1"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h3><h5>Hallar</h5>
             </div>
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
-                <h2 class="h1"><strong><?php echo get_theme_mod('antal_banor') ?></strong></h2><h5>Banor</h5>
+                <h3 class="h1"><strong><?php echo get_theme_mod('antal_banor') ?></strong></h3><h5>Banor</h5>
             </div>
             <?php if(get_theme_mod('antal_turneringar')) {?>
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/turneringar.png') ?>" alt="Turneringar" class="w-160" />
-                <h2 class="h1"><strong><?php echo get_theme_mod('antal_turneringar') ?></strong></h2><h5>Turneringar</h5>
+                <h3 class="h1"><strong><?php echo get_theme_mod('antal_turneringar') ?></strong></h3><h5>Turneringar</h5>
             </div>
             <div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="w-160" />
-                <h2 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h2><h5>Medlemmar</h5>
+                <h3 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Medlemmar</h5>
             </div>
             <?php } else { ?>
 			<div class="col-6 col-md offset-3 offset-md-0">
                 <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="w-160" />
-                <h2 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h2><h5>Medlemmar</h5>
+                <h3 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Medlemmar</h5>
             </div>
             <?php } ?>
 		</div>
@@ -197,9 +197,9 @@ function omrades_excerpt_boxar( $atts ) {
 
     $omrade_pages = new \WP_Query( $args );
     ?>
-    <div class="container alignfull pu-darkblue-bg pb-4">
-        <div class="text-center">
-            <h2 class="text-white">VÄLJ OMRÅDE</h2>
+    <div class="container alignfull pu-darkblue-bg pb-4 pt-4">
+        <div class="text-center pb-4">
+            <h2 class="text-white fw-bold">Välj område</h2>
         </div>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
@@ -250,7 +250,7 @@ function visa_generella_ikoner( $atts ) {
     ?>
     <div class="container alignfull pu-darkblue-bg pb-4">
         <div class="text-center text-white">
-            <h2 class="pt-4 pb-4 text-uppercase">Vårt hjärta slår för spelet</h2>
+            <h2 class="pt-4 pb-4 fw-bold">Vårt hjärta slår för spelet</h2>
         </div>
         <div class="container text-white ps-0 pe-0 ps-md-3 pe-md-3 text-center">
             <div class="row">
@@ -343,17 +343,17 @@ function visa_general_info_hallar( $atts ) {
             <?php if(get_post_meta(get_the_ID(), 'tak_hojd', true)) {?>
 			<div class="col">
                 <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Tak Höjd" class="w-160" />
-                <h2 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'tak_hojd', true) ?>m</strong></h2><h5>Tak Höjd</h5>
+                <h3 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'tak_hojd', true) ?>m</strong></h3><h5>Tak Höjd</h5>
             </div>
             <?php } ?>
 			<div class="col">
                 <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
-                <h2 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'antal_banor', true) ?></strong></h2><h5>Banor</h5>
+                <h3 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'antal_banor', true) ?></strong></h3><h5>Banor</h5>
             </div>
             <?php if(get_post_meta(get_the_ID(), 'fri_parkering', true)) {?>
 			<div class="col">
                 <img src="<?php echo asset_path('images/icons/fri_parkering.png') ?>" alt="Fri Parkering" class="w-160" />
-                <h2 class="h1 mb-0"><strong>FRI</strong></h2><h5>Parkering</h5>
+                <h3 class="h1 mb-0"><strong>FRI</strong></h3><h5>Parkering</h5>
             </div>
             <?php } ?>
 		</div>
@@ -494,7 +494,7 @@ function aktiviteter( $atts ) {
     ?>
     <div class="alignfull pu-beigegrey-bg mb-4">
         <div class="container pb-4 d-none d-md-block">
-            <h2 class="pt-4 pb-4 pu-darkblue text-center text-uppercase">Aktiviteter</h2>
+            <h2 class="pt-4 pb-4 pu-darkblue text-center fw-bold">Aktiviteter</h2>
             <div class="row">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -535,7 +535,7 @@ function aktiviteter( $atts ) {
             </div>
         </div>
         <div class="container d-block d-md-none pt-4 pb-4">
-            <h2 class="pt-4 pb-4 pu-darkblue text-center text-uppercase">Aktiviteter</h2>
+            <h2 class="pt-4 pb-4 pu-darkblue text-center fw-bold">Aktiviteter</h2>
             <div class="accordion accordion-flush" id="padelUnitedAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header bg-white" id="headingOne">
@@ -614,7 +614,7 @@ function pris_boxar( $atts ) {
     ob_start();
     ?>
     <div class="container alignfull pu-darkblue-bg pb-4">
-        <h2 class="pt-4 pb-4 text-white text-center">PRISER</h2>
+        <h2 class="pt-4 pb-4 text-white text-center fw-bold">Priser</h2>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
             <div class="row">
                 <div class="col pe-md-1 mb-4">

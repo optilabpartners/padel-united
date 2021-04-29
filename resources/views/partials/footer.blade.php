@@ -27,15 +27,15 @@
 
 @if (('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true)) || is_front_page())
 <div class="jumbotron d-flex align-items-center" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
-	<div class="container justify-content-center text-white pb-4">
-		<div class="row text-center">
-			<div class="col-12">
+	<div class="container justify-content-center text-white pt-4 pb-4">
+		<div class="row text-center pb-4">
+			<div class="col-12 pb-4">
 			@if ('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true))
-				<h2>{!! get_theme_mod('above_hall_footer_title') !!}</h2>
+				<h2 class="fw-bold">{!! get_theme_mod('above_hall_footer_title') !!}</h2>
 				<p>{!! get_theme_mod('above_hall_footer_text') !!}</p>
 				<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</a>
 			@elseif( is_front_page() )
-				<h2>{!! get_theme_mod('above_footer_title') !!}</h2>
+				<h2 class="fw-bold">{!! get_theme_mod('above_footer_title') !!}</h2>
 				<p>{!! get_theme_mod('above_footer_text') !!}</p>
 				<a href="https://matchi.se" target="_blank" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
 			@endif
@@ -45,10 +45,10 @@
 </div>
 @endif
 <footer class="content-info text-white pt-4 pb-4">
-	<div class="container">
-		<div class="row">
+	<div class="container pb-4 pt-4">
+		<div class="row pt-4 pb-4">
 			<nav class="nav-footer col-md-4 mb-4 mb-md-0">
-				<h3 class="text-red">Våra Hallar</h3>
+				<h3>Våra Hallar</h3>
 				@if (has_nav_menu('footer_navigation'))
 					{!! wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'nav flex-column']) !!}
         		@endif
