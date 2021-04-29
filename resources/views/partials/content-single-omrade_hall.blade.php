@@ -5,9 +5,9 @@
     @endif
 
     @if($get_children_pages->have_posts())
-    <div class="container alignfull pu-darkblue-bg pb-4">
+    <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
       <h2 class="pt-4 pb-4 text-white text-center fw-bold">Våra Hallar i {!! the_title() !!}</h2>
-      <div class="container ps-0 pe-0">
+      <div class="container ps-0 pe-0 pt-4 pb-4">
         <div class="row">
           @while ($get_children_pages->have_posts())
           @php $get_children_pages->the_post() @endphp
