@@ -467,7 +467,7 @@ function kontakt_box( $atts ) {
             </div>
         </div>
         <div class="row">
-            <h2 class="text-center pu-darkblue">Hitta Hit</h2>
+            <h2 class="text-center pu-darkblue fw-bold">Hitta Hit</h2>
             <div class="mt-2 col-12 col-md-6">
                 <p class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'hitta_hit', true) ?></p>
             </div>
