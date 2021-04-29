@@ -496,10 +496,10 @@ function aktiviteter( $atts ) {
     $aktiviteter = new \WP_Query( $args );
     while($aktiviteter->have_posts() ) : $aktiviteter->the_post();
     ?>
-    <div class="alignfull pu-beigegrey-bg mb-4">
+    <div class="alignfull pu-beigegrey-bg pt-4 pb-4 mb-4">
         <div class="container pb-4 d-none d-md-block">
             <h2 class="pt-4 pb-4 pu-darkblue text-center fw-bold">Aktiviteter</h2>
-            <div class="row">
+            <div class="row pt-4 pb-4">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="nav-link active h5 pu-darkblue text-start pt-4 pb-4" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
@@ -617,11 +617,11 @@ function pris_boxar( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'pris_boxar' );
     ob_start();
     ?>
-    <div class="container alignfull pu-darkblue-bg pb-4">
+    <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
         <h2 class="pt-4 pb-4 text-white text-center fw-bold">Priser</h2>
-        <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
+        <div class="container ps-0 pe-0 ps-md-3 pe-md-3 pt-4 pb-4">
             <div class="row">
-                <div class="col pe-md-1 mb-4">
+                <div class="col pe-md-1 mb-4 pt-4 pb-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
@@ -631,7 +631,7 @@ function pris_boxar( $atts ) {
                         </div>
                     </div>
                 </div>
-                <div class="col pe-md-1 mb-4">
+                <div class="col pe-md-1 mb-4 pt-4 pb-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
@@ -642,7 +642,7 @@ function pris_boxar( $atts ) {
                     </div>
                 </div>
                 <?php if(get_post_meta(get_the_ID(), 'pris_box_three', true)) { ?>
-                <div class="col pe-md-1 mb-4">
+                <div class="col pe-md-1 mb-4 pt-4 pb-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
