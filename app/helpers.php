@@ -498,7 +498,7 @@ function aktiviteter( $atts ) {
     ?>
     <div class="alignfull pu-beigegrey-bg pt-4 pb-4 mb-4">
         <div class="container pb-4 d-none d-md-block">
-            <h2 class="pt-4 pb-4 pu-darkblue text-center fw-bold">Aktiviteter</h2>
+            <h2 class="pt-4 pb-4 text-center fw-bold">Aktiviteter</h2>
             <div class="row pt-4 pb-4">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
