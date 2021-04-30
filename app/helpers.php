@@ -437,18 +437,18 @@ function kontakt_box( $atts ) {
                 <h2 class="fw-bold">Kontakt</h2>
                 <p><?php echo get_post_meta(get_the_ID(), 'oppettider', true) ?></p>
                 <div class="row pt-4">
+                <?php if(get_post_meta(get_the_ID(), 'telefon_nummer', true)) { ?>
                     <div class="col-12 pb-2">
                         <div class="row">
-                        <?php if(get_post_meta(get_the_ID(), 'telefon_nummer', true)) { ?>
                             <div class="col-2">
                                 <img src="<?php echo asset_path('images/icons/mobile.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />               
                             </div>
                             <div class="align-self-center ps-4 col-10 ps-md-0">
                                 <a class="pu-darkblue text-decoration-none" href="tel:<?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?>"><?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?></a>
                             </div>
-                        </div>
-                        <?php } ?>
+                        </div>        
                     </div>
+                <?php } ?>
                     <div class="col-12 pb-2">
                         <div class="row">
                             <div class="col-2">
