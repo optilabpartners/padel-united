@@ -9,6 +9,10 @@
 
 .jumbotron-cover {
   margin-top: -84px;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: -58px;
+  }
 }
 
 .logo {
