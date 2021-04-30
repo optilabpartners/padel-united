@@ -71,6 +71,8 @@
     transition: width 0.6s ease;
 
     li {
+      border: none;
+
       a {
         padding: 0.5rem 1rem 0.5rem 1.5rem;
         color: #fff;
@@ -97,7 +99,7 @@
 
         &.show {
           border: none;
-          border-top: 1px solid $pu-teal !important;
+          border-top: 3px solid $pu-teal;
           border-radius: 0;
           margin-top: 0;
           background-color: $pu-darkblue;
