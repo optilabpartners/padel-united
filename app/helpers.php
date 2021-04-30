@@ -316,8 +316,8 @@ function visa_medlemskap( $atts ) {
     <div class="container alignfullmobile p-0 pb-4">
         <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
         <div class="col-12 pu-lightblue-bg text-white ps-4 pe-4 clearfix">    
-            <div class="float-md-start"><h2 class="m-0 mb-2 mb-md-0"><strong>Detta ingår i medlemskapet</strong></h2></div>
-            <div class="float-md-end"><h2 class="m-0"><strong>Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</strong></h2></div>
+            <div class="float-md-start"><h2 class="small-padding fw-bold">Detta ingår i medlemskapet</h2></div>
+            <div class="float-md-end"><h2 class="small-padding fw-bold">Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</h2></div>
         </div>
         <div class="col-12 p-2 border clearfix">
             <ul class="float-start pu-darkblue">
@@ -431,47 +431,47 @@ function kontakt_box( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'kontakt_box' );
     ob_start();
     ?>
-    <div class="container ps-0 pe-0 mb-4">
-        <div class="row">
+    <div class="container ps-0 pe-0 pb-4">
+        <div class="row pb-4">
             <div class="col-md-6">
-                <div class="row">
-                    <div class="col-2 text-end">
-                        <img src="<?php echo asset_path('images/icons/mobile.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />
+                <h2 class="fw-bold">Kontakt</h2>
+                <p><?php echo get_post_meta(get_the_ID(), 'oppettider', true) ?></p>
+                <div class="row pt-4">
+                    <div class="col-12 pb-2">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="<?php echo asset_path('images/icons/mobile.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />               
+                            </div>
+                            <div class="align-self-center ps-4 col-10 ps-md-0">
+                                <a class="pu-darkblue text-decoration-none" href="tel:<?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?>"><?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-10 align-self-center">
-                        <p class="ps-2 ps-md-0"><a class="pu-darkblue text-decoration-none" href="tel:<?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?>"><?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?></a></p>
+                    <div class="col-12 pb-2">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="<?php echo asset_path('images/icons/mail.png') ?>" class="w-70 pe-2 p-md-0" alt="Email" />
+                            </div>
+                            <div class="align-self-center ps-4 col-10 ps-md-0">
+                                <a class="pu-darkblue text-decoration-none" href="mailto:<?php echo get_post_meta(get_the_ID(), 'epost', true) ?>"><?php echo get_post_meta(get_the_ID(), 'epost', true) ?></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-2 col-2 text-end">
-                        <img src="<?php echo asset_path('images/icons/mail.png') ?>" class="w-70 pe-2 p-md-0" alt="Email" />
-                    </div>
-                    <div class="col-10 align-self-center">
-                        <p class="ps-2 ps-md-0 text-break"><a class="pu-darkblue text-decoration-none" href="mailto:<?php echo get_post_meta(get_the_ID(), 'epost', true) ?>"><?php echo get_post_meta(get_the_ID(), 'epost', true) ?></a></p>
-                    </div>
-                    <div class="mt-2 col-2 text-end">
-                        <img src="<?php echo asset_path('images/icons/location.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />
-                    </div>
-                    <div class="mt-2 col-10 align-self-center">
-                        <p class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'adress', true) ?></p>
+                    <div class="col-12">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="<?php echo asset_path('images/icons/location.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />
+                        </div>
+                        <div class="align-self-center ps-4 col-10 ps-md-0">
+                            <span class="align-middle"><?php echo get_post_meta(get_the_ID(), 'adress', true) ?></span>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="mt-2 col-md-6">
-                <div class="row">
-                    <div class="col-2 text-end">
-                        <img src="<?php echo asset_path('images/icons/building.png') ?>" class="w-70 pe-2 p-md-0" alt="Öppettider" />
-                    </div>
-                    <div class="col-10 align-self-center">
-                        <p class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'oppettider', true) ?></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <h2 class="text-center fw-bold">Hitta Hit</h2>
-            <div class="mt-2 col-12 col-md-6">
-                <p class="ps-2 ps-md-0"><?php echo get_post_meta(get_the_ID(), 'hitta_hit', true) ?></p>
-            </div>
-            <div class="mt-2 col-12 col-md-6">
+            <div class="col-md-6">
+                <h2 class="fw-bold">Hitta Hit</h2>
+                <p><?php echo get_post_meta(get_the_ID(), 'hitta_hit', true) ?></p>
                 <iframe src="<?php echo get_post_meta(get_the_ID(), 'google_maps_adress', true) ?>" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>

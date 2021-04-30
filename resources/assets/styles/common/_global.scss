@@ -23,6 +23,13 @@ h2,
   padding-bottom: 3rem !important;
   padding-top: 3rem !important;
   margin-bottom: 0 !important;
+
+  &.small-padding {
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 1.5rem !important;
+      padding-top: 1.5rem !important;
+    }
+  }
 }
 
 h2:target::before {
@@ -167,6 +174,10 @@ h2:target::before {
 }
 
 #padelUnitedAccordion {
+  .accordion-header {
+    padding: 0 !important;
+  }
+
   .accordion-button {
     border-radius: 0;
     border-left: 4px solid transparent;
