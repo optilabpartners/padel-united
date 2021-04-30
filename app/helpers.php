@@ -221,7 +221,11 @@ function omrades_excerpt_boxar( $atts ) {
                                     <img class="img-fluid" src="<?php echo asset_path('images/footer-logo.png') ?>" alt="Padel United Logga" />
                                 </div>
                                 <div class="col-9 justify-content-center align-self-center">
-                                    <h3>Se våra hallar i <?php the_title() ?></h3>
+                                    <?php if(get_post_meta(get_the_ID(), 'short_title', true)) {?>
+                                        <h3>Se våra hallar i <?php echo(get_post_meta(get_the_ID(), 'short_title', true)) ?></h3>
+                                    <?php } else {?>
+                                        <h3>Se våra hallar i <?php the_title() ?></h3>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
