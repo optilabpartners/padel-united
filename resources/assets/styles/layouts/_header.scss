@@ -97,7 +97,7 @@
 
         &.show {
           border: none;
-          border-top: 3px solid $pu-teal;
+          border-top: 1px solid $pu-teal !important;
           border-radius: 0;
           margin-top: 0;
           background-color: $pu-darkblue;
