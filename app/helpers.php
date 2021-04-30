@@ -439,6 +439,7 @@ function kontakt_box( $atts ) {
                 <div class="row pt-4">
                     <div class="col-12 pb-2">
                         <div class="row">
+                        <?php if(get_post_meta(get_the_ID(), 'telefon_nummer', true)) { ?>
                             <div class="col-2">
                                 <img src="<?php echo asset_path('images/icons/mobile.png') ?>" class="w-70 pe-2 p-md-0" alt="Telefon nummer" />               
                             </div>
@@ -446,6 +447,7 @@ function kontakt_box( $atts ) {
                                 <a class="pu-darkblue text-decoration-none" href="tel:<?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?>"><?php echo get_post_meta(get_the_ID(), 'telefon_nummer', true) ?></a>
                             </div>
                         </div>
+                        <?php } ?>
                     </div>
                     <div class="col-12 pb-2">
                         <div class="row">
