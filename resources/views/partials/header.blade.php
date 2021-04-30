@@ -60,7 +60,7 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
-					<h1 class="text-uppercase pb-2 pb-md-4 fw-bold">{!! App::title() !!}</h1>
+					<h1 class="text-uppercase pb-2 pb-md-4 fw-bold">@if(!$get_children_pages->have_posts() && $hallsida == 1) Padel United @endif{!! App::title() !!}</h1>
 					@if ($get_children_pages->have_posts() && $hallsida != 1)
 						<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
 							BOKA BANA NU

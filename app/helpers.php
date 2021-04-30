@@ -146,25 +146,25 @@ function visa_general_info( $atts ) {
 		<div class="row text-center pu-darkblue pb-4">
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="w-160" />
-                <h3 class="h1"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h3><h5>Hallar</h5>
+                <h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h3><h5>Hallar</h5>
             </div>
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
-                <h3 class="h1"><strong><?php echo get_theme_mod('antal_banor') ?></strong></h3><h5>Banor</h5>
+                <h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_banor') ?></strong></h3><h5>Banor</h5>
             </div>
             <?php if(get_theme_mod('antal_turneringar')) {?>
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/turneringar.png') ?>" alt="Turneringar" class="w-160" />
-                <h3 class="h1"><strong><?php echo get_theme_mod('antal_turneringar') ?></strong></h3><h5>Turneringar</h5>
+                <h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_turneringar') ?></strong></h3><h5>Turneringar</h5>
             </div>
             <div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="w-160" />
-                <h3 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Medlemmar</h5>
+                <h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Medlemmar</h5>
             </div>
             <?php } else { ?>
 			<div class="col-6 col-md offset-3 offset-md-0">
                 <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="w-160" />
-                <h3 class="h1"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Medlemmar</h5>
+                <h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Medlemmar</h5>
             </div>
             <?php } ?>
 		</div>
@@ -201,18 +201,18 @@ function omrades_excerpt_boxar( $atts ) {
         <div class="text-center pb-4">
             <h2 class="text-white fw-bold">Välj område</h2>
         </div>
-        <div class="container ps-0 pe-0 ps-md-3 pe-md-3">
+        <div class="container ps-0 pe-0 ps-md-3 pe-md-3 pb-4">
             <div class="row">
                 <?php
                 $counter = 1;
                 while($omrade_pages->have_posts() ) : $omrade_pages->the_post();?>
                 <div class="col-md-4 pe-md-1">
                     <div class="<?php if ($counter % 3 == 1) {
-                        echo 'pu-warmyellow-bg';
-                    } else if ($counter % 3 == 2) {
-                        echo 'pu-yellow-bg';
-                    } else if ($counter % 3 == 0) {
                         echo 'pu-orange-bg';
+                    } else if ($counter % 3 == 2) {
+                        echo 'pu-warmyellow-bg';
+                    } else if ($counter % 3 == 0) {
+                        echo 'pu-yellow-bg';
                     } ?> pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 mb-4 p-4 text-white">
                         <div class="container d-flex h-100 p-0">
@@ -313,20 +313,22 @@ function visa_medlemskap( $atts ) {
     $ingar_medlemskapet = array();
     $ingar_medlemskapet = explode("\n", get_theme_mod('ingar_medlemskapet'));
     ?>
-    <div class="container alignfullmobile p-0 pb-4">
-        <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
-        <div class="col-12 pu-lightblue-bg text-white ps-4 pe-4 clearfix">    
-            <div class="float-md-start"><h2 class="small-padding fw-bold">Detta ingår i medlemskapet</h2></div>
-            <div class="float-md-end"><h2 class="small-padding fw-bold">Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</h2></div>
-        </div>
-        <div class="col-12 p-2 border clearfix">
-            <ul class="float-start pu-darkblue">
-                <?php foreach($ingar_medlemskapet as $medlemskap) {?> 
-                    <li><?php echo($medlemskap); ?>    
-                <?php } ?>
-            </ul>
-            <div class="float-md-end text-center">
-                <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" target="_blank" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
+    <div class="container alignfullmobile w-85 p-0 pb-4">
+        <div class="pb-4">
+            <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
+            <div class="col-12 pu-lightblue-bg text-white ps-4 pe-4 clearfix">    
+                <div class="float-md-start"><h2 class="h3 small-padding fw-bold">Detta ingår i medlemskapet</h2></div>
+                <div class="float-md-end"><h2 class="small-padding fw-bold">Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</h2></div>
+            </div>
+            <div class="col-12 p-2 border clearfix">
+                <ul class="float-start pu-darkblue">
+                    <?php foreach($ingar_medlemskapet as $medlemskap) {?> 
+                        <li><?php echo($medlemskap); ?>    
+                    <?php } ?>
+                </ul>
+                <div class="float-md-end text-center">
+                    <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" target="_blank" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
+                </div>
             </div>
         </div>
     </div>
@@ -343,25 +345,27 @@ function visa_general_info_hallar( $atts ) {
     $atts = shortcode_atts( array(), $atts, 'visa_general_info_hallar' );
     ob_start();?>
     <div class="container w-75 pt-4 pb-4 ps-0 pe-0">
-		<div class="row text-center pu-darkblue pt-4 pb-4">
-            <?php if(get_post_meta(get_the_ID(), 'tak_hojd', true)) {?>
-			<div class="col">
-                <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Tak Höjd" class="w-160" />
-                <h3 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'tak_hojd', true) ?>m</strong></h3><h5>Tak Höjd</h5>
+        <div class="pt-2 pb-2">
+            <div class="row text-center pu-darkblue pt-4 pb-4">
+                <?php if(get_post_meta(get_the_ID(), 'tak_hojd', true)) {?>
+                <div class="col">
+                    <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Tak Höjd" class="w-160" />
+                    <h3 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'tak_hojd', true) ?>m</strong></h3><h5>Tak Höjd</h5>
+                </div>
+                <?php } ?>
+                <div class="col">
+                    <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
+                    <h3 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'antal_banor', true) ?></strong></h3><h5>Banor</h5>
+                </div>
+                <?php if(get_post_meta(get_the_ID(), 'fri_parkering', true)) {?>
+                <div class="col">
+                    <img src="<?php echo asset_path('images/icons/fri_parkering.png') ?>" alt="Fri Parkering" class="w-160" />
+                    <h3 class="h1 mb-0"><strong>FRI</strong></h3><h5>Parkering</h5>
+                </div>
+                <?php } ?>
             </div>
-            <?php } ?>
-			<div class="col">
-                <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
-                <h3 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'antal_banor', true) ?></strong></h3><h5>Banor</h5>
-            </div>
-            <?php if(get_post_meta(get_the_ID(), 'fri_parkering', true)) {?>
-			<div class="col">
-                <img src="<?php echo asset_path('images/icons/fri_parkering.png') ?>" alt="Fri Parkering" class="w-160" />
-                <h3 class="h1 mb-0"><strong>FRI</strong></h3><h5>Parkering</h5>
-            </div>
-            <?php } ?>
-		</div>
-	</div>
+        </div>
+    </div>
     <?php
     wp_reset_query();
     $content = ob_get_clean();

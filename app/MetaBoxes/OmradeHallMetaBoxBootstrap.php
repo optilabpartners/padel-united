@@ -35,6 +35,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
           if ($hall_sida) {
             $hallSidaChecked = "checked";
           }
+          $short_title = get_post_meta($post->ID, 'short_title', true);
           $matchi_link = get_post_meta($post->ID, 'matchi_link', true);
           $telefon_nummer = get_post_meta($post->ID, 'telefon_nummer', true);
           $maps_link = get_post_meta($post->ID, 'maps_link', true);
@@ -59,6 +60,10 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
       <div class="form-field">
         <label for="hallSida">Hall Sida?</label>
         <input type="checkbox" id="hallSida" name="hall_sida" value="1" <?= $hallSidaChecked ?>>
+      </div>
+      <div class="form-field">
+        <label for="short_title">Kort Titel</label><br />
+        <input type="text" name="short_title" id="short_title" value="<?php echo $short_title; ?>">
       </div>
       <div class="form-field">
         <label for="matchi_link">Matchi Länk</label><br />
@@ -257,6 +262,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         }
 
         update_post_meta($post_id, 'hall_sida', $_POST['hall_sida']);
+        update_post_meta($post_id, 'short_title', $_POST['short_title']);
         update_post_meta($post_id, 'matchi_link', $_POST['matchi_link']);
         update_post_meta($post_id, 'telefon_nummer', $_POST['telefon_nummer']);
         update_post_meta($post_id, 'maps_link', $_POST['maps_link']);

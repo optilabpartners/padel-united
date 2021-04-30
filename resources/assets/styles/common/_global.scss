@@ -30,6 +30,10 @@ h2,
       padding-top: 1.5rem !important;
     }
   }
+
+  &.no-padding {
+    padding: 0 !important;
+  }
 }
 
 h2:target::before {
@@ -135,6 +139,14 @@ h2:target::before {
 
 .w-70 {
   max-width: 70px;
+}
+
+.w-85 {
+  @include media-breakpoint-down(lg) {
+    width: 100vw !important;
+  }
+
+  width: 85% !important;
 }
 
 .w-75 {
