@@ -1,6 +1,6 @@
 #ct-menu.container-fluid {
-  background: transparent;
-  transition: background-color 0.5s ease;
+  position: absolute;
+  z-index: 2;
 }
 
 #ct-menu.addWhiteBg {
@@ -213,4 +213,39 @@
     transition: transform 0.3s, opacity 0.3s;
     transform: scaleY(1) translateZ(0);
   }
+}
+
+.pu-containers {
+  position: relative;
+  z-index: 1;
+}
+
+.pu-backgrounds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.pu-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.pu-background.pu-previous,
+.pu-background.pu-current {
+  opacity: 1;
+}
+
+.pu-content {
+  position: relative;
+  z-index: 3;
 }

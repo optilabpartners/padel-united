@@ -38,7 +38,27 @@ export default {
         $('html,body').animate({
             scrollTop: $panel.offset().top
         }, 500); 
-      }); 
+      });
+      
+      const backgroundsRoot = document.querySelector('.pu-backgrounds');
+
+      setInterval(function() {
+        // Flytta första bakgrunden så den är sist i ordningen och visas över dom andra
+        const nextBg = backgroundsRoot.querySelector('.pu-background');
+        backgroundsRoot.appendChild(nextBg);
+
+        // Ta bort 'previous' så den blir dold och kan visas igen senare.
+        const previousBg = backgroundsRoot.querySelector('.pu-previous');
+        previousBg.classList.remove('pu-previous');
+
+        // Ändra 'current' till 'previous' så den den fortfarande syns, men kan bli dold nästa gång.
+        const currentBg = backgroundsRoot.querySelector('.pu-current');
+        currentBg.classList.remove('pu-current');
+        currentBg.classList.add('pu-previous');
+
+        // Sätt nästa till 'current' så den syns.
+        nextBg.classList.add('pu-current');
+      }, 4000); // Millisekunder 
     });
   },
 };

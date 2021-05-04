@@ -55,8 +55,13 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 @endphp
 
 @if ('omrade_hall' == get_post_type())
-<div class="jumbotron-cover">
-	<div class="jumbotron d-flex align-items-center min-vh-100" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
+<div class="pu-containers">
+	<div class="pu-backgrounds">
+		<div class="pu-background" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-2.jpg')">3</div>
+		<div class="pu-background pu-previous" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-3.jpg')">1</div>
+		<div class="pu-background pu-current" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/04/lanner_20210223_1233.jpg')">2</div>
+	</div>
+	<div class="pu-content min-vh-100 d-flex align-items-center">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
@@ -105,8 +110,13 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 	</div>
 </div>
 @elseif( is_front_page() )
-<div class="jumbotron-cover">
-	<div class="jumbotron d-flex align-items-center min-vh-100" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+<div class="pu-containers">
+	<div class="pu-backgrounds">
+		<div class="pu-background" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-2.jpg')">3</div>
+		<div class="pu-background pu-previous" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-3.jpg')">1</div>
+		<div class="pu-background pu-current" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/04/lanner_20210223_1233.jpg')">2</div>
+	</div>
+	<div class="pu-content min-vh-100 d-flex align-items-center">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center justify-content-md-center">
 				<div class="col-12 col-md-6">
@@ -135,8 +145,13 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 	</div>
 </div>
 @else
-<div class="jumbotron-cover">
-	<div class="jumbotron d-flex align-items-center min-vh-100" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+<div class="pu-containers">
+	<div class="pu-backgrounds">
+		<div class="pu-background" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-2.jpg')">3</div>
+		<div class="pu-background pu-previous" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-3.jpg')">1</div>
+		<div class="pu-background pu-current" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/04/lanner_20210223_1233.jpg')">2</div>
+	</div>
+	<div class="pu-content min-vh-100 d-flex align-items-center">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
