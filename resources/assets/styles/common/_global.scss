@@ -15,7 +15,11 @@ body {
 h1,
 .h1 {
   @include media-breakpoint-up(lg) {
-    font-size: 2.7rem;
+    font-size: 3.2rem;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 3rem;
   }
 }
 
@@ -24,9 +28,12 @@ h2,
   padding-bottom: 3rem !important;
   padding-top: 3rem !important;
   margin-bottom: 0 !important;
+  font-size: 2.5rem !important;
 
-  &.small-padding {
-    @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(lg) {
+    font-size: 2rem !important;
+
+    &.small-padding {
       padding-bottom: 1.5rem !important;
       padding-top: 1.5rem !important;
     }
