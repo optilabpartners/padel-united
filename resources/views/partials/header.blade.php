@@ -57,15 +57,15 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 @if ('omrade_hall' == get_post_type())
 <div class="pu-containers">
 	<div class="pu-backgrounds">
-		<div class="pu-background" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-2.jpg')">3</div>
-		<div class="pu-background pu-previous" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-3.jpg')">1</div>
-		<div class="pu-background pu-current" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/04/lanner_20210223_1233.jpg')">2</div>
+		<div class="pu-background" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-2.jpg')"></div>
+		<div class="pu-background pu-previous" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/05/bg-header-3.jpg')"></div>
+		<div class="pu-background pu-current" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);background-image: url('https://padelunited.se/wp-content/uploads/2021/04/lanner_20210223_1233.jpg')"></div>
 	</div>
 	<div class="pu-content min-vh-100 d-flex align-items-center">
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center">
 				<div class="col-12">
-					<h1 class="text-uppercase pb-2 pb-md-4 fw-bold">@if(!$get_children_pages->have_posts() && $hallsida == 1) Padel United @endif{!! App::title() !!}</h1>
+					<h1 class="text-uppercase pb-4 fw-bold">@if(!$get_children_pages->have_posts() && $hallsida == 1) Padel United @endif{!! App::title() !!}</h1>
 					@if ($get_children_pages->have_posts() && $hallsida != 1)
 						<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
 							BOKA BANA NU
@@ -120,7 +120,7 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 		<div class="container justify-content-center text-white jumbotron-text-box">
 			<div class="row text-center justify-content-md-center">
 				<div class="col-12 col-md-8">
-					<h1 class="text-uppercase pb-2 pb-md-4 fw-bold">{!! App::title() !!}</h1>
+					<h1 class="text-uppercase pb-4 fw-bold">{!! App::title() !!}</h1>
 					<button type="button" data-bs-toggle="collapse" data-bs-target="#showAllBanor" aria-expanded="false" aria-controls="showAllBanor" class="btn btn-primary btn-lg btn-huge">
 						BOKA BANA NU
 					</button>

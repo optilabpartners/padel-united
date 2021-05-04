@@ -231,7 +231,7 @@ function omrades_excerpt_boxar( $atts ) {
                         </div>
                         <p><?php echo(get_the_excerpt()) ?></p>
                         <div class="pb-4 pt-4 clearfix">
-                            <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-primary float-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-primary btn-huge float-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -259,7 +259,7 @@ function visa_generella_ikoner( $atts ) {
         <div class="container text-white ps-0 pe-0 ps-md-3 pe-md-3 text-center">
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col col-md-10">
+                <div class="col col-md-10 pb-4 pb-md-0">
                     <p>Padel är en fantastisk sport som alla kan utöva – oavsett erfarenhet eller spelnivå. På Padel United erbjuder vi spel för såväl nybörjare som elitspelare, för barn, ungdomar, vuxna och pensionärer och varje padelhall erbjuder också banor för handikappade där man kan komma in med rullstol. Välkommen till Padel United! - vi kan garantera ett personligt bemötande och en rolig stund på banan.</p>
                 </div>
                 <div class="col-md-1"></div>
@@ -321,16 +321,16 @@ function visa_medlemskap( $atts ) {
         <div class="pb-4">
             <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
             <div class="col-12 pu-lightblue-bg text-white ps-4 pe-4 clearfix">    
-                <div class="float-md-start"><h2 class="h3 small-padding fw-bold">Detta ingår i medlemskapet</h2></div>
-                <div class="float-md-end"><h2 class="small-padding fw-bold">Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</h2></div>
+                <div class="float-md-start"><h2 class="h3 small-padding fw-bold less-mobile-padding">Detta ingår i medlemskapet</h2></div>
+                <div class="float-md-end"><h2 class="h3 small-padding fw-bold less-mobile-padding">Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</h2></div>
             </div>
-            <div class="col-12 p-2 border clearfix">
-                <ul class="float-start pu-darkblue">
+            <div class="col-12 p-2 pt-4 pb-4 border clearfix">
+                <ul class="float-start pu-darkblue pb-4 pb-md-2">
                     <?php foreach($ingar_medlemskapet as $medlemskap) {?> 
                         <li><?php echo($medlemskap); ?>    
                     <?php } ?>
                 </ul>
-                <div class="float-md-end text-center">
+                <div class="pb-4 pb-md-0 float-md-end text-center">
                     <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" target="_blank" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
                 </div>
             </div>

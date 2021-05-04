@@ -37,6 +37,11 @@ h2,
       padding-bottom: 1.5rem !important;
       padding-top: 1.5rem !important;
     }
+
+    &.less-mobile-padding {
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+    }
   }
 
   &.no-padding {
@@ -135,7 +140,7 @@ h2:target::before {
 
 .w-160 {
   @include media-breakpoint-down(md) {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   max-width: 160px;
