@@ -47,18 +47,22 @@ export default {
         const nextBg = backgroundsRoot.querySelector('.pu-background');
         backgroundsRoot.appendChild(nextBg);
 
-        // Ta bort 'previous' så den blir dold och kan visas igen senare.
-        const previousBg = backgroundsRoot.querySelector('.pu-previous');
-        previousBg.classList.remove('pu-previous');
+        // Vi behöver vänta på nästa frame innan vi ändrar klasserna så att dom inte hamnar
+        // i samma frame som vi flyttade nextBg i, annars så hoppar den över CSS animationen.
+        window.requestAnimationFrame(function() {
+          // Ta bort 'previous' så den blir dold och kan visas igen senare.
+          const previousBg = backgroundsRoot.querySelector('.pu-previous');
+          previousBg.classList.remove('pu-previous');
 
-        // Ändra 'current' till 'previous' så den den fortfarande syns, men kan bli dold nästa gång.
-        const currentBg = backgroundsRoot.querySelector('.pu-current');
-        currentBg.classList.remove('pu-current');
-        currentBg.classList.add('pu-previous');
+          // Ändra 'current' till 'previous' så den den fortfarande syns, men kan bli dold nästa gång.
+          const currentBg = backgroundsRoot.querySelector('.pu-current');
+          currentBg.classList.remove('pu-current');
+          currentBg.classList.add('pu-previous');
 
-        // Sätt nästa till 'current' så den syns.
-        nextBg.classList.add('pu-current');
-      }, 4000); // Millisekunder 
+          // Sätt nästa till 'current' så den syns.
+          nextBg.classList.add('pu-current');
+        });
+      }, 4000); // Millisekunder
     });
   },
 };
