@@ -11,7 +11,7 @@
               			<a href="/"><img class="logo ps-3" src="{!! $image[0] !!}" alt="Padel United Logo" /></a>
 						<div class="d-lg-none nav-primary-responsive">
 							<button class="btn btn-bars" aria-label="Menu Button"><span class="navbar-toggler-icon"></span></button>
-							<a href="/"><img class="logo d-none logo-class" src="{!! $image[0] !!}" alt="Padel United Logo" /></a>
+							<a href="/"><img class="logo d-none logo-class ps-3 ms-2" src="{!! $image[0] !!}" alt="Padel United Logo" /></a>
 							{!! wp_nav_menu([
 								'theme_location'  => 'primary_navigation',
 								'menu_class'      => 'nav flex-column',

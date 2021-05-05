@@ -84,6 +84,11 @@
       a {
         padding: 0.5rem 1rem 0.5rem 1.5rem;
         color: #fff;
+
+        @include media-breakpoint-down(lg) {
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
       }
 
       ul {
@@ -158,8 +163,8 @@
 
     .logo-class {
       display: block !important;
-      max-width: 200px;
-      padding: 10px 10px 10px 20px;
+      max-width: 137px;
+      padding: 10px 10px 10px 1rem;
     }
   }
 }
