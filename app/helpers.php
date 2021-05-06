@@ -397,7 +397,7 @@ function nyheter_med_etikett( $atts ) {
     
     $nyheter = get_posts( $args );
     ?>
-    <div id="hallNyheterCarousel" class="carousel slide alignfull" data-bs-ride="carousel" data-bs-touch="false">
+    <div id="hallNyheterCarousel" class="carousel slide alignfull" data-bs-ride="carousel">
         <div class="carousel-indicators">
         <?php foreach ($nyheter as $key => $post) : setup_postdata( $post )?>
             <button type="button" data-bs-target="#hallNyheterCarousel" data-bs-slide-to="<?=$key?>" <?php echo ($key == 0 ) ? 'class="active"' : ''?>></button>    
