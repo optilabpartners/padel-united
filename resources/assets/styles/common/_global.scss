@@ -117,6 +117,8 @@ h2:target::before {
   @include media-breakpoint-up(lg) {
     height: 450px;
   }
+
+  height: 400px;
 }
 
 .carousel-control-prev-icon,

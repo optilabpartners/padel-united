@@ -405,11 +405,10 @@ function nyheter_med_etikett( $atts ) {
         </div>
       <div class="carousel-inner">
       <?php foreach ($nyheter as $key => $post) : setup_postdata( $post )?>
-        <div class="carousel-item <?php echo ($key == 0 ) ? 'active' : ''?> pu-teal-bg">
-          <img src="<?php echo asset_path('images/padel_boll.jpg') ?>" style="opacity: 0.3" class="d-block w-100" alt="Padel Boll">
+        <div class="carousel-item <?php echo ($key == 0 ) ? 'active' : ''?> pu-teal-bg" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image: url('<?php echo asset_path('images/padel_boll.jpg') ?>'); background-size: cover; background-position: center center;">
           <div class="carousel-caption d-block pt-0 pt-md-4">
             <h2 class="h1"><a href="<?php the_permalink() ?>" class="text-white text-decoration-none"><?php the_title() ?></a></h2>
-            <div class="d-none d-md-block">
+            <div class="d-block">
                 <a href="<?php the_permalink() ?>" class="btn btn-lg btn-huge btn-secondary">LÄS MER</a>
             </div>
           </div>
@@ -629,7 +628,7 @@ function pris_boxar( $atts ) {
         <h2 class="pt-4 pb-4 text-white text-center fw-bold">Priser</h2>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3 pt-4 pb-4">
             <div class="row">
-                <div class="col pe-md-1 mb-4 pt-4 pb-4">
+                <div class="col pe-md-1 pt-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
@@ -639,7 +638,7 @@ function pris_boxar( $atts ) {
                         </div>
                     </div>
                 </div>
-                <div class="col pe-md-1 mb-4 pt-4 pb-4">
+                <div class="col pe-md-1 pt-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
@@ -650,7 +649,7 @@ function pris_boxar( $atts ) {
                     </div>
                 </div>
                 <?php if(get_post_meta(get_the_ID(), 'pris_box_three', true)) { ?>
-                <div class="col pe-md-1 mb-4 pt-4 pb-4">
+                <div class="col pe-md-1 pt-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white">
                         <div class="container d-flex h-100 p-0">
