@@ -5,15 +5,10 @@
     @php do_action('get_header') @endphp
     @include('partials.header')
     <div class="wrap container" role="document">
-    @php
-    if(!is_front_page()) {
-    	yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-    }
-    @endphp
-      <div class="content row mt-md-3 mb-3">
-        <main class="main col-md-12 pe-md-4">
+      <div class="content row">
+        <main class="main col-md-12">
           <div class="row">
-            <div class="col-md-12 bg-white">
+            <div class="col-md-12 bg-white ps-4 pe-4 ps-md-0 pe-md-0">
               @yield('content')
             </div>
           </div>

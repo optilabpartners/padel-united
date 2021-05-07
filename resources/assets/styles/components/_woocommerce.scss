@@ -8,3 +8,20 @@
     padding: 5px !important;
   }
 }
+
+body.woocommerce {
+  /* hide SKU on product meta section */
+  .product_meta {
+    .sku_wrapper {
+      display: none;
+    }
+
+    .posted_in {
+      display: none;
+    }
+
+    .tagged_as {
+      display: none;
+    }
+  }
+}
