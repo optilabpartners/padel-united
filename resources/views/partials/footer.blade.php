@@ -37,7 +37,7 @@
 			@elseif( is_front_page() )
 				<h2 class="fw-bold">{!! get_theme_mod('above_footer_title') !!}</h2>
 				<p class="pb-4">{!! get_theme_mod('above_footer_text') !!}</p>
-				<a href="{!! get_theme_mod('medlemskaps_link') !!}" target="_blank" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
+				<a href="{!! get_theme_mod('medlemskaps_link') !!}" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
 			@endif
 			</div>
 		</div>
