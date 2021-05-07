@@ -16,7 +16,7 @@
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 200px !important;
 
   @include media-breakpoint-down(lg) {
     max-width: 130px;

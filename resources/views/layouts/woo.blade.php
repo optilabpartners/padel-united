@@ -8,7 +8,7 @@
       <div class="content row">
         <main class="main col-md-12">
           <div class="row">
-            <div class="col-md-12 bg-white ps-4 pe-4 ps-md-0 pe-md-0">
+            <div class="col-md-12 bg-white ps-4 pe-4 ps-md-0 pe-md-0 pt-4 pb-4">
               @yield('content')
             </div>
           </div>
