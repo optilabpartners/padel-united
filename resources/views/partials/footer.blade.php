@@ -69,9 +69,11 @@
 						<img class="img-fluid" src="@asset('images/footer-logo.png')" alt="Padel United Footer Logga" />
 					</div>
 					<div class="col-9">
-						<p>Padel United AB<br />
+						<p>Padel-tennis Stockholm AB<br />
 						Västeråsgatan 5<br />
 						113 43 Stockholm
+						Org. Nr. 559151-9417
+						Tel: 0763-64 63 75
 						<p>&copy; {{ date('Y') }} Padel United AB</p>
 					</div>
 				</div>
