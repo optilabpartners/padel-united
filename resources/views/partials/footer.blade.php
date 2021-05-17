@@ -71,8 +71,8 @@
 					<div class="col-9">
 						<p>Padel-tennis Stockholm AB<br />
 						Västeråsgatan 5<br />
-						113 43 Stockholm
-						Org. Nr. 559151-9417
+						113 43 Stockholm<br />
+						Org. Nr. 559151-9417<br />
 						Tel: 0763-64 63 75
 						<p>&copy; {{ date('Y') }} Padel United AB</p>
 					</div>
