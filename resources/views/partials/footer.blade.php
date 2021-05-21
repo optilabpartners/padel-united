@@ -28,7 +28,7 @@
 @if (('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true)) || is_front_page())
 <div class="jumbotron d-flex align-items-center" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); background-image:url('{!! $featured_image !!}'); background-size: cover; background-repeat: no-repeat; background-position: top center;">
 	<div class="container justify-content-center text-white pt-4 pb-4">
-		<div class="row text-center pb-4  d-flex justyify-content-center">
+		<div class="row text-center pb-4  d-flex justify-content-center">
 			<div class="col-12 pb-4 w-85">
 			@if ('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true))
 				{!! get_post_meta(get_the_ID(), 'above_footer', true) !!}
