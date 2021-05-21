@@ -235,6 +235,20 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
     $post->post_type , 'normal', 'core'
   );
 
+  $setup->add_meta_box(
+    'above_footer_codebox',
+    'Ovanför Footer Text',
+    function($post) {
+        wp_nonce_field( 'above_footer_codebox', 'padelunited_new_nonce' );
+        $above_footer = get_post_meta($post->ID, 'above_footer', true);?>
+        <div class="form-field">
+          <?php wp_editor( $above_footer, 'above_footer', array('wpautop' => false, 'textarea_rows' => 12) ); ?>
+        </div>
+    <?php
+    },
+    $post->post_type , 'normal', 'core'
+  );
+
   $setup->init(function() { return true; });
   }
 
@@ -287,5 +301,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         update_post_meta($post_id, 'pris_box_one', $_POST['pris_box_one']);
         update_post_meta($post_id, 'pris_box_two', $_POST['pris_box_two']);
         update_post_meta($post_id, 'pris_box_three', $_POST['pris_box_three']);
+
+        update_post_meta($post_id, 'above_footer', $_POST['above_footer']);
     }
 }

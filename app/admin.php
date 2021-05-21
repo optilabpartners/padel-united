@@ -97,33 +97,6 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'type'  => 'textarea'
     )));
 
-    $wp_customize->add_section( 'hall_settings', array(
-        'title'          => 'Hall Inställningar',
-        'priority'       => 500,
-    ) );
-
-    $wp_customize->add_setting( 'above_hall_footer_title', array(
-        'default'        => '',
-    ) );
-    
-    $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'above_hall_footer_title', array(
-        'label' => __('Ovanför Footer Title(Syns på hall sidor)'),
-        'section' => 'hall_settings',
-        'settings' => 'above_hall_footer_title',
-        'type'  => 'text'
-    )));
-
-    $wp_customize->add_setting( 'above_hall_footer_text', array(
-        'default'        => '',
-    ) );
-    
-    $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'above_hall_footer_text', array(
-        'label' => __('Ovanför Footer Text(Syns på hall sidor)'),
-        'section' => 'hall_settings',
-        'settings' => 'above_hall_footer_text',
-        'type'  => 'textarea'
-    )));
-
     $wp_customize->add_section( 'medlemskap_settings', array(
         'title'          => 'Medlemskaps Inställningar',
         'priority'       => 600,
