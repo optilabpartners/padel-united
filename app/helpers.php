@@ -260,7 +260,7 @@ function visa_generella_ikoner( $atts ) {
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col col-md-10 pb-4 pb-md-0">
-                    <p>Padel är en fantastisk sport som alla kan utöva – oavsett erfarenhet eller spelnivå. På Padel United erbjuder vi spel för såväl nybörjare som elitspelare, för barn, ungdomar, vuxna och pensionärer och varje padelhall erbjuder också banor för handikappade där man kan komma in med rullstol. Välkommen till Padel United! - vi kan garantera ett personligt bemötande och en rolig stund på banan.</p>
+                    <p>Padel är en fantastisk sport som alla kan utöva – oavsett erfarenhet eller spelnivå. På Padel United erbjuder vi spel för såväl nybörjare som elitspelare, för barn, ungdomar, vuxna och pensionärer. Välkommen till Padel United! – hos oss får du ett personligt bemötande och en garanterat rolig stund på banan.</p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
