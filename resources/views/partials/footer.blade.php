@@ -31,7 +31,9 @@
 		<div class="row text-center pb-4">
 			<div class="col-12 pb-4">
 			@if ('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true))
-				{!! get_post_meta(get_the_ID(), 'above_footer', true) !!}
+				<div class="w-85">
+					{!! get_post_meta(get_the_ID(), 'above_footer', true) !!}
+				</div>
 				<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge">BOKA BANA NU</a>
 			@elseif( is_front_page() )
 				<h2 class="fw-bold">{!! get_theme_mod('above_footer_title') !!}</h2>
