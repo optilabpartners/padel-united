@@ -318,19 +318,21 @@ function visa_medlemskap( $atts ) {
     $ingar_medlemskapet = explode("\n", get_theme_mod('ingar_medlemskapet'));
     ?>
     <div class="container alignfullmobile w-85 p-0 pb-4">
-        <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
-        <div class="col-12 pu-lightblue-bg text-white ps-4 pe-4 clearfix">    
-            <div class="float-md-start"><h2 class="h3 small-padding fw-bold less-mobile-padding">Detta ingår i medlemskapet</h2></div>
-            <div class="float-md-end"><h2 class="h3 small-padding fw-bold less-mobile-padding">Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</h2></div>
-        </div>
-        <div class="col-12 p-2 pt-4 pb-4 border clearfix">
-            <ul class="float-start pu-darkblue pb-4 pb-md-2">
-                <?php foreach($ingar_medlemskapet as $medlemskap) {?> 
-                    <li><?php echo($medlemskap); ?>    
-                <?php } ?>
-            </ul>
-            <div class="pb-4 pb-md-0 float-md-end text-center">
-                <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
+        <div class="pb-4">
+            <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
+            <div class="col-12 pu-lightblue-bg text-white ps-4 pe-4 clearfix">    
+                <div class="float-md-start"><h2 class="h3 small-padding fw-bold less-mobile-padding">Detta ingår i medlemskapet</h2></div>
+                <div class="float-md-end"><h2 class="h3 small-padding fw-bold less-mobile-padding">Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</h2></div>
+            </div>
+            <div class="col-12 p-2 pt-4 pb-4 border clearfix">
+                <ul class="float-start pu-darkblue pb-4 pb-md-2">
+                    <?php foreach($ingar_medlemskapet as $medlemskap) {?> 
+                        <li><?php echo($medlemskap); ?>    
+                    <?php } ?>
+                </ul>
+                <div class="pb-4 pb-md-0 float-md-end text-center">
+                    <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
+                </div>
             </div>
         </div>
     </div>
