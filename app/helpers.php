@@ -254,7 +254,7 @@ function visa_generella_ikoner( $atts ) {
     ?>
     <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
         <div class="text-center text-white pt-4 pb-4">
-            <h2 class="pt-4 pb-4 fw-bold">Vårt hjärta slår för spelet</h2>
+            <h2 class="pt-4 pb-4 fw-bold text-uppercase">Vårt hjärta slår för spelet</h2>
         </div>
         <div class="container text-white ps-0 pe-0 ps-md-3 pe-md-3 text-center">
             <div class="row">
