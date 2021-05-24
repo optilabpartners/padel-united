@@ -28,3 +28,11 @@ body.woocommerce {
 #kco-extra-checkout-fields {
   display: none;
 }
+
+.woocommerce div.product div.images.woocommerce-product-gallery {
+  display: none;
+}
+
+.woocommerce-page div.product div.summary {
+  float: none;
+}
