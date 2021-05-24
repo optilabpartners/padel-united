@@ -16,11 +16,11 @@
           <h2 class="pt-4 pb-4 text-white text-center fw-bold">Våra Hallar i {!! the_title() !!}</h2>
         @endif
         <div class="container ps-0 pe-0 pt-4 pb-4">
-          <div class="row">
+          <div class="row justify-content-md-center">
             @while ($get_children_pages->have_posts())
             @php $get_children_pages->the_post() @endphp
-              <div class="col text-center mb-4">
-                <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-large btn-huge text-uppercase w-290 text-decoration text-white pu-orange-bg"><?php the_title() ?> <i class="fas fa-arrow-circle-right"></i></a>
+              <div class="col-3 text-center mb-4">
+                <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-large btn-huge text-uppercase w-290 text-decoration-light-blue text-white pu-orange-bg"><?php the_title() ?> <i class="fas fa-arrow-circle-right"></i></a>
               </div>
               @endwhile
             @php wp_reset_postdata() @endphp

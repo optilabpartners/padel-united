@@ -90,7 +90,7 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 					@endif
 					@if (get_post_meta(get_the_ID(), 'hall_sida', true))
 						<div class="row mt-4">
-							<div class="col-12">
+							<div class="col-12 pt-3">
 								<p class="text-center">
 									@if(get_post_meta(get_the_ID(), 'maps_link', true))
 										<img src="@asset('images/icons/pin.png')" style="height: 40px;" class="me-2 h-40" alt="Pin" />

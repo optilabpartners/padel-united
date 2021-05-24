@@ -55,3 +55,9 @@ $pu-darkgrey: #9e9f99;
 .pu-beigegrey {
   color: $pu-beigegrey !important;
 }
+
+.text-decoration-light-blue {
+  &:hover {
+    background-color: $pu-teal !important;
+  }
+}
