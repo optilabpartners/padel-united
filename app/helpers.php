@@ -317,7 +317,7 @@ function visa_medlemskap( $atts ) {
     $ingar_medlemskapet = array();
     $ingar_medlemskapet = explode("\n", get_theme_mod('ingar_medlemskapet'));
     ?>
-    <div class="container alignfullmobile w-85 p-0">
+    <div class="container alignfullmobile w-85 p-0 pb-4">
         <div class="col-12 pu-orange-bg pt-2 pb-2"></div>
         <div class="col-12 pu-lightblue-bg text-white ps-4 pe-4 clearfix">    
             <div class="float-md-start"><h2 class="h3 small-padding fw-bold less-mobile-padding">Detta ingår i medlemskapet</h2></div>
