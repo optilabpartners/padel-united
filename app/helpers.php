@@ -146,7 +146,7 @@ function visa_general_info( $atts ) {
 		<div class="row text-center pu-darkblue pb-4">
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/hallar.png') ?>" alt="Padel Hallar" class="w-160" />
-                <h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h3><h5>Hallar</h5>
+                <div class="pt-1 pb-1"><h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_hallar') ?></strong></h3><h5>Hallar</h5></div>
             </div>
 			<div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/banor.png') ?>" alt="Banor" class="w-160" />
