@@ -11,7 +11,7 @@
 @if ('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true))
 	@if (get_post_meta(get_the_ID(), 'facebook', true) || get_post_meta(get_the_ID(), 'instagram', true))
 	<div class="container pt-4 pb-4">
-		<div class="row text-center">	
+		<div class="row text-center pb-4">	
 			<div class="col">
 				@if (get_post_meta(get_the_ID(), 'facebook', true))
 					<a href="{!! get_post_meta(get_the_ID(), 'facebook', true) !!}" target="_blank" class="pe-4"><img src="@asset('images/icons/facebook.png')" class="w-65" alt="Facebook" /></a>
@@ -31,7 +31,7 @@
 		<div class="row text-center pb-4 d-flex justify-content-center">
 			<div class="col-12 pb-4 w-85">
 			@if ('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true))
-				{!! get_post_meta(get_the_ID(), 'above_footer', true) !!}
+				<div class="pb-4">{!! get_post_meta(get_the_ID(), 'above_footer', true) !!}</div>
 				<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge mb-2">BOKA BANA NU</a>
 			@elseif( is_front_page() )
 				<h2 class="fw-bold">{!! get_theme_mod('above_footer_title') !!}</h2>
