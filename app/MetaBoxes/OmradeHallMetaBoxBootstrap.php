@@ -36,6 +36,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
             $hallSidaChecked = "checked";
           }
           $short_title = get_post_meta($post->ID, 'short_title', true);
+          $extra_hall_text = get_post_meta($post->ID, 'extra_hall_text', true);
           $matchi_link = get_post_meta($post->ID, 'matchi_link', true);
           $telefon_nummer = get_post_meta($post->ID, 'telefon_nummer', true);
           $maps_link = get_post_meta($post->ID, 'maps_link', true);
@@ -64,6 +65,10 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
       <div class="form-field">
         <label for="short_title">Kort Titel</label><br />
         <input type="text" name="short_title" id="short_title" value="<?php echo $short_title; ?>">
+      </div>
+      <div class="form-field">
+        <label for="extra_hall_text">Om området har extra hallar från andra bolag skriv en kort text här(se Stocholm eller Skåne för mer info)</label><br />
+        <input type="text" name="extra_hall_text" id="extra_hall_text" value="<?php echo $extra_hall_text; ?>">
       </div>
       <div class="form-field">
         <label for="matchi_link">Matchi Länk</label><br />
@@ -277,6 +282,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
 
         update_post_meta($post_id, 'hall_sida', $_POST['hall_sida']);
         update_post_meta($post_id, 'short_title', $_POST['short_title']);
+        update_post_meta($post_id, 'extra_hall_text', $_POST['extra_hall_text']);
         update_post_meta($post_id, 'matchi_link', $_POST['matchi_link']);
         update_post_meta($post_id, 'telefon_nummer', $_POST['telefon_nummer']);
         update_post_meta($post_id, 'maps_link', $_POST['maps_link']);
