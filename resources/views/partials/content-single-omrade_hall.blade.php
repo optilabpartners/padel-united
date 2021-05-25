@@ -27,22 +27,22 @@
               @php wp_reset_postdata() @endphp
             </div>
           </div>
-          @php
-            $nav_items = wp_get_nav_menu_items($short_title);
-          @endphp
-          @if($nav_items)
-            <p class="text-center text-white">{!! $extra_hall_text !!}</p>
-            <div class="container ps-0 pe-0 pt-4 pb-4">
-              <div class="row justify-content-md-center">
-                @foreach ( $nav_items as $nav_item )
-                  <div class="col-3 text-center mb-4">
-                    <a href="<?php echo($nav_item->url) ?>" target="_blank" class="btn btn-large btn-huge text-uppercase w-290 text-decoration-light-blue text-white pu-orange-bg"><?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i></a>
-                  </div>
-                @endforeach
-                @php wp_reset_postdata() @endphp
-              </div>
+        @endif
+        @php
+          $nav_items = wp_get_nav_menu_items($short_title);
+        @endphp
+        @if($nav_items)
+          <p class="text-center text-white">{!! $extra_hall_text !!}</p>
+          <div class="container ps-0 pe-0 pt-4 pb-4">
+            <div class="row justify-content-md-center">
+              @foreach ( $nav_items as $nav_item )
+                <div class="col-3 text-center mb-4">
+                  <a href="<?php echo($nav_item->url) ?>" target="_blank" class="btn btn-large btn-huge text-uppercase w-290 text-decoration-light-blue text-white pu-orange-bg"><?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              @endforeach
+              @php wp_reset_postdata() @endphp
             </div>
-          @endif
+          </div>
         @endif
       </div>
     </div>
