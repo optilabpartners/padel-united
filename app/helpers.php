@@ -159,12 +159,12 @@ function visa_general_info( $atts ) {
             </div>
             <div class="col-6 col-md">
                 <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="w-160" />
-                <div class="pt-1 pb-1"><h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Medlemmar</h5></div>
+                <div class="pt-1 pb-1"><h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Spelare</h5></div>
             </div>
             <?php } else { ?>
 			<div class="col-6 col-md offset-3 offset-md-0">
                 <img src="<?php echo asset_path('images/icons/medlemmar.png') ?>" alt="Medlemmar" class="w-160" />
-                <div class="pt-1 pb-1"><h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Medlemmar</h5></div>
+                <div class="pt-1 pb-1"><h3 class="h2 no-padding"><strong><?php echo get_theme_mod('antal_medlemmar') ?></strong></h3><h5>Spelare</h5></div>
             </div>
             <?php } ?>
 		</div>
