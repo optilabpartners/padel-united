@@ -77,7 +77,11 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 									@while ($get_children_pages->have_posts())
 									@php $get_children_pages->the_post() @endphp
 									<li class="list-group-item list-group-item-action">
-										<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
+										@if(get_post_meta(get_the_ID(), 'matchi_link', true))
+											<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
+										@else
+											<a href="{!! get_the_permalink() !!}" target="_blank">{!! the_title() !!}</a>
+										@endif
 									</li>
 									@endwhile
 									@php wp_reset_postdata() @endphp
