@@ -187,19 +187,7 @@ function omrades_excerpt_boxar( $atts ) {
         'post_status' => 'publish',
         'orderby' => 'title',
         'order' => 'ASC',
-        'meta_query' => array(
-            'relation' => 'OR',
-            array(
-                'key' => 'hall_sida',
-                'value' => 'on',
-                'compare' => '!='
-            ),
-            array(
-                'key' => 'hall_sida',
-                'value' => '',
-                'compare' => 'NOT EXISTS'
-            )
-        )
+        'post_parent' => 0
     );
 
     $omrade_pages = new \WP_Query( $args );
