@@ -190,7 +190,7 @@ function omrades_excerpt_boxar( $atts ) {
         'meta_query' => array(
             array(
                 'key' => 'hall_sida',
-                'value' => ''
+                'value' => 0
             )
         )
     );
