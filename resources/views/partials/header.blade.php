@@ -80,7 +80,7 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 										@if(get_post_meta(get_the_ID(), 'matchi_link', true))
 											<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
 										@else
-											<a href="{!! get_the_permalink() !!}" target="_blank">{!! the_title() !!}</a>
+											<a href="{!! get_the_permalink() !!}">{!! the_title() !!}</a>
 										@endif
 									</li>
 									@endwhile
