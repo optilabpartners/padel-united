@@ -1,6 +1,7 @@
 @php
   $short_title = get_post_meta(get_the_ID(), 'short_title', true);
   $extra_hall_text = get_post_meta(get_the_ID(), 'extra_hall_text', true);
+  $nav_items = wp_get_nav_menu_items($short_title);
 @endphp
 <article @php post_class() @endphp>
   <div class="entry-content">
@@ -8,6 +9,7 @@
       {!! do_shortcode( '[visa_general_info_hallar]') !!}
     @endif
 
+    @if($get_children_pages->have_posts() || $nav_items)
     <div class="container alignfull pu-darkblue-bg pt-4 pb-4">
       <div class="pt-4 pb-4">
         @if($get_children_pages->have_posts())
@@ -28,9 +30,6 @@
             </div>
           </div>
         @endif
-        @php
-          $nav_items = wp_get_nav_menu_items($short_title);
-        @endphp
         @if($nav_items)
           <p class="text-center text-white">{!! $extra_hall_text !!}</p>
           <div class="container ps-0 pe-0 pt-4 pb-4">
@@ -46,6 +45,7 @@
         @endif
       </div>
     </div>
+    @endif
     
 
     @php the_content() @endphp
