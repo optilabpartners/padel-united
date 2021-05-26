@@ -188,9 +188,15 @@ function omrades_excerpt_boxar( $atts ) {
         'orderby' => 'title',
         'order' => 'ASC',
         'meta_query' => array(
+            'relation' => 'OR',
             array(
                 'key' => 'hall_sida',
-                'value' => 'true',
+                'value' => 'on',
+                'compare' => '!='
+            ),
+            array(
+                'key' => 'hall_sida',
+                'value' => '',
                 'compare' => 'NOT EXISTS'
             )
         )
