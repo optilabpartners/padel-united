@@ -36,7 +36,15 @@
             <div class="row justify-content-md-center">
               @foreach ( $nav_items as $nav_item )
                 <div class="col-3 text-center mb-4">
-                  <a href="<?php echo($nav_item->url) ?>" target="_blank" class="btn btn-large btn-huge text-uppercase w-290 text-decoration-light-blue text-white pu-orange-bg"><?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i></a>
+                  <a href="<?php echo($nav_item->url) ?>" target="_blank" class="btn btn-large btn-huge text-uppercase w-290 text-decoration-light-blue text-white pu-orange-bg">
+                    <?php if($nav_item->classes[0] == 'padelverket') { ?>
+                      <img src="@asset('images/padelverket.png')" class="w-60" /> <?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i>
+                    <?php } elseif($nav_item->classes[0] == 'padelcrew') { ?>
+                      <img src="@asset('images/padel-crew.png')" class="w-60" /> <?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i>
+                    <?php } else { ?>
+                      <?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i>
+                    <?php } ?>
+                  </a>
                 </div>
               @endforeach
               @php wp_reset_postdata() @endphp
