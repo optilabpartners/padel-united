@@ -189,7 +189,7 @@ function omrades_excerpt_boxar( $atts ) {
         'order' => 'ASC',
         'meta_query' => array(
             array(
-                'key' => 'matchi_link',
+                'key' => 'hall_sida',
                 'value' => ''
             )
         )
