@@ -186,8 +186,8 @@ function omrades_excerpt_boxar( $atts ) {
         'post_type' => 'omrade_hall',
         'post_status' => 'publish',
         'orderby' => 'title',
-        'order' => 'ASC',
-        'post_parent' => 0
+        'post_parent' => 0,
+        'order' => 'ASC'
     );
 
     $omrade_pages = new \WP_Query( $args );

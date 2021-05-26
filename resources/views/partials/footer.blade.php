@@ -32,7 +32,9 @@
 			<div class="col-12 pb-4 w-85">
 			@if ('omrade_hall' == get_post_type() && get_post_meta(get_the_ID(), 'hall_sida', true))
 				<div class="pb-4">{!! get_post_meta(get_the_ID(), 'above_footer', true) !!}</div>
-				<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge mb-2">BOKA BANA NU</a>
+				@if(get_post_meta(get_the_ID(), 'matchi_link', true))
+					<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank" class="btn btn-primary btn-lg btn-huge mb-2">BOKA BANA NU</a>
+				@endif
 			@elseif( is_front_page() )
 				<h2 class="fw-bold">{!! get_theme_mod('above_footer_title') !!}</h2>
 				<p class="pb-4">{!! get_theme_mod('above_footer_text') !!}</p>
