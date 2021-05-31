@@ -22,13 +22,13 @@
             <div class="row justify-content-md-center">
               @while ($get_children_pages->have_posts())
               @php $get_children_pages->the_post() @endphp
-                <div class="col-4 text-center mb-4">
+                <div class="col-12 col-md-4 text-center mb-4">
                   <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-large btn-huge text-uppercase w-100 text-decoration-light-blue text-white pu-orange-bg"><?php the_title() ?> <img src="@asset('images/padel-united.png')" class="w-23 float-end" /></a>
                 </div>
                 @endwhile
                 @if($nav_items)
                   @foreach ( $nav_items as $nav_item )
-                  <div class="col-4 text-center mb-4">
+                  <div class="ccol-12 col-md-4 text-center mb-4">
                     <a href="<?php echo($nav_item->url) ?>" target="_blank" class="btn btn-large btn-huge text-uppercase w-100 text-decoration-light-blue text-white pu-orange-bg">
                       <?php if($nav_item->classes[0] == 'padelverket') { ?>
                         <?php echo($nav_item->title) ?> <img src="@asset('images/padelverket.png')" class="w-23 float-end" />
