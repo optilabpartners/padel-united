@@ -625,7 +625,7 @@ function pris_boxar( $atts ) {
         <h2 class="pt-4 pb-4 text-white text-center fw-bold">Priser</h2>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3 pb-4">
             <div class="row">
-                <div class="col pe-md-1 pt-4">
+                <div class="col-12 col-md-4 pe-md-1 pt-4">
                     <div class="pu-orange-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white h-250">
                         <div class="container d-flex h-100 p-0">
@@ -635,7 +635,7 @@ function pris_boxar( $atts ) {
                         </div>
                     </div>
                 </div>
-                <div class="col pe-md-1 pt-4">
+                <div class="col-12 col-md-4 pe-md-1 pt-4">
                     <div class="pu-warmyellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white h-250">
                         <div class="container d-flex h-100 p-0">
@@ -646,7 +646,7 @@ function pris_boxar( $atts ) {
                     </div>
                 </div>
                 <?php if(get_post_meta(get_the_ID(), 'pris_box_three', true)) { ?>
-                <div class="col pe-md-1 pt-4">
+                <div class="col-12 col-md-4 pe-md-1 pt-4">
                     <div class="pu-yellow-bg pt-2 pb-2"></div>
                     <div class="pu-lightblue-bg mt-2 p-4 clearfix text-white h-250">
                         <div class="container d-flex h-100 p-0">
