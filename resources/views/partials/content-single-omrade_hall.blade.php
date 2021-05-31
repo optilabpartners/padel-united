@@ -25,23 +25,23 @@
                 <div class="col-12 col-md-4 text-center mb-4">
                   <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-large btn-huge text-uppercase w-100 text-decoration-light-blue text-white pu-orange-bg"><?php the_title() ?> <img src="@asset('images/padel-united.png')" class="w-23 float-end" /></a>
                 </div>
-                @endwhile
-                @if($nav_items)
-                  @foreach ( $nav_items as $nav_item )
-                  <div class="ccol-12 col-md-4 text-center mb-4">
-                    <a href="<?php echo($nav_item->url) ?>" target="_blank" class="btn btn-large btn-huge text-uppercase w-100 text-decoration-light-blue text-white pu-orange-bg">
-                      <?php if($nav_item->classes[0] == 'padelverket') { ?>
-                        <?php echo($nav_item->title) ?> <img src="@asset('images/padelverket.png')" class="w-23 float-end" />
-                      <?php } elseif($nav_item->classes[0] == 'padelcrew') { ?>
-                        <?php echo($nav_item->title) ?> <img src="@asset('images/padel-crew.png')" class="w-23 float-end" />
-                      <?php } else { ?>
-                        <?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i>
-                      <?php } ?>
-                    </a>
-                  </div>
-                  @endforeach
-                  @php wp_reset_postdata() @endphp
-                @endif
+              @endwhile
+              @php wp_reset_postdata() @endphp
+              @if($nav_items)
+                @foreach ( $nav_items as $nav_item )
+                <div class="ccol-12 col-md-4 text-center mb-4">
+                  <a href="<?php echo($nav_item->url) ?>" target="_blank" class="btn btn-large btn-huge text-uppercase w-100 text-decoration-light-blue text-white pu-orange-bg">
+                    <?php if($nav_item->classes[0] == 'padelverket') { ?>
+                      <?php echo($nav_item->title) ?> <img src="@asset('images/padelverket.png')" class="w-23 float-end" />
+                    <?php } elseif($nav_item->classes[0] == 'padelcrew') { ?>
+                      <?php echo($nav_item->title) ?> <img src="@asset('images/padel-crew.png')" class="w-23 float-end" />
+                    <?php } else { ?>
+                      <?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i>
+                    <?php } ?>
+                  </a>
+                </div>
+                @endforeach
+              @endif
             </div>
           </div>
         @endif
@@ -52,7 +52,6 @@
     </div>
     @endif
     
-
     @php the_content() @endphp
   </div>
 </article>
