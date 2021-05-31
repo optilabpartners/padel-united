@@ -201,7 +201,7 @@ function omrades_excerpt_boxar( $atts ) {
                 <?php
                 $counter = 1;
                 while($omrade_pages->have_posts() ) : $omrade_pages->the_post();?>
-                <div class="col-md-4 pe-md-1">
+                <div class="col-md-6 pe-md-1">
                     <div class="<?php if ($counter % 3 == 1) {
                         echo 'pu-orange-bg';
                     } else if ($counter % 3 == 2) {

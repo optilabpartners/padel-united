@@ -109,3 +109,8 @@ add_filter('nav_menu_link_attributes', function ($atts) {
     }
     return $atts;
 }, 100);
+
+function mytheme_custom_excerpt_length( $length ) {
+    return 80;
+}
+add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 )
