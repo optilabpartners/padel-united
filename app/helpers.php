@@ -320,7 +320,7 @@ function visa_medlemskap( $atts ) {
                 <div class="float-md-end"><h2 class="h3 small-padding fw-bold less-mobile-padding">Pris: <?php echo(get_theme_mod('medlemskaps_pris')) ?> kr</h2></div>
             </div>
             <div class="col-12 p-2 pt-4 pb-4 border clearfix">
-                <ul class="float-start pu-darkblue pb-4 pb-md-2">
+                <ul class="float-start pb-4 pb-md-2">
                     <?php foreach($ingar_medlemskapet as $medlemskap) {?> 
                         <li><?php echo($medlemskap); ?>    
                     <?php } ?>
