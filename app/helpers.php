@@ -406,7 +406,7 @@ function nyheter_med_etikett( $atts ) {
           <div class="carousel-caption d-block pt-0 pt-md-4">
             <h2 class="h1"><a href="<?php the_permalink() ?>" class="text-white text-decoration-none"><?php the_title() ?></a></h2>
             <div class="d-block">
-                <a href="<?php the_permalink() ?>" class="btn btn-lg btn-huge btn-secondary">LÄS MER</a>
+                <a href="<?php the_permalink() ?>" class="btn btn-lg btn-huge btn-secondary text-white">LÄS MER</a>
             </div>
           </div>
         </div>
