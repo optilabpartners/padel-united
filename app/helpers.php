@@ -507,7 +507,7 @@ function aktiviteter( $atts ) {
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="nav-link active h5 pu-darkblue text-start pt-4 pb-4" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                            <img src="<?php echo asset_path('images/padel-boll.png') ?>" alt="Aktiviterer Icon" width="84" height="84" class="rounded-circle pe-2" />Tränare
+                            <img src="<?php echo asset_path('images/action-bild.jpg') ?>" alt="Aktiviterer Icon" width="84" height="84" class="rounded-circle pe-2" />Tränare
                         </button>
                         <button class="nav-link h5 pu-darkblue text-start pt-4 pb-4" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
                             <img src="<?php echo asset_path('images/kille-smashar.png') ?>" alt="Aktiviterer Icon" width="84" height="84" class="rounded-circle pe-2" />Vårt Seriespel
@@ -519,7 +519,7 @@ function aktiviteter( $atts ) {
                             <img src="<?php echo asset_path('images/foretag-skola.png') ?>" alt="Aktiviterer Icon" width="84" height="84" class="rounded-circle pe-2" />Företag & Skola
                         </button>
                         <button class="nav-link h5 pu-darkblue text-start pt-4 pb-4" id="v-pills-abonnemang-tab" data-bs-toggle="pill" data-bs-target="#v-pills-abonnemang" type="button" role="tab" aria-controls="v-pills-abonnemang" aria-selected="false">
-                            <img src="<?php echo asset_path('images/padel-boll.png') ?>" alt="Aktiviterer Icon" width="84" height="84" class="rounded-circle pe-2" />Abonnemang
+                            <img src="<?php echo asset_path('images/action-bild-2.jpg') ?>" alt="Aktiviterer Icon" width="84" height="84" class="rounded-circle pe-2" />Abonnemang
                         </button>
                     </div>
                     <div class="tab-content" id="v-pills-tabContent">
