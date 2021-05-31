@@ -4,6 +4,10 @@ body {
   color: #000;
 }
 
+a {
+  color: #002b52 !important;
+}
+
 @include media-breakpoint-up(lg) {
   a:hover {
     &:not(.btn) {
