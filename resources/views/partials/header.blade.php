@@ -40,18 +40,8 @@
 		</div>
 	</div>
 </header>
-@if ( has_post_thumbnail() )
 @php
-	$featured_image = get_the_post_thumbnail_url( get_the_ID() );
-@endphp
-@else
-@php
-	$featured_image = App\asset_path('images/general-jumbotron.jpg');
-@endphp
-@endif
-
-@php
-$hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
+	$hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 @endphp
 
 @if ('omrade_hall' == get_post_type())
@@ -76,11 +66,13 @@ $hallsida = get_post_meta(get_the_ID(), 'hall_sida', true);
 								@if($get_children_pages)
 									@while ($get_children_pages->have_posts())
 									@php $get_children_pages->the_post() @endphp
+									<li class="list-group-item list-group-item-action">
 										@if(get_post_meta(get_the_ID(), 'matchi_link', true))
-											<li class="list-group-item list-group-item-action">
-												<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
-											</li>
+											<a href="{!! get_post_meta(get_the_ID(), 'matchi_link', true) !!}" target="_blank">{!! the_title() !!}</a>
+										@else
+											<a href="{!! get_the_permalink() !!}">{!! the_title() !!}</a>
 										@endif
+									</li>
 									@endwhile
 									@php wp_reset_postdata() @endphp
 								@endif
