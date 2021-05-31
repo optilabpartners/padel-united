@@ -226,7 +226,7 @@ function omrades_excerpt_boxar( $atts ) {
                         </div>
                         <p><?php echo(get_the_excerpt()) ?></p>
                         <div class="pb-4 pt-4 clearfix">
-                            <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-primary btn-huge float-end">Se Hallar <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-primary btn-huge float-end text-white">Se Hallar <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -326,7 +326,7 @@ function visa_medlemskap( $atts ) {
                     <?php } ?>
                 </ul>
                 <div class="pb-4 pb-md-0 float-md-end text-center">
-                    <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" class="btn btn-huge btn-primary">BLI MEDLEM NU</a>
+                    <a href="<?php echo(get_theme_mod('medlemskaps_link')) ?>" class="btn btn-huge btn-primary text-white">BLI MEDLEM NU</a>
                 </div>
             </div>
         </div>
