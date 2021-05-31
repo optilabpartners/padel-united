@@ -22,34 +22,31 @@
             <div class="row justify-content-md-center">
               @while ($get_children_pages->have_posts())
               @php $get_children_pages->the_post() @endphp
-                <div class="col-3 text-center mb-4">
-                  <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-large btn-huge text-uppercase w-290 text-decoration-light-blue text-white pu-orange-bg"><?php the_title() ?> <i class="fas fa-arrow-circle-right"></i></a>
+                <div class="col-4 text-center mb-4">
+                  <a href="<?php echo(get_the_permalink()) ?>" class="btn btn-large btn-huge text-uppercase w-100 text-decoration-light-blue text-white pu-orange-bg"><?php the_title() ?> <img src="@asset('images/padel-united.png')" class="w-23 float-end" /></a>
                 </div>
                 @endwhile
-              @php wp_reset_postdata() @endphp
+                @if($nav_items)
+                  @foreach ( $nav_items as $nav_item )
+                  <div class="col-4 text-center mb-4">
+                    <a href="<?php echo($nav_item->url) ?>" target="_blank" class="btn btn-large btn-huge text-uppercase w-100 text-decoration-light-blue text-white pu-orange-bg">
+                      <?php if($nav_item->classes[0] == 'padelverket') { ?>
+                        <?php echo($nav_item->title) ?> <img src="@asset('images/padelverket.png')" class="w-23 float-end" />
+                      <?php } elseif($nav_item->classes[0] == 'padelcrew') { ?>
+                        <?php echo($nav_item->title) ?> <img src="@asset('images/padel-crew.png')" class="w-23 float-end" />
+                      <?php } else { ?>
+                        <?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i>
+                      <?php } ?>
+                    </a>
+                  </div>
+                  @endforeach
+                  @php wp_reset_postdata() @endphp
+                @endif
             </div>
           </div>
         @endif
         @if($nav_items)
           <p class="text-center text-white">{!! $extra_hall_text !!}</p>
-          <div class="container ps-0 pe-0 pt-4 pb-4">
-            <div class="row justify-content-md-center">
-              @foreach ( $nav_items as $nav_item )
-                <div class="col-3 text-center mb-4">
-                  <a href="<?php echo($nav_item->url) ?>" target="_blank" class="btn btn-large btn-huge text-uppercase w-290 text-decoration-light-blue text-white pu-orange-bg">
-                    <?php if($nav_item->classes[0] == 'padelverket') { ?>
-                      <?php echo($nav_item->title) ?> <img src="@asset('images/padelverket.png')" class="w-23" />
-                    <?php } elseif($nav_item->classes[0] == 'padelcrew') { ?>
-                      <?php echo($nav_item->title) ?> <img src="@asset('images/padel-crew.png')" class="w-23" />
-                    <?php } else { ?>
-                      <?php echo($nav_item->title) ?> <i class="fas fa-arrow-circle-right"></i>
-                    <?php } ?>
-                  </a>
-                </div>
-              @endforeach
-              @php wp_reset_postdata() @endphp
-            </div>
-          </div>
         @endif
       </div>
     </div>
