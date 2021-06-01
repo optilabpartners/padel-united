@@ -194,7 +194,7 @@ function omrades_excerpt_boxar( $atts ) {
     ?>
     <div class="container alignfull pu-darkblue-bg pb-4 pt-4">
         <div class="text-center pb-4">
-            <h2 class="text-white fw-bold">Välj område</h2>
+            <h2 class="text-white fw-bold">Välj region</h2>
         </div>
         <div class="container ps-0 pe-0 ps-md-3 pe-md-3 pb-4">
             <div class="row">

@@ -54,7 +54,7 @@ class App extends Controller
            return $matchi_links;
     }
 
-    //Get children of this Områdes sida.
+    //Get children of this Region sida.
     public function get_children_pages()
     {
         global $post;
