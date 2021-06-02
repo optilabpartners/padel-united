@@ -497,6 +497,12 @@ function aktiviteter( $atts ) {
         'p' => 14,
     );
 
+    $tranare = get_post_meta(get_the_ID(), 'tranare', true);
+    $vart_seriespel = get_post_meta(get_the_ID(), 'vart_seriespel', true);
+    $ungdomsverksamhet = get_post_meta(get_the_ID(), 'ungdomsverksamhet', true);
+    $foretag = get_post_meta(get_the_ID(), 'foretag', true);
+    $abonnemang = get_post_meta(get_the_ID(), 'abonnemang', true);
+
     $aktiviteter = new \WP_Query( $args );
     while($aktiviteter->have_posts() ) : $aktiviteter->the_post();
     ?>
@@ -524,19 +530,54 @@ function aktiviteter( $atts ) {
                     </div>
                     <div class="tab-content" id="v-pills-tabContent">
                         <div class="tab-pane fade show active p-4 pt-0" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'tranare', true) ?></div>
+                            <div class="ps-4 pe-4">
+                            <?php
+                            if($tranare != '') {
+                                echo($tranare);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'tranare', true);
+                            } ?>
+                            </div>
                         </div>
                         <div class="tab-pane fade p-4 pt-0" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'vart_seriespel', true) ?></div>
+                            <div class="ps-4 pe-4">
+                            <?php
+                            if($vart_seriespel != '') {
+                                echo($vart_seriespel);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'vart_seriespel', true);
+                            } ?>
+                            </div>
                         </div>
                         <div class="tab-pane fade p-4 pt-0" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'ungdomsverksamhet', true) ?></div>
+                            <div class="ps-4 pe-4">
+                            <?php
+                            if($ungdomsverksamhet != '') {
+                                echo($ungdomsverksamhet);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'ungdomsverksamhet', true);
+                            } ?>
+                            </div>
                         </div>
                         <div class="tab-pane fade p-4 pt-0" id="v-pills-foretag" role="tabpanel" aria-labelledby="v-pills-foretag-tab">
-                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'foretag', true) ?></div>
+                            <div class="ps-4 pe-4">
+                            <?php
+                            if($foretag != '') {
+                                echo($foretag);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'foretag', true);
+                            } ?>
+                            </div>
                         </div>
                         <div class="tab-pane fade p-4 pt-0" id="v-pills-abonnemang" role="tabpanel" aria-labelledby="v-pills-abonnemang-tab">
-                            <div class="ps-4 pe-4"><?php echo get_post_meta(get_the_ID(), 'abonnemang', true) ?></div>
+                            <div class="ps-4 pe-4">
+                            <?php
+                            if($abonnemang != '') {
+                                echo($abonnemang);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'abonnemang', true);
+                            } ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -553,7 +594,12 @@ function aktiviteter( $atts ) {
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#padelUnitedAccordion">
                         <div class="accordion-body bg-white">
-                            <?php echo get_post_meta(get_the_ID(), 'tranare', true) ?>
+                            <?php
+                            if($tranare != '') {
+                                echo($tranare);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'tranare', true);
+                            } ?>
                         </div>
                     </div>
                 </div>
@@ -565,7 +611,12 @@ function aktiviteter( $atts ) {
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#padelUnitedAccordion">
                         <div class="accordion-body bg-white">
-                            <?php echo get_post_meta(get_the_ID(), 'vart_seriespel', true) ?>
+                            <?php
+                            if($vart_seriespel != '') {
+                                echo($vart_seriespel);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'vart_seriespel', true);
+                            } ?>
                         </div>
                     </div>
                 </div>
@@ -577,7 +628,12 @@ function aktiviteter( $atts ) {
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#padelUnitedAccordion">
                         <div class="accordion-body bg-white">
-                            <?php echo get_post_meta(get_the_ID(), 'ungdomsverksamhet', true) ?>
+                            <?php
+                            if($ungdomsverksamhet != '') {
+                                echo($ungdomsverksamhet);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'ungdomsverksamhet', true);
+                            } ?>
                         </div>
                     </div>
                 </div>
@@ -589,7 +645,12 @@ function aktiviteter( $atts ) {
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#padelUnitedAccordion">
                         <div class="accordion-body bg-white">
-                            <?php echo get_post_meta(get_the_ID(), 'foretag', true) ?>
+                            <?php
+                            if($foretag != '') {
+                                echo($foretag);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'foretag', true);
+                            } ?>
                         </div>
                     </div>
                 </div>
@@ -601,7 +662,12 @@ function aktiviteter( $atts ) {
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#padelUnitedAccordion">
                         <div class="accordion-body bg-white">
-                            <?php echo get_post_meta(get_the_ID(), 'abonnemang', true) ?>
+                            <?php
+                            if($abonnemang != '') {
+                                echo($abonnemang);
+                            } else {
+                                echo get_post_meta(get_the_ID(), 'abonnemang', true);
+                            } ?>
                         </div>
                     </div>
                 </div>
