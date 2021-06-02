@@ -176,7 +176,7 @@ function visa_general_info( $atts ) {
 }
 add_shortcode( 'visa_general_info', __NAMESPACE__ . '\visa_general_info' );
 
-//Visa områdes boxar med excerpt och lite innehåll
+//Visa regions boxar med excerpt och lite innehåll
 function omrades_excerpt_boxar( $atts ) {
     global $post;
     $atts = shortcode_atts( array(), $atts, 'omrades_excerpt_boxar' );
@@ -348,8 +348,8 @@ function visa_general_info_hallar( $atts ) {
             <div class="row text-center pu-darkblue pt-4 pb-4">
                 <?php if(get_post_meta(get_the_ID(), 'tak_hojd', true)) {?>
                 <div class="col">
-                    <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Tak Höjd" class="w-160" />
-                    <h3 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'tak_hojd', true) ?>m</strong></h3><h5>Tak Höjd</h5>
+                    <img src="<?php echo asset_path('images/icons/tak_hojd.png') ?>" alt="Takhöjd" class="w-160" />
+                    <h3 class="h1 mb-0"><strong><?php echo get_post_meta(get_the_ID(), 'tak_hojd', true) ?>m</strong></h3><h5>Takhöjd</h5>
                 </div>
                 <?php } ?>
                 <div class="col">
