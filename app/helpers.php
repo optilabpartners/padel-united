@@ -264,11 +264,11 @@ function visa_generella_ikoner( $atts ) {
             <div class="row">
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/vpt_underlag.png') ?>" alt="VPT Underlag" class="w-160 pb-2" />
-                    <h6>VTP-underlag: Mondo super court XN</h6>
+                    <h6>WTP-underlag: Mondo super court XN</h6>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/panorama_glas.png') ?>" alt="Panorama glas på alla banor" class="w-160 pb-2" />
-                    <h6>Panorama glas på alla banor</h6>
+                    <h6>Panoramaglas på alla banor</h6>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/optimal_ljudisolering.png') ?>" alt="Optimal ljudisolering" class="w-160 pb-2" />
@@ -276,15 +276,15 @@ function visa_generella_ikoner( $atts ) {
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/belysning.png') ?>" alt="Skräddarsydd belysning" class="w-160 pb-2" />
-                    <h6>Skräddasydd belysning</h6>
+                    <h6>Skräddarsydd belysning</h6>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/stream.png') ?>" alt="Streama din match" class="w-160 pb-2" />
                     <h6>Streama din match hos oss</h6>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
-                    <img src="<?php echo asset_path('images/icons/barn_och_ungdom.png') ?>" alt="Barn & Ungdoms verksamhet" class="w-160 pb-2" />
-                    <h6>Barn & ungdoms verksamhet</h6>
+                    <img src="<?php echo asset_path('images/icons/barn_och_ungdom.png') ?>" alt="Barn- ungdoms-verksamhet<" class="w-160 pb-2" />
+                    <h6>Barn- ungdoms-verksamhet</h6>
                 </div>
                 <div class="col-6 col-md-3 p-md-4 pb-4">
                     <img src="<?php echo asset_path('images/icons/elittranare.png') ?>" alt="Elittränare" class="w-160 pb-2" />
