@@ -67,7 +67,7 @@ class OmradeHallMetaBoxBootstrap extends WPMetaBoxBuilder\Bootstrap
         <input type="text" name="short_title" id="short_title" value="<?php echo $short_title; ?>">
       </div>
       <div class="form-field">
-        <label for="extra_hall_text">Om området har extra hallar från andra bolag skriv en kort text här(se Stocholm eller Skåne för mer info)</label><br />
+        <label for="extra_hall_text">Om regionen har extra hallar från andra bolag skriv en kort text här(se Stocholm eller Skåne för mer info)</label><br />
         <input type="text" name="extra_hall_text" id="extra_hall_text" value="<?php echo $extra_hall_text; ?>">
       </div>
       <div class="form-field">
