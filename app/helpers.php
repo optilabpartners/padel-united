@@ -209,7 +209,7 @@ function omrades_excerpt_boxar( $atts ) {
                     } else if ($counter % 3 == 0) {
                         echo 'pu-yellow-bg';
                     } ?> pt-2 pb-2"></div>
-                    <div class="pu-lightblue-bg mt-2 mb-4 p-4 text-white">
+                    <div class="pu-lightblue-bg mt-2 mb-4 p-4 text-white h-480">
                         <div class="container d-flex h-100 p-0">
                             <div class="row pt-4 pb-4">
                                 <div class="col-3">

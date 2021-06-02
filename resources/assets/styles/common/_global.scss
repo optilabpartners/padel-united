@@ -198,6 +198,14 @@ h2:target::before {
   min-height: 250px;
 }
 
+.h-480 {
+  @include media-breakpoint-down(lg) {
+    min-height: initial;
+  }
+
+  min-height: 480px;
+}
+
 #v-pills-tab {
   .nav-link {
     border-radius: 0;
