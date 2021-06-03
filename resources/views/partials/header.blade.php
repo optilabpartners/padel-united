@@ -151,7 +151,7 @@
 	</div>
 	<div class="pu-content min-vh-100 d-flex align-items-center">
 		<div class="container justify-content-center text-white jumbotron-text-box">
-			<div class="row text-center">
+			<div class="row text-center justify-content-md-center">
 				<div class="col-12">
 					<h1 class="text-uppercase fw-bold">{!! App::title() !!}</h1>
 				</div>
