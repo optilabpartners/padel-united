@@ -498,7 +498,7 @@ function aktiviteter( $atts ) {
     );
 
     $tranare = get_post_meta(get_the_ID(), 'tranare', true);
-    $vart_seriespel = get_post_meta(get_the_ID(), 'vart_seriespel', true);
+    $vart_seriespel = do_shortcode(get_post_meta(get_the_ID(), 'vart_seriespel', true));
     $ungdomsverksamhet = get_post_meta(get_the_ID(), 'ungdomsverksamhet', true);
     $foretag = get_post_meta(get_the_ID(), 'foretag', true);
     $abonnemang = get_post_meta(get_the_ID(), 'abonnemang', true);
